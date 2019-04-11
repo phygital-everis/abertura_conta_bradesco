@@ -1,0 +1,8 @@
+{
+  "name": "chat-app-itau-abre-conta-corrente",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "app_id": ""
+}
