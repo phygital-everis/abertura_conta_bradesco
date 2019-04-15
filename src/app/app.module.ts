@@ -33,6 +33,11 @@ import { WatsonapiProvider } from '../providers/watsonapi/watsonapi';
 import { BuscaCepProvider } from '../providers/busca-cep/busca-cep';
 import { HttpGenericProvider } from '../providers/http-generic/http-generic';
 
+import { AngularFireModule } from 'angularfire2';
+import { AuthService } from '../services/auth.service';
+import { AngularFireAuth } from 'angularfire2/auth';
+import { firebaseConfig } from '../config';
+
 
 const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
 
@@ -52,6 +57,7 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     ChatScrollPage
   ],
   imports: [
+    AngularFireModule.initializeApp(firebaseConfig.fire),
     BrowserModule,
     IonicModule.forRoot(MyApp, {
       backButtonText: '',
@@ -84,6 +90,8 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     ChatScrollPage
   ],
   providers: [
+    AuthService,
+    AngularFireAuth,
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
