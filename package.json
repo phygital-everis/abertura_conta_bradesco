@@ -9,13 +9,14 @@
     "build": "ionic-app-scripts build",
     "lint": "ionic-app-scripts lint",
     "ionic:build": "ionic-app-scripts build",
-    "ionic:serve": "ionic-app-scripts serve"
+    "dev": "ionic-app-scripts serve"
   },
   "dependencies": {
     "@angular/common": "5.0.0",
     "@angular/compiler": "5.0.0",
     "@angular/compiler-cli": "5.0.0",
     "@angular/core": "5.0.0",
+    "@angular/fire": "^5.1.2",
     "@angular/forms": "5.0.0",
     "@angular/http": "5.0.0",
     "@angular/platform-browser": "5.0.0",
@@ -44,6 +45,7 @@
     "cordova-plugin-whitelist": "^1.3.1",
     "cordova-sms-plugin": "1.0.0",
     "cordova-sqlite-storage": "3.0.0",
+    "firebase": "^5.9.4",
     "ionic-angular": "3.9.2",
     "ionic-plugin-keyboard": "~2.2.1",
     "ionicons": "3.0.0",
