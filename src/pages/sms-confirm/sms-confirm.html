@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      <ion-row>
+        <ion-col>
+          <img src="assets/imgs/bradesco_logo.png" alt="logo">
+        </ion-col>
+
+      </ion-row>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-row>
+    <ion-col text-center>
+      <h2>Digite o código recebido por SMS</h2>
+    </ion-col>
+  </ion-row>
+
+  <ion-list>
+    <ion-item>
+      <ion-label floating>código</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <div padding>
+    <button ion-button full color="danger" (click)="goNext()">finalizar</button></div>
+</ion-content>

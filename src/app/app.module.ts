@@ -1,34 +1,38 @@
+//modules
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule, IonicPageModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { HttpClientModule } from '@angular/common/http';
-import { SMS } from '@ionic-native/sms';
-import { Sim } from '@ionic-native/sim';
 import { BrMaskerModule } from 'brmasker-ionic-3';
 import { IonicStorageModule } from '@ionic/storage';
 import { SocketIoModule, SocketIoConfig } from 'ng-socket-io';
 import { Camera } from '@ionic-native/camera';
 import { MediaCapture} from '@ionic-native/media-capture';
 
+//pages
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { TakePicturePage } from '../pages/take-picture/take-picture';
-import { SendSmsPage } from "../pages/send-sms/send-sms";
 import { PlanosPage } from '../pages/planos/planos';
 import { CustomPlanePage } from '../pages/custom-plane/custom-plane';
 import { CaptureDocPage } from '../pages/capture-doc/capture-doc';
 import { CaptureCompEndPage } from '../pages/capture-comp-end/capture-comp-end';
 import { FormularioPage } from '../pages/formulario/formulario';
 import { Formulario2Page } from '../pages/formulario2/formulario2';
+import { Formulario3Page } from '../pages/formulario3/formulario3';
+import { CadastraSenhaPage } from '../pages/cadastra-senha/cadastra-senha';
+import { ConfirmaSenhaPage } from '../pages/confirma-senha/confirma-senha';
+import { SmsConfirmPage } from '../pages/sms-confirm/sms-confirm';
 
+//providers
 import { VisionProvider } from '../providers/vision/vision';
 import { LocalStorageProvider } from '../providers/local-storage/local-storage';
 import { HttpEvaProvider } from '../providers/http-eva/http-eva';
-import { SendSmsProvider } from '../providers/send-sms/send-sms';
 import { WatsonapiProvider } from '../providers/watsonapi/watsonapi';
 import { BuscaCepProvider } from '../providers/busca-cep/busca-cep';
+import { FirebaseServiceProvider } from '../providers/firebase-service/firebase-service';
 
 
 const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
@@ -45,13 +49,16 @@ class CameraMock extends Camera {
     MyApp,
     HomePage,
     TakePicturePage,
-    SendSmsPage,
     PlanosPage,
     CustomPlanePage,
     FormularioPage,
     Formulario2Page,
+    Formulario3Page,
     CaptureDocPage,
-    CaptureCompEndPage
+    CaptureCompEndPage,
+    CadastraSenhaPage,
+    ConfirmaSenhaPage,
+    SmsConfirmPage
   ],
   imports: [
     BrowserModule,
@@ -75,13 +82,16 @@ class CameraMock extends Camera {
     MyApp,
     HomePage,
     TakePicturePage,
-    SendSmsPage,
     PlanosPage,
     CustomPlanePage,
     FormularioPage,
     Formulario2Page,
+    Formulario3Page,
     CaptureDocPage,
-    CaptureCompEndPage
+    CaptureCompEndPage,
+    CadastraSenhaPage,
+    ConfirmaSenhaPage,
+    SmsConfirmPage
   ],
   providers: [
     StatusBar,
@@ -91,12 +101,10 @@ class CameraMock extends Camera {
     { provide: Camera, useClass: CameraMock },
     LocalStorageProvider,
     HttpEvaProvider,
-    SMS,
-    Sim,
-    SendSmsProvider,
     WatsonapiProvider,
     BuscaCepProvider,
-    MediaCapture
+    MediaCapture,
+    FirebaseServiceProvider
   ]
 })
 export class AppModule {}

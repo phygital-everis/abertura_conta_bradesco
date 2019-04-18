@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-//import { ChatPage } from "../chat/chat";
+import { ConfirmaSenhaPage } from "../confirma-senha/confirma-senha";
 import { LocalStorageProvider } from "../../providers/local-storage/local-storage";
 
 @Component({
@@ -31,6 +31,7 @@ export class CustomPlanePage {
   }
 
   confirmPacote() {
+    this.navCtrl.push(ConfirmaSenhaPage)
   }
 
   alterarValor(propriedade: string, valor: number){

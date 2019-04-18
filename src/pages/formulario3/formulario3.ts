@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { CadastraSenhaPage } from "../cadastra-senha/cadastra-senha";
 import { Cliente } from "../../models/cliente.model";
-import { LocalStorageProvider } from "../../providers/local-storage/local-storage";
-import { Formulario3Page } from "../formulario3/formulario3";
+
 
 @Component({
-  selector: 'page-formulario2',
-  templateUrl: 'formulario2.html',
+  selector: 'page-formulario3',
+  templateUrl: 'formulario3.html',
 })
-export class Formulario2Page {
+export class Formulario3Page {
 
   public cliente = new Cliente()
 
@@ -17,9 +17,8 @@ export class Formulario2Page {
 
   ionViewDidLoad() {
   }
-
   goNext() {
-    this.navCtrl.push(Formulario3Page)
+    this.navCtrl.push(CadastraSenhaPage)
   }
 
 }

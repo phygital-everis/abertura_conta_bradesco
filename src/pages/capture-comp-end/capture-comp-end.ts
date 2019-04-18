@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams, LoadingController, AlertController } from 'ionic-angular';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import { VisionProvider } from "../../providers/vision/vision";
-import { FormularioPage } from "../../pages/formulario/formulario";
+import { Formulario2Page } from "../../pages/formulario2/formulario2";
 import { HomePage } from '../home/home';
 import { DomSanitizer } from '@angular/platform-browser';
 
@@ -47,7 +47,7 @@ export class CaptureCompEndPage {
         this.navCtrl.push(FormularioPage, { data: data, tipo: this.tipoDoc });
       }); */
 
-      this.navCtrl.push(FormularioPage)
+      this.navCtrl.push(Formulario2Page)
     }, (err) => {
       console.log(err);
       this.presentAlertConfirm();
