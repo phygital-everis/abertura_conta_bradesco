@@ -1,0 +1,31 @@
+page-formulario {
+    .header {
+        background-color: #ffffff !important;
+        padding-top: 24px;
+        padding-bottom: 24px;
+        box-shadow: none!important;
+        .toolbar{
+            .toolbar-background{
+                background-color: #ffffff !important;
+                box-shadow: none!important;
+                   
+            }
+        }
+    }
+
+    .title {
+            padding: 0 60px 1px;
+    }
+    .header-ios .toolbar-ios:last-child .toolbar-background-ios{
+         border: none;
+
+    }
+
+        .back-button{
+        display: none !important;
+        color: #CC092F;
+        margin-left: 10px;
+        margin-bottom: 5px;
+    }
+
+}

@@ -1,32 +1,32 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, LoadingController, AlertController } from 'ionic-angular';
 import { Camera, CameraOptions } from '@ionic-native/camera';
-import { CaptureDocPage } from "../../pages/capture-doc/capture-doc";
+import { VisionProvider } from "../../providers/vision/vision";
+import { FormularioPage } from "../../pages/formulario/formulario";
 import { HomePage } from '../home/home';
 import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
-  selector: 'page-take-picture',
-  templateUrl: 'take-picture.html'
+  selector: 'page-capture-comp-end',
+  templateUrl: 'capture-comp-end.html',
+  providers: [VisionProvider]
 })
-export class TakePicturePage {
-
-  photo:any = ''
-  tipoDoc:string
+export class CaptureCompEndPage {
+    photo: any = ''
+  tipoDoc: string
   loading
 
   constructor(
-    private camera: Camera, 
-    public navCtrl: NavController, 
+    private camera: Camera,
+    public navCtrl: NavController,
     public navParams: NavParams,
+    private vision: VisionProvider,
     private _sanitizer: DomSanitizer,
     private loadingCtrl: LoadingController,
-    private alertController: AlertController) {
+    private alertController: AlertController) { }
 
-  }
+  getPhoto() {
 
-  getPhoto(){
-    
     const options: CameraOptions = {
       quality: 100,
       destinationType: this.camera.DestinationType.DATA_URL,
@@ -37,21 +37,35 @@ export class TakePicturePage {
     }
 
     this.camera.getPicture(options).then((imageData) => {
-      
-      this.photo = this._sanitizer.bypassSecurityTrustResourceUrl('data:image/jpg;base64,' 
-      + imageData);
 
-      setTimeout(() => {
-        this.presentGoOrBack()
-      }, 1000);
-             
-     
+      this.photo = this._sanitizer.bypassSecurityTrustResourceUrl('data:image/jpg;base64,'
+        + imageData);
+
+      this.presentLoadingOptions();
+
+      /* this.vision.sendVision(imageData).subscribe((data) => {
+        this.navCtrl.push(FormularioPage, { data: data, tipo: this.tipoDoc });
+      }); */
+
+      this.navCtrl.push(FormularioPage)
     }, (err) => {
       console.log(err);
       this.presentAlertConfirm();
     });
   }
-  
+
+  choseType(el) {
+    this.tipoDoc = el._elementRef.nativeElement.value
+  }
+
+  async presentLoadingOptions() {
+    const loading = await this.loadingCtrl.create({
+      spinner: null,
+      duration: 8000,
+      content: 'Estamos processando as suas informações, aguarde!'
+    });
+    return await loading.present();
+  }
 
   async presentAlertConfirm() {
     const alert = await this.alertController.create({
@@ -69,22 +83,4 @@ export class TakePicturePage {
     await alert.present();
   }
 
-  async presentGoOrBack() {
-    const alert = await this.alertController.create({
-      title: '<strong>Foto Tirada</strong>!!!',
-      message: 'A foto está boa?',
-      buttons: [
-        {
-          text: 'Confirmar',
-          handler: () => {
-            this.navCtrl.push(CaptureDocPage);
-          }
-        }
-      ]
-    });
-    await alert.present();
-  }
-
 }
-
-

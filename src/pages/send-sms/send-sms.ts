@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { SendSmsProvider } from "../../providers/send-sms/send-sms";
-import { ChatScrollPage } from "../chat-scroll/chat-scroll";
 
 @Component({
   selector: 'page-send-sms',
@@ -27,7 +26,7 @@ export class SendSmsPage {
   confirmCode(){
     if (this.code == '2234') {
       this.passCode = 'passou'
-      this.navCtrl.push(ChatScrollPage);
+      //this.navCtrl.push(ChatScrollPage);
     }else{
       this.passCode = 'falhou'
     }

@@ -2,7 +2,6 @@ import { Component, ViewChild } from '@angular/core';
 import { NavController, NavParams, Slides } from 'ionic-angular';
 import { LocalStorageProvider } from "../../providers/local-storage/local-storage";
 //import { ChatPage } from "../chat/chat";
-import { ChatScrollPage } from "../chat-scroll/chat-scroll";
 import { CustomPlanePage } from "../custom-plane/custom-plane";
 
  @Component({
@@ -30,7 +29,6 @@ export class PlanosPage {
   }
 
   confirmPacote(){
-    this.navCtrl.push(ChatScrollPage, { pergunta: 'Plano selecionado!',passo:5})
   }
 
   goToCustomPlane(){
