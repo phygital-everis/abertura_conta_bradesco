@@ -20,27 +20,27 @@
   <ion-list>
     <ion-item>
       <ion-label floating>Endereço</ion-label>
-      <ion-input [(ngModel)]="cliente.logradouro" type="text"></ion-input>
+      <ion-input [(ngModel)]="cliente.cliente.logradouro" type="text"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label floating>Número</ion-label>
-      <ion-input [(ngModel)]="cliente.numero" type="text"></ion-input>
+      <ion-input [(ngModel)]="cliente.cliente.numero" type="text"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label floating>Complemento</ion-label>
-      <ion-input [(ngModel)]="cliente.complemento" type="text"></ion-input>
+      <ion-input [(ngModel)]="cliente.cliente.complemento" type="text"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label floating>Bairro</ion-label>
-      <ion-input [(ngModel)]="cliente.bairro" type="text"></ion-input>
+      <ion-input [(ngModel)]="cliente.cliente.bairro" type="text"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label floating>Municipio</ion-label>
-      <ion-input [(ngModel)]="cliente.municipio" type="text"></ion-input>
+      <ion-input [(ngModel)]="cliente.cliente.municipio" type="text"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label>Estado</ion-label>
-      <ion-select [(ngModel)]="cliente.ufNascimento">
+      <ion-select [(ngModel)]="cliente.cliente.ufNascimento">
         <ion-option value="sp">São Paulo</ion-option>
         <ion-option value="rj">Rio de Janeiro</ion-option>
         <ion-option value="es">Espirito Santo</ion-option>
@@ -51,11 +51,11 @@
     </ion-item>
     <ion-item>
       <ion-label floating>Cep</ion-label>
-      <ion-input [(ngModel)]="cliente.cep" type="text"></ion-input>
+      <ion-input [(ngModel)]="cliente.cliente.cep" type="text"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label floating>Tipo de Residência</ion-label>
-      <ion-select [(ngModel)]="cliente.tipoResidencia">
+      <ion-select [(ngModel)]="cliente.cliente.tipoResidencia">
         <ion-option value="casa">Casa</ion-option>
         <ion-option value="apartamento">Apartamento</ion-option>
         <ion-option value="sobrado">Sobrado</ion-option>
@@ -64,19 +64,19 @@
     </ion-item>
     <ion-item>
       <ion-label floating>Telefone</ion-label>
-      <ion-input [(ngModel)]="cliente.telefone" type="text"></ion-input>
+      <ion-input [(ngModel)]="cliente.cliente.telefone" type="text"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label floating>Celular</ion-label>
-      <ion-input [(ngModel)]="cliente.celular" type="text"></ion-input>
+      <ion-input [(ngModel)]="cliente.cliente.celular" type="text"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label floating>E-mail</ion-label>
-      <ion-input [(ngModel)]="cliente.email" type="email"></ion-input>
+      <ion-input [(ngModel)]="cliente.cliente.email" type="email"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label floating>Ocupação</ion-label>
-      <ion-input [(ngModel)]="cliente.celular" type="text"></ion-input>
+      <ion-input [(ngModel)]="cliente.cliente.celular" type="text"></ion-input>
     </ion-item>
 
   </ion-list>

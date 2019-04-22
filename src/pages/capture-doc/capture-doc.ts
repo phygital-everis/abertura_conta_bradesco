@@ -44,11 +44,11 @@ export class CaptureDocPage {
 
       this.presentLoadingOptions();
 
-      /* this.vision.sendVision(imageData).subscribe((data) => {
+      this.vision.sendVision(imageData).subscribe((data) => {        
         this.navCtrl.push(FormularioPage, { data: data, tipo: this.tipoDoc });
-      }); */
+      });
 
-      this.navCtrl.push(FormularioPage)
+      
     }, (err) => {
       console.log(err);
       this.presentAlertConfirm();

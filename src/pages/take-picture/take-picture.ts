@@ -4,10 +4,12 @@ import { Camera, CameraOptions } from '@ionic-native/camera';
 import { CaptureDocPage } from "../../pages/capture-doc/capture-doc";
 import { HomePage } from '../home/home';
 import { DomSanitizer } from '@angular/platform-browser';
-
+import { LocalStorageProvider } from "../../providers/local-storage/local-storage";
+import { FirebaseServiceProvider } from "../../providers/firebase-service/firebase-service";
 @Component({
   selector: 'page-take-picture',
-  templateUrl: 'take-picture.html'
+  templateUrl: 'take-picture.html',
+  providers: [LocalStorageProvider]
 })
 export class TakePicturePage {
 
@@ -21,8 +23,16 @@ export class TakePicturePage {
     public navParams: NavParams,
     private _sanitizer: DomSanitizer,
     private loadingCtrl: LoadingController,
-    private alertController: AlertController) {
+    private alertController: AlertController,
+    private localstorage: LocalStorageProvider,
+    private fbService: FirebaseServiceProvider
 
+    ) {
+
+  }
+
+  ionViewDidLoad() {
+    this.localstorage.clearAll()
   }
 
   getPhoto(){
@@ -33,17 +43,21 @@ export class TakePicturePage {
       encodingType: this.camera.EncodingType.JPEG,
       mediaType: this.camera.MediaType.PICTURE,
       targetHeight: 600,
-      targetWidth: 900
+      targetWidth: 600
     }
 
     this.camera.getPicture(options).then((imageData) => {
       
-      this.photo = this._sanitizer.bypassSecurityTrustResourceUrl('data:image/jpg;base64,' 
-      + imageData);
+      this.photo = 'data:image/jpeg;base64,' + imageData;
 
-      setTimeout(() => {
-        this.presentGoOrBack()
-      }, 1000);
+      this.localstorage.addItem('foto',this.photo).then(
+        response=>{
+          setTimeout(() => {
+            this.presentGoOrBack()
+          }, 1000);
+      })
+
+      this.fbService.upLoadToStorage(this.photo)
              
      
     }, (err) => {

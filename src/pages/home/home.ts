@@ -1,28 +1,23 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { TakePicturePage } from '../take-picture/take-picture';
-import { LocalStorageProvider } from "../../providers/local-storage/local-storage";
 
 
 @Component({
   selector: 'page-home',
-  templateUrl: 'home.html',
-  providers: [LocalStorageProvider]
+  templateUrl: 'home.html'
 })
 export class HomePage {
 
 
   constructor(
-    public navCtrl: NavController, 
-    private localstorage: LocalStorageProvider
+    public navCtrl: NavController
     ) {
 
      }
   
 
-  ionViewDidLoad(){
-    this.localstorage.clearAll()
-  }
+  
 
   joinChat() {
     this.navCtrl.push(TakePicturePage);

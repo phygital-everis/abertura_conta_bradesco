@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { CadastraSenhaPage } from "../cadastra-senha/cadastra-senha";
-import { Cliente } from "../../models/cliente.model";
+import { ClienteProvider } from "../../providers/cliente/cliente";
 
 
 @Component({
@@ -10,12 +10,16 @@ import { Cliente } from "../../models/cliente.model";
 })
 export class Formulario3Page {
 
-  public cliente = new Cliente()
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    private cliente: ClienteProvider
+  ) {
   }
 
   ionViewDidLoad() {
+    console.log(this.cliente.cliente);
+
   }
   goNext() {
     this.navCtrl.push(CadastraSenhaPage)

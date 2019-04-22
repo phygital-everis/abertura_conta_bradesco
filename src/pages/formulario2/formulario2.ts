@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { Cliente } from "../../models/cliente.model";
-import { LocalStorageProvider } from "../../providers/local-storage/local-storage";
+import { ClienteProvider } from "../../providers/cliente/cliente";
 import { Formulario3Page } from "../formulario3/formulario3";
 
 @Component({
@@ -10,12 +9,16 @@ import { Formulario3Page } from "../formulario3/formulario3";
 })
 export class Formulario2Page {
 
-  public cliente = new Cliente()
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    private cliente: ClienteProvider
+    ) {
   }
 
   ionViewDidLoad() {
+    console.log(this.cliente.cliente);
+    
   }
 
   goNext() {

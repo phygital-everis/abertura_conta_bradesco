@@ -10,6 +10,9 @@ import { IonicStorageModule } from '@ionic/storage';
 import { SocketIoModule, SocketIoConfig } from 'ng-socket-io';
 import { Camera } from '@ionic-native/camera';
 import { MediaCapture} from '@ionic-native/media-capture';
+import { AngularFireModule } from "angularfire2";
+import { AngularFireDatabaseModule } from "angularfire2/database";
+import { AngularFireStorageModule } from "angularfire2/Storage";
 
 //pages
 import { MyApp } from './app.component';
@@ -33,8 +36,16 @@ import { HttpEvaProvider } from '../providers/http-eva/http-eva';
 import { WatsonapiProvider } from '../providers/watsonapi/watsonapi';
 import { BuscaCepProvider } from '../providers/busca-cep/busca-cep';
 import { FirebaseServiceProvider } from '../providers/firebase-service/firebase-service';
+import { ClienteProvider } from '../providers/cliente/cliente';
 
-
+const FIREBASE_CONFIG = {
+  apiKey: "AIzaSyBH-ht1XjzdfH8sRWPd6jQvM1sIExmhalA",
+  authDomain: "bradesco-abre-contas.firebaseapp.com",
+  databaseURL: "https://bradesco-abre-contas.firebaseio.com",
+  projectId: "bradesco-abre-contas",
+  storageBucket: "bradesco-abre-contas.appspot.com",
+  messagingSenderId: "1016709793348"
+}; 
 const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
 class CameraMock extends Camera {
   getPicture(options) {
@@ -69,13 +80,17 @@ class CameraMock extends Camera {
       modalEnter: 'modal-slide-in',
       modalLeave: 'modal-slide-out',
       tabsPlacement: 'bottom',
-      pageTransition: 'ios-transition'
+      pageTransition: 'ios-transition',
+      
     }),
     HttpClientModule,
     SocketIoModule.forRoot(config),
     IonicStorageModule.forRoot(),
     BrMaskerModule,
-    IonicPageModule.forChild(HomePage)
+    IonicPageModule.forChild(HomePage),
+    AngularFireModule.initializeApp(FIREBASE_CONFIG),
+    AngularFireDatabaseModule,
+    AngularFireStorageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -104,7 +119,8 @@ class CameraMock extends Camera {
     WatsonapiProvider,
     BuscaCepProvider,
     MediaCapture,
-    FirebaseServiceProvider
+    FirebaseServiceProvider,
+    ClienteProvider
   ]
 })
 export class AppModule {}
