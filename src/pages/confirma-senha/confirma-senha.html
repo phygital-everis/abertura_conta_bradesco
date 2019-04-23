@@ -20,11 +20,11 @@
   <ion-list>
     <ion-item>
       <ion-label floating>Digite sua senha</ion-label>
-      <ion-input type="password"></ion-input>
+      <ion-input [(ngModel)]="senha1" type="password" ></ion-input>
     </ion-item>
 
   </ion-list>
 
   <div padding>
-    <button ion-button full color="danger" (click)="goNext()">próximo</button></div>
+    <button ion-button full color="danger" (click)="confereSenha()" >próximo</button></div>
 </ion-content>

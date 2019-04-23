@@ -44,6 +44,7 @@ export class Cliente{
     pais: string= "";
     nif: string= "";
     propositoRelacaoNegocioOrganizacao: string= "";
+    senha:number
 
     constructor(){
         
