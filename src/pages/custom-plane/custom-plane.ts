@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-//import { ChatPage } from "../chat/chat";
+import { ConfirmaSenhaPage } from "../confirma-senha/confirma-senha";
 import { LocalStorageProvider } from "../../providers/local-storage/local-storage";
-import { ChatScrollPage } from "../chat-scroll/chat-scroll";
 
 @Component({
   selector: 'page-custom-plane',
@@ -32,7 +31,7 @@ export class CustomPlanePage {
   }
 
   confirmPacote() {
-    this.navCtrl.push(ChatScrollPage, { pergunta: 'Plano selecionado!', passo: 5 })
+    this.navCtrl.push(ConfirmaSenhaPage)
   }
 
   alterarValor(propriedade: string, valor: number){

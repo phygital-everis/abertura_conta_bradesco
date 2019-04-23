@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      <ion-row>
+        <ion-col>
+          <img src="assets/imgs/bradesco_logo.png" alt="logo">
+        </ion-col>
+
+      </ion-row>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-row>
+    <ion-col text-center>
+      <h2>Confirme com a sua senha</h2>
+    </ion-col>
+  </ion-row>
+
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Digite sua senha</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <div padding>
+    <button ion-button full color="danger" (click)="goNext()">próximo</button></div>
+</ion-content>

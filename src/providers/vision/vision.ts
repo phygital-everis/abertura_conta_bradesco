@@ -10,7 +10,9 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class VisionProvider {
 
-  private url = 'https://vision.googleapis.com/v1/images:annotate?key=AIzaSyDr-38LULqBLMxncojrjdlE7kDVSp-DlIg'
+  private key ='AIzaSyBpdmS1--uG0kRG-LCjrmTxh3lv9YoijEA'
+
+  private url = 'https://vision.googleapis.com/v1/images:annotate?key='+this.key
 
   private json = {
     "requests": [

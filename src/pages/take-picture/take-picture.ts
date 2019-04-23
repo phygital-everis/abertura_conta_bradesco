@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, LoadingController, AlertController } from 'ionic-angular';
 import { Camera, CameraOptions } from '@ionic-native/camera';
-import { VisionProvider } from "../../providers/vision/vision";
-import { ShowDocPage } from "../../pages/show-doc/show-doc";
+import { CaptureDocPage } from "../../pages/capture-doc/capture-doc";
 import { HomePage } from '../home/home';
 import { DomSanitizer } from '@angular/platform-browser';
-
+import { LocalStorageProvider } from "../../providers/local-storage/local-storage";
+import { FirebaseServiceProvider } from "../../providers/firebase-service/firebase-service";
 @Component({
   selector: 'page-take-picture',
   templateUrl: 'take-picture.html',
-  providers: [VisionProvider]
+  providers: [LocalStorageProvider]
 })
 export class TakePicturePage {
 
@@ -21,10 +21,19 @@ export class TakePicturePage {
     private camera: Camera, 
     public navCtrl: NavController, 
     public navParams: NavParams,
-    private vision:VisionProvider,
     private _sanitizer: DomSanitizer,
     private loadingCtrl: LoadingController,
-    private alertController: AlertController) { }
+    private alertController: AlertController,
+    private localstorage: LocalStorageProvider,
+    private fbService: FirebaseServiceProvider
+
+    ) {
+
+  }
+
+  ionViewDidLoad() {
+    this.localstorage.clearAll()
+  }
 
   getPhoto(){
     
@@ -34,37 +43,29 @@ export class TakePicturePage {
       encodingType: this.camera.EncodingType.JPEG,
       mediaType: this.camera.MediaType.PICTURE,
       targetHeight: 600,
-      targetWidth: 900
+      targetWidth: 600
     }
 
     this.camera.getPicture(options).then((imageData) => {
       
-      this.photo = this._sanitizer.bypassSecurityTrustResourceUrl('data:image/jpg;base64,' 
-      + imageData);
+      this.photo = 'data:image/jpeg;base64,' + imageData;
 
-      this.presentLoadingOptions();
-      
-      this.vision.sendVision(imageData).subscribe((data)=>{
-        this.navCtrl.push(ShowDocPage, { data: data, tipo:this.tipoDoc });
-      });
+      this.localstorage.addItem('foto',this.photo).then(
+        response=>{
+          setTimeout(() => {
+            this.presentGoOrBack()
+          }, 1000);
+      })
+
+      this.fbService.upLoadToStorage(this.photo)
+             
+     
     }, (err) => {
       console.log(err);
       this.presentAlertConfirm();
     });
   }
-
-  choseType(el){
-    this.tipoDoc = el._elementRef.nativeElement.value   
-  }
   
-  async presentLoadingOptions() {
-    const loading =  await this.loadingCtrl.create({
-      spinner: null,
-      duration: 8000,
-      content: 'Estamos processando as suas informações, aguarde!'
-    });
-    return await loading.present();
-  }
 
   async presentAlertConfirm() {
     const alert = await this.alertController.create({
@@ -82,4 +83,22 @@ export class TakePicturePage {
     await alert.present();
   }
 
+  async presentGoOrBack() {
+    const alert = await this.alertController.create({
+      title: '<strong>Foto Tirada</strong>!!!',
+      message: 'A foto está boa?',
+      buttons: [
+        {
+          text: 'Confirmar',
+          handler: () => {
+            this.navCtrl.push(CaptureDocPage);
+          }
+        }
+      ]
+    });
+    await alert.present();
+  }
+
 }
+
+

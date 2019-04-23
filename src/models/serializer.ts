@@ -1,5 +1,4 @@
-import { Message } from "./message.model";
-export class Serializer {
+/* export class Serializer {
     fromJson(json: any): Message {
         const message = new Message();
         message.id = json.id;
@@ -14,4 +13,4 @@ export class Serializer {
             text: message.text
         };
     }
-}
+} */

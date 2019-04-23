@@ -1,0 +1,121 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      <ion-row>
+        <ion-col>
+          <img src="assets/imgs/bradesco_logo.png" alt="logo">
+        </ion-col>
+
+      </ion-row>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-row>
+    <ion-col text-center>
+<h2>Proposta de abertura de conta</h2>
+    </ion-col>
+  </ion-row>
+  
+<ion-list>
+  <ion-item>
+    <ion-label floating>Nome</ion-label>
+    <ion-input [(ngModel)]="cliente.cliente.nomeCompleto" type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>CPF</ion-label>
+    <ion-input [(ngModel)]="cliente.cliente.cpf" type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Nome da Mãe</ion-label>
+    <ion-input [(ngModel)]="cliente.cliente.nomeMae" type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Nome do Pai</ion-label>
+    <ion-input [(ngModel)]="cliente.cliente.nomePai" type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Estado Cívil</ion-label>
+    <ion-select [(ngModel)]="cliente.cliente.estadoCivil">
+      <ion-option value="casado">Casado</ion-option>
+      <ion-option value="solteiro">Solteiro</ion-option>
+      <ion-option value="viúvo(a)">Viúvo(a)</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Data Nascimento</ion-label>
+    <ion-input  [(ngModel)]="cliente.cliente.dataNascimento" type="text"></ion-input>
+  </ion-item>
+<ion-item>
+  <ion-label>Sexo</ion-label>
+  <ion-select  [(ngModel)]="cliente.cliente.sexo" >
+    <ion-option value="masculino">Masculino</ion-option>
+    <ion-option value="feminino">Feminino</ion-option>
+   
+  </ion-select>
+</ion-item>
+  <ion-item>
+    <ion-label floating>Nacionalidade</ion-label>
+    <ion-input [(ngModel)]="cliente.cliente.nacionalidade" type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Estado de nascimento</ion-label>
+    <ion-select [(ngModel)]="cliente.cliente.ufNascimento">
+      <ion-option value="sp">São Paulo</ion-option>
+      <ion-option value="rj">Rio de Janeiro</ion-option>
+      <ion-option value="es">Espirito Santo</ion-option>
+      <ion-option value="mg">Minas Gerais</ion-option>
+      <ion-option value="rs">Rio Grande do Sul</ion-option>
+      <ion-option value="sc">Santa Catarina</ion-option>
+    </ion-select>
+  </ion-item>
+    <ion-item>
+      <ion-label floating>Municipio</ion-label>
+      <ion-input [(ngModel)]="cliente.cliente.municipioNascimento" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Tipo de documento</ion-label>
+      <ion-select [(ngModel)]="cliente.cliente.tipoDocumento">
+        <ion-option value="rg">RG</ion-option>
+        <ion-option value="cnh">CNH</ion-option>
+      
+      </ion-select>
+    </ion-item>
+      <ion-item>
+        <ion-label floating>Número Documento</ion-label>
+        <ion-input [(ngModel)]="cliente.cliente.numeroDocumento" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Órgão Emissor</ion-label>
+        <ion-input [(ngModel)]="cliente.cliente.orgaoEmissor" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Estado de emissão</ion-label>
+        <ion-select [(ngModel)]="cliente.cliente.ufOrgaoEmissor">
+          <ion-option value="sp">São Paulo</ion-option>
+          <ion-option value="rj">Rio de Janeiro</ion-option>
+          <ion-option value="es">Espirito Santo</ion-option>
+          <ion-option value="mg">Minas Gerais</ion-option>
+          <ion-option value="rs">Rio Grande do Sul</ion-option>
+          <ion-option value="sc">Santa Catarina</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>País de emissão</ion-label>
+        <ion-input  [(ngModel)]="cliente.cliente.paisEmissor" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Data de emissão</ion-label>
+        <ion-input [(ngModel)]="cliente.cliente.dataEmissao" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Vencimento do documento</ion-label>
+        <ion-input [(ngModel)]="cliente.cliente.vencimentoDocumento" type="text"></ion-input>
+      </ion-item>
+   
+</ion-list>
+
+<div padding>
+<button ion-button full color="danger" (click)="goNext()">próximo</button></div>
+</ion-content>

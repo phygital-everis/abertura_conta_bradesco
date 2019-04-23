@@ -1,0 +1,78 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      <ion-row>
+        <ion-col>
+          <img src="assets/imgs/bradesco_logo.png" alt="logo">
+        </ion-col>
+
+      </ion-row>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-row>
+    <ion-col text-center>
+      <h2>Formulário Pep</h2>
+    </ion-col>
+  </ion-row>
+
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Você se declara PEP</ion-label>
+      <ion-input [(ngModel)]="cliente.cliente.seDeclaraPep" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Você possui relacionamento PEP</ion-label>
+      <ion-input [(ngModel)]="cliente.cliente.possuiRelacionamentoPep" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Início do exercício</ion-label>
+      <ion-input [(ngModel)]="cliente.cliente.inicioExercicio" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Final do exercício</ion-label>
+      <ion-input [(ngModel)]="cliente.cliente.terminoExercicio" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Possui ligação</ion-label>
+      <ion-input [(ngModel)]="cliente.cliente.possuiLigacao" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Ligação</ion-label>
+      <ion-input [(ngModel)]="cliente.cliente.ligacao" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Cargo</ion-label>
+      <ion-input [(ngModel)]="cliente.cliente.cargo" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Tipo de ligação</ion-label>
+      <ion-input [(ngModel)]="cliente.cliente.tipoLigacao" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Residência Fiscal em Outro País</ion-label>
+      <ion-input [(ngModel)]="cliente.cliente.residenciaFiscalOutroPais" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Referência</ion-label>
+      <ion-input [(ngModel)]="cliente.cliente.referencia" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>País</ion-label>
+      <ion-input [(ngModel)]="cliente.cliente.pais" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Nif</ion-label>
+      <ion-input [(ngModel)]="cliente.cliente.nif" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Possui Relacionamento na Organização</ion-label>
+      <ion-input [(ngModel)]="cliente.cliente.propositoRelacaoNegocioOrganizacao" type="text"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <div padding>
+    <button ion-button full color="danger" (click)="goNext()">próximo</button></div>
+</ion-content>

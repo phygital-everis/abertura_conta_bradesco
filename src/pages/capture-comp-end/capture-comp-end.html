@@ -3,9 +3,9 @@
     <ion-title>
       <ion-row>
         <ion-col>
-          <img src="assets/imgs/bradesco_logo.png"  alt="logo">
+          <img src="assets/imgs/bradesco_logo.png" alt="logo">
         </ion-col>
-      
+
       </ion-row>
     </ion-title>
   </ion-navbar>
@@ -14,9 +14,11 @@
   <div class="menu">
     <ion-row>
       <ion-col text-center>
-        <h2>Para começar vamos tirar uma foto</h2>
+        <h2>Comprovante de endereço</h2>
       </ion-col>
     </ion-row>
+   
+    <hr>
   </div>
   <ion-card *ngIf="photo !== ''">
     <img [src]="photo" />
@@ -28,7 +30,7 @@
   <ion-toolbar>
     <ion-row>
       <ion-col>
-        <button ion-button clear full color="primary" icon-left>
+        <button ion-button clear full color="primary" icon-left [disabled]='!tipoDoc'>
           <ion-icon name='camera'></ion-icon>
           Tirar foto
         </button>

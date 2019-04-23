@@ -1,8 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { NavController, NavParams, Slides } from 'ionic-angular';
 import { LocalStorageProvider } from "../../providers/local-storage/local-storage";
-//import { ChatPage } from "../chat/chat";
-import { ChatScrollPage } from "../chat-scroll/chat-scroll";
+import { ConfirmaSenhaPage } from "../confirma-senha/confirma-senha";
 import { CustomPlanePage } from "../custom-plane/custom-plane";
 
  @Component({
@@ -22,15 +21,12 @@ export class PlanosPage {
     public navParams: NavParams,
     private localStorage:LocalStorageProvider) 
     {
-    this.localStorage.getItems('nickname').then(
-      (response) => {
-          this.nickname = response
-      }
-    )
+    
   }
 
   confirmPacote(){
-    this.navCtrl.push(ChatScrollPage, { pergunta: 'Plano selecionado!',passo:5})
+    this.navCtrl.push(ConfirmaSenhaPage)
+
   }
 
   goToCustomPlane(){
