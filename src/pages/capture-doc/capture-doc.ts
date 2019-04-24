@@ -27,6 +27,7 @@ export class CaptureDocPage {
     private alertController: AlertController) { }
 
   getPhoto() {
+    if (!this.tipoDoc) return
 
     const options: CameraOptions = {
       quality: 100,
