@@ -27,7 +27,7 @@ export class FormularioPage {
       fields.push(data.responses[0].textAnnotations[index].description)
     }
 
-    if(tipoDoc === "CNH"){
+    if(tipoDoc === "CNH") {
       //Nome
       let nomeBegin = fields.indexOf("NOME") > 0 ? fields.indexOf("NOME") :
       fields.indexOf("WOME") > 0 ? fields.indexOf("WOME") : 
@@ -64,13 +64,21 @@ export class FormularioPage {
           cpf += fields[i] + ' ';
         }
       }
+      if(cpf.substring(0,1) == "-") {
+        cpf = cpf.replace('-', '');
+      } else if (cpf.substring(0,1) == "–") {
+        cpf = cpf.replace('–', '');
+      }
 
       //data nascimento
       let dtNascBegin = fields[cpfBegin] === "–" || fields[cpfBegin] === "-" ? cpfBegin + 9 : cpfBegin + 8;
+      dtNascBegin = fields[dtNascBegin] === "|" ? dtNascBegin+1 : dtNascBegin;
+      fields[dtNascBegin] = fields[dtNascBegin].length === 4 ? fields[dtNascBegin].substring(2, 4) : fields[dtNascBegin];
+
       let dtNascEnd = fields.indexOf("FILIAÇÃO") > 0 ? fields.indexOf("FILIAÇÃO") : 
       fields.indexOf("FILIACAO") > 0 ? fields.indexOf("FILIACAO") : fields.indexOf("FUAÇÃO");
       let dtNasc = '';
-
+      
       if(dtNascBegin !== -1 && dtNascEnd !== -1){
         for(let i=dtNascBegin; i < dtNascEnd; i++) {
           dtNasc += fields[i] + ' ';
@@ -91,12 +99,65 @@ export class FormularioPage {
           filiacao += fields[i] + ' ';
         }
       }
-      
+
       this.cliente.cliente.nomeCompleto = nomeCompleto;
-      this.cliente.cliente.tipoDocumento = 'CNH';
       this.cliente.cliente.numeroDocumento = rg.replace(/[|(– -]/g, '').substring(0, 9);
       this.cliente.cliente.cpf = cpf.replace(/ /g, '').substring(0, 14);
       this.cliente.cliente.dataNascimento = dtNasc.replace(/[ -]/g, '').substring(0, 10);
+    } else if(tipoDoc === "RG") {
+      //RG
+      let RGBegin = fields.indexOf("GERAL");
+      
+      let RGEnd = fields.indexOf("EXPEDIÇÃO") > 0 ? fields.indexOf("EXPEDIÇÃO") : fields.indexOf("EXPEDICAO");
+      let rg = '';
+
+      if(RGBegin !== -1 && RGEnd !== -1){
+        let add = fields[RGEnd -1] === "via" ? 2 : 0;
+        for(let i=RGBegin+1; i < RGEnd-add; i++) {
+          rg += fields[i] + ' ';
+        }
+      }
+
+      //Nome
+      let nomeBegin = fields.indexOf("NOME") > 0 ? fields.indexOf("NOME") : fields.indexOf("WOME");
+      
+      let nomeEnd = fields.indexOf("FILIAÇÃO") > 0 ? fields.indexOf("FILIAÇÃO") : fields.indexOf("FILIACAO");
+      let nomeCompleto = '';
+
+      if(nomeBegin !== -1 && nomeEnd !== -1){
+        for(let i=nomeBegin+1; i < nomeEnd; i++) {
+          nomeCompleto += fields[i] + ' ';
+        }
+      }
+
+      //Data Nascimento
+      let dtNascBegin = fields.indexOf("-", fields.indexOf("NASCIMENTO"));
+      
+      let dtNascEnd = fields.indexOf("DOC", dtNascBegin);
+      let dtNasc = '';
+
+      if(dtNascBegin !== -1 && dtNascEnd !== -1){
+        for(let i=dtNascBegin+2; i < dtNascEnd; i++) {
+          dtNasc += fields[i] + ' ';
+        }
+      }
+
+      //CPF
+      let cpfBegin = fields.indexOf("CPF");
+      
+      let cpfEnd = cpfBegin+4;
+      let cpf = '';
+
+      if(cpfBegin !== -1 && cpfEnd !== -1){
+        for(let i=cpfBegin+1; i < cpfEnd; i++) {
+          cpf += fields[i] + ' ';
+        }
+      }
+
+      this.cliente.cliente.nomeCompleto = nomeCompleto;
+      this.cliente.cliente.numeroDocumento = rg.replace(/ /g, '');
+      this.cliente.cliente.dataNascimento = dtNasc.replace(/ /g, '');
+      this.cliente.cliente.cpf = cpf.replace(/ /g, '');
     }
   }
 
