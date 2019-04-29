@@ -16,6 +16,7 @@ import { AngularFireStorageModule } from "angularfire2/Storage";
 import { AuthService } from '../providers/firebase/auth';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { firebaseConfig } from '../config';
+import { BluetoothSerial } from '@ionic-native/bluetooth-serial';
 
 //pages
 import { MyApp } from './app.component';
@@ -31,6 +32,7 @@ import { Formulario3Page } from '../pages/formulario3/formulario3';
 import { CadastraSenhaPage } from '../pages/cadastra-senha/cadastra-senha';
 import { ConfirmaSenhaPage } from '../pages/confirma-senha/confirma-senha';
 import { SmsConfirmPage } from '../pages/sms-confirm/sms-confirm';
+import { ReciboPage } from "../pages/recibo/recibo";
 
 //providers
 import { VisionProvider } from '../providers/vision/vision';
@@ -40,6 +42,7 @@ import { WatsonapiProvider } from '../providers/watsonapi/watsonapi';
 import { BuscaCepProvider } from '../providers/busca-cep/busca-cep';
 import { FirebaseServiceProvider } from '../providers/firebase-service/firebase-service';
 import { ClienteProvider } from '../providers/cliente/cliente';
+import { PrinterProvider } from '../providers/printer/printer';
 
 const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
 
@@ -57,7 +60,8 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     CaptureCompEndPage,
     CadastraSenhaPage,
     ConfirmaSenhaPage,
-    SmsConfirmPage
+    SmsConfirmPage,
+    ReciboPage
   ],
   imports: [
     BrowserModule,
@@ -94,7 +98,8 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     CaptureCompEndPage,
     CadastraSenhaPage,
     ConfirmaSenhaPage,
-    SmsConfirmPage
+    SmsConfirmPage,
+    ReciboPage
   ],
   providers: [
     AuthService,
@@ -111,7 +116,9 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     BuscaCepProvider,
     MediaCapture,
     FirebaseServiceProvider,
-    ClienteProvider
+    ClienteProvider,
+    PrinterProvider,
+    BluetoothSerial
   ]
 })
 export class AppModule {}
