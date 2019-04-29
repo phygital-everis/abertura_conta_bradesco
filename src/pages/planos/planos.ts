@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { NavController, NavParams, Slides } from 'ionic-angular';
 import { LocalStorageProvider } from "../../providers/local-storage/local-storage";
-import { ConfirmaSenhaPage } from "../confirma-senha/confirma-senha";
+import { TakePicturePage } from "../take-picture/take-picture";
 import { CustomPlanePage } from "../custom-plane/custom-plane";
 
  @Component({
@@ -25,7 +25,7 @@ export class PlanosPage {
   }
 
   confirmPacote(){
-    this.navCtrl.push(ConfirmaSenhaPage)
+    this.navCtrl.push(TakePicturePage)
 
   }
 

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { CadastraSenhaPage } from "../cadastra-senha/cadastra-senha";
+import { PlanosPage } from '../planos/planos';
 import { ClienteProvider } from "../../providers/cliente/cliente";
 
 
@@ -22,7 +22,7 @@ export class Formulario3Page {
 
   }
   goNext() {
-    this.navCtrl.push(CadastraSenhaPage)
+    this.navCtrl.push(PlanosPage)
   }
 
 }

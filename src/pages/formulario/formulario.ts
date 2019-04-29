@@ -17,7 +17,7 @@ export class FormularioPage {
   }
 
   ionViewDidLoad() {
-    let data = (this.navParams.get('data'));
+    /* let data = (this.navParams.get('data'));
 
     let fields = [];
    
@@ -30,7 +30,7 @@ export class FormularioPage {
    
     this.cliente.cliente.nomeCompleto = fields[17] + " " + fields[18] + " " + fields[19] + " " + fields[20];
     this.cliente.cliente.cpf = fields[33] + " " + fields[34] + " " + fields[35] + " " + fields[36] + " " + fields[37] + " " + fields[38] + " " + fields[39];
-    
+     */
      
   }
 

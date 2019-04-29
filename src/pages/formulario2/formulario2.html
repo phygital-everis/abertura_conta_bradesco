@@ -1,19 +1,19 @@
-<ion-header>
+<ion-header no-border>
   <ion-navbar>
-    <ion-title>
-      <ion-row>
-        <ion-col>
-          <img src="assets/imgs/bradesco_logo.png" alt="logo">
-        </ion-col>
-
-      </ion-row>
-    </ion-title>
+    <ion-row text-center class="logo">
+      <ion-col col-2 id="faixa-logo">
+        <img class="logo-img" src="assets/imgs/logo-bradesco.png" alt="logo">
+      </ion-col>
+      <ion-col col-10>
+        <h2>Proposta de abertura de conta</h2>
+      </ion-col>
+    </ion-row>
   </ion-navbar>
 </ion-header>
 <ion-content padding>
   <ion-row>
     <ion-col text-center>
-      <h2>Preencha os dados do seu Endereço</h2>
+      <h3>Dados do Endereço</h3>
     </ion-col>
   </ion-row>
 
@@ -22,14 +22,22 @@
       <ion-label floating>Endereço</ion-label>
       <ion-input [(ngModel)]="cliente.cliente.logradouro" type="text"></ion-input>
     </ion-item>
-    <ion-item>
-      <ion-label floating>Número</ion-label>
-      <ion-input [(ngModel)]="cliente.cliente.numero" type="text"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label floating>Complemento</ion-label>
-      <ion-input [(ngModel)]="cliente.cliente.complemento" type="text"></ion-input>
-    </ion-item>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label floating>Número</ion-label>
+          <ion-input [(ngModel)]="cliente.cliente.numero" type="text"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <ion-label floating>Complemento</ion-label>
+          <ion-input [(ngModel)]="cliente.cliente.complemento" type="text"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+   
+   
     <ion-item>
       <ion-label floating>Bairro</ion-label>
       <ion-input [(ngModel)]="cliente.cliente.bairro" type="text"></ion-input>
@@ -37,43 +45,62 @@
     <ion-item>
       <ion-label floating>Municipio</ion-label>
       <ion-input [(ngModel)]="cliente.cliente.municipio" type="text"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label>Estado</ion-label>
-      <ion-select [(ngModel)]="cliente.cliente.ufNascimento">
-        <ion-option value="sp">São Paulo</ion-option>
-        <ion-option value="rj">Rio de Janeiro</ion-option>
-        <ion-option value="es">Espirito Santo</ion-option>
-        <ion-option value="mg">Minas Gerais</ion-option>
-        <ion-option value="rs">Rio Grande do Sul</ion-option>
-        <ion-option value="sc">Santa Catarina</ion-option>
-      </ion-select>
-    </ion-item>
-    <ion-item>
-      <ion-label floating>Cep</ion-label>
-      <ion-input [(ngModel)]="cliente.cliente.cep" type="text"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label floating>Tipo de Residência</ion-label>
-      <ion-select [(ngModel)]="cliente.cliente.tipoResidencia">
-        <ion-option value="casa">Casa</ion-option>
-        <ion-option value="apartamento">Apartamento</ion-option>
-        <ion-option value="sobrado">Sobrado</ion-option>
-        
-      </ion-select>
-    </ion-item>
-    <ion-item>
-      <ion-label floating>Telefone</ion-label>
-      <ion-input [(ngModel)]="cliente.cliente.telefone" type="text"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label floating>Celular</ion-label>
-      <ion-input [(ngModel)]="cliente.cliente.celular" type="text"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label floating>E-mail</ion-label>
-      <ion-input [(ngModel)]="cliente.cliente.email" type="email"></ion-input>
-    </ion-item>
+    </ion-item>  
+
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label floating>Cep</ion-label>
+          <ion-input [(ngModel)]="cliente.cliente.cep" type="text"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+          <ion-item>
+            <ion-label>Estado</ion-label>
+            <ion-select [(ngModel)]="cliente.cliente.ufNascimento">
+              <ion-option value="sp">São Paulo</ion-option>
+              <ion-option value="rj">Rio de Janeiro</ion-option>
+              <ion-option value="es">Espirito Santo</ion-option>
+              <ion-option value="mg">Minas Gerais</ion-option>
+              <ion-option value="rs">Rio Grande do Sul</ion-option>
+              <ion-option value="sc">Santa Catarina</ion-option>
+            </ion-select>
+          </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label floating>Telefone</ion-label>
+          <ion-input [(ngModel)]="cliente.cliente.telefone" type="text"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <ion-label floating>Tipo de Residência</ion-label>
+          <ion-select [(ngModel)]="cliente.cliente.tipoResidencia">
+            <ion-option value="casa">Casa</ion-option>
+            <ion-option value="apartamento">Apartamento</ion-option>
+            <ion-option value="sobrado">Sobrado</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+          <ion-item>
+            <ion-label floating>Celular</ion-label>
+            <ion-input [(ngModel)]="cliente.cliente.celular" type="text"></ion-input>
+          </ion-item>
+      </ion-col>
+      <ion-col>
+          <ion-item>
+            <ion-label floating>E-mail</ion-label>
+            <ion-input [(ngModel)]="cliente.cliente.email" type="email"></ion-input>
+          </ion-item>
+      </ion-col>
+    </ion-row>
+   
     <ion-item>
       <ion-label floating>Ocupação</ion-label>
       <ion-input [(ngModel)]="cliente.cliente.celular" type="text"></ion-input>
@@ -81,6 +108,13 @@
 
   </ion-list>
 
-  <div padding>
-    <button ion-button full color="danger" (click)="goNext()">próximo</button></div>
+<ion-row>
+  <ion-col col-4></ion-col>
+  <ion-col col-4>
+    <button ion-button clear full color="danger" (click)="goNext()">
+      próximo
+    </button>
+  </ion-col>
+  <ion-col col-4></ion-col>
+</ion-row>
 </ion-content>
