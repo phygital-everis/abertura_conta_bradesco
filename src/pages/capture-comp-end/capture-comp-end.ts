@@ -43,11 +43,9 @@ export class CaptureCompEndPage {
 
       this.presentLoadingOptions();
 
-      /* this.vision.sendVision(imageData).subscribe((data) => {
-        this.navCtrl.push(FormularioPage, { data: data, tipo: this.tipoDoc });
-      }); */
-
-      this.navCtrl.push(Formulario2Page)
+      this.vision.sendVision(imageData).subscribe((data) => {
+        this.navCtrl.push(Formulario2Page, { data: data });
+      });
     }, (err) => {
       console.log(err);
       this.presentAlertConfirm();
