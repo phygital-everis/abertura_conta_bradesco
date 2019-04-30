@@ -31,7 +31,7 @@ export class FormularioPage {
       //Nome
       let nomeBegin = fields.indexOf("NOME") > 0 ? fields.indexOf("NOME") :
       fields.indexOf("WOME") > 0 ? fields.indexOf("WOME") : 
-      fields.indexOf("HABILITACAO");
+      fields.indexOf("HABILITACAO") > 0 ? fields.indexOf("HABILITACAO") : fields.indexOf("HABILITAÇÃO");
       
       let nomeEnd = fields.indexOf("DOC") > 0 ? fields.indexOf("DOC") : fields.indexOf("BOC");
       let nomeCompleto = '';
