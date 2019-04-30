@@ -1,32 +1,50 @@
-<ion-header>
+<ion-header no-border>
   <ion-navbar>
-    <ion-title>
-      <ion-row>
-        <ion-col>
-          <img src="assets/imgs/bradesco_logo.png" alt="logo">
-        </ion-col>
-      </ion-row>
-    </ion-title>
+    <ion-row text-center class="logo">
+      <ion-col id="faixa-logo">
+        <img class="logo-img" src="assets/imgs/logo-bradesco.png" alt="logo">
+      </ion-col>
+     
+    </ion-row>
   </ion-navbar>
 </ion-header>
 <ion-content padding>
   <ion-row>
     <ion-col text-center>
-      <h2>Conta aberta com sucesso</h2>
+      <h2>Parabéns!</h2>
     </ion-col>
   </ion-row>
-  <div padding>
   <ion-row>
     <ion-col>
-      Agência: 2237
-    </ion-col>
-    <ion-col>
-      Conta: 010003444-9
+     <p>A sua conta foi criada com sucesso</p>
     </ion-col>
   </ion-row>
-
-    <button ion-button full color="danger" (click)="prepareToPrint()">imprimir comprovante</button>
- 
-    <button ion-button full color="danger" (click)="goNext()">finalizar</button>
-  </div>
+  <ion-row>
+    <ion-col>
+      <p>Em instantes você receberá um SMS no telefone cadastrado com a confirmação</p>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <p>Seja bem vindo ao Banco Bradesco</p>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-4></ion-col>
+    <ion-col col-4>
+      <button ion-button clear full color="danger" (click)="prepareToPrint()">
+        imprimir comprovante
+      </button>
+    </ion-col>
+    <ion-col col-4></ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-4></ion-col>
+    <ion-col col-4>
+      <button ion-button clear full color="danger" (click)="goNext()">
+        finalizar
+      </button>
+    </ion-col>
+    <ion-col col-4></ion-col>
+  </ion-row>  
 </ion-content>

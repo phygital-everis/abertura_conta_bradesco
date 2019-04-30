@@ -14,7 +14,13 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
-
+h1{
+    font-size: 41px;
+    font-weight: bold;
+}
+h2{
+    font-size: 41px;
+}
 
     .header {
         background-color: #ffffff !important;
@@ -61,7 +67,20 @@
     }
 
     .content, .scroll-content{
-        padding: 0 !important;
+        //padding: 0 !important;
+    }
+
+    #faixa-logo{
+        width: 100%;
+    }
+
+    .logo-img{
+        width:256px;
+    }
+
+    .input{
+        border: 1px solid #4a4a4a;
+        border-radius: 25px;
     }
 
     .menu{
@@ -86,11 +105,10 @@
 
 
      .footer {
-        background-color: #CC092F !important;
         color: #ffffff;        
         .toolbar{
             .toolbar-background{
-                background-color: #CC092F !important;
+                background-color: #ffffff !important;
                 color: #ffffff; 
             }
         }
@@ -101,5 +119,15 @@
         .icon{
             margin-left: 10px;
         }
+    }
+
+    .button {
+        border-radius: 25px;
+        background-color: #CC092F; 
+        border-bottom: 4px solid #c40101;
+        width: 100%;
+        height: 44px !important;
+        font-size: 16px !important;
+        color: #ffffff;
     }
 

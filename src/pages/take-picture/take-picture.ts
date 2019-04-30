@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, LoadingController, AlertController } from 'ionic-angular';
 import { Camera, CameraOptions } from '@ionic-native/camera';
-import { CaptureDocPage } from "../../pages/capture-doc/capture-doc";
+import { CadastraSenhaPage } from "../cadastra-senha/cadastra-senha";
 import { HomePage } from '../home/home';
 import { DomSanitizer } from '@angular/platform-browser';
 import { LocalStorageProvider } from "../../providers/local-storage/local-storage";
@@ -91,7 +91,7 @@ export class TakePicturePage {
         {
           text: 'Confirmar',
           handler: () => {
-            this.navCtrl.push(CaptureDocPage);
+            this.navCtrl.push(CadastraSenhaPage);
           }
         }
       ]

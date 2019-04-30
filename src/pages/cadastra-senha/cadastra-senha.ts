@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import {PlanosPage} from '../planos/planos';
+import { ReciboPage} from '../recibo/recibo';
 import { ToastController } from 'ionic-angular';
 import { ClienteProvider } from "../../providers/cliente/cliente";
 
@@ -38,7 +38,7 @@ export class CadastraSenhaPage {
   
 
   goNext(){
-    this.navCtrl.push(PlanosPage)
+    this.navCtrl.push(ReciboPage)
   }
 
   presentToast(msg) {

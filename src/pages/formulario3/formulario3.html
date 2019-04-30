@@ -1,78 +1,152 @@
-<ion-header>
+<ion-header no-border>
   <ion-navbar>
-    <ion-title>
-      <ion-row>
-        <ion-col>
-          <img src="assets/imgs/bradesco_logo.png" alt="logo">
-        </ion-col>
-
-      </ion-row>
-    </ion-title>
+    <ion-row text-center class="logo">
+      <ion-col col-2 id="faixa-logo">
+        <img class="logo-img" src="assets/imgs/logo-bradesco.png" alt="logo">
+      </ion-col>
+      <ion-col col-10>
+        <h2>Proposta de abertura de conta</h2>
+      </ion-col>
+    </ion-row>
   </ion-navbar>
 </ion-header>
 <ion-content padding>
   <ion-row>
-    <ion-col text-center>
-      <h2>Formulário Pep</h2>
+    <ion-col>
+      <h3>Formulário Pep</h3>
     </ion-col>
   </ion-row>
 
   <ion-list>
-    <ion-item>
-      <ion-label floating>Você se declara PEP</ion-label>
-      <ion-input [(ngModel)]="cliente.cliente.seDeclaraPep" type="text"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label floating>Você possui relacionamento PEP</ion-label>
-      <ion-input [(ngModel)]="cliente.cliente.possuiRelacionamentoPep" type="text"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label floating>Início do exercício</ion-label>
-      <ion-input [(ngModel)]="cliente.cliente.inicioExercicio" type="text"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label floating>Final do exercício</ion-label>
-      <ion-input [(ngModel)]="cliente.cliente.terminoExercicio" type="text"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label floating>Possui ligação</ion-label>
-      <ion-input [(ngModel)]="cliente.cliente.possuiLigacao" type="text"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label floating>Ligação</ion-label>
-      <ion-input [(ngModel)]="cliente.cliente.ligacao" type="text"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label floating>Cargo</ion-label>
-      <ion-input [(ngModel)]="cliente.cliente.cargo" type="text"></ion-input>
-    </ion-item>
+    <ion-row>      
+      <ion-col col-6>          
+        <h3>Você se declara PEP?</h3>          
+      </ion-col>
+      <ion-col> 
+      </ion-col>
+      <ion-col>
+        <button ion-button clear color="danger" >Sim</button>
+      </ion-col>
+      <ion-col>
+        <button ion-button clear color="danger">Não</button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6>
+        <h3>Você possui relacionamento PEP?</h3>
+      </ion-col>
+      <ion-col>
+      </ion-col>
+      <ion-col>
+        <button ion-button clear color="danger">Sim</button>
+      </ion-col>
+      <ion-col>
+        <button ion-button clear color="danger">Não</button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label floating>Início do exercício</ion-label>
+          <ion-input [(ngModel)]="cliente.cliente.inicioExercicio" type="text"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+          <ion-item>
+            <ion-label floating>Final do exercício</ion-label>
+            <ion-input [(ngModel)]="cliente.cliente.terminoExercicio" type="text"></ion-input>
+          </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6>
+        <h3>Possui ligação?</h3>
+      </ion-col>
+      <ion-col>
+      </ion-col>
+      <ion-col>
+        <button ion-button clear color="danger">Sim</button>
+      </ion-col>
+      <ion-col>
+        <button ion-button clear color="danger">Não</button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label floating>Ligação</ion-label>
+          <ion-input [(ngModel)]="cliente.cliente.ligacao" type="text"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <ion-label floating>Cargo</ion-label>
+          <ion-input [(ngModel)]="cliente.cliente.cargo" type="text"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>    
+    
     <ion-item>
       <ion-label floating>Tipo de ligação</ion-label>
       <ion-input [(ngModel)]="cliente.cliente.tipoLigacao" type="text"></ion-input>
     </ion-item>
-    <ion-item>
-      <ion-label floating>Residência Fiscal em Outro País</ion-label>
-      <ion-input [(ngModel)]="cliente.cliente.residenciaFiscalOutroPais" type="text"></ion-input>
-    </ion-item>
+    <ion-row>
+      <ion-col col-6>
+        <h3>Residência Fiscal em Outro País?</h3>
+      </ion-col>
+      <ion-col>
+      </ion-col>
+      <ion-col>
+        <button ion-button clear color="danger">Sim</button>
+      </ion-col>
+      <ion-col>
+        <button ion-button clear color="danger">Não</button>
+      </ion-col>
+    </ion-row>
+   
     <ion-item>
       <ion-label floating>Referência</ion-label>
       <ion-input [(ngModel)]="cliente.cliente.referencia" type="text"></ion-input>
     </ion-item>
-    <ion-item>
-      <ion-label floating>País</ion-label>
-      <ion-input [(ngModel)]="cliente.cliente.pais" type="text"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label floating>Nif</ion-label>
-      <ion-input [(ngModel)]="cliente.cliente.nif" type="text"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label floating>Possui Relacionamento na Organização</ion-label>
-      <ion-input [(ngModel)]="cliente.cliente.propositoRelacaoNegocioOrganizacao" type="text"></ion-input>
-    </ion-item>
 
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label floating>País</ion-label>
+          <ion-input [(ngModel)]="cliente.cliente.pais" type="text"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+      <ion-item>
+        <ion-label floating>Nif</ion-label>
+        <ion-input [(ngModel)]="cliente.cliente.nif" type="text"></ion-input>
+      </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-6>
+        <h3>Possui Relacionamento na Organização?</h3>
+      </ion-col>
+      <ion-col>
+      </ion-col>
+      <ion-col>
+        <button ion-button clear color="danger">Sim</button>
+      </ion-col>
+      <ion-col>
+        <button ion-button clear color="danger">Não</button>
+      </ion-col>
+    </ion-row>
+   
   </ion-list>
 
-  <div padding>
-    <button ion-button full color="danger" (click)="goNext()">próximo</button></div>
+  <ion-row>
+    <ion-col col-4></ion-col>
+    <ion-col col-4>
+      <button ion-button clear full color="danger" (click)="goNext()">
+        próximo
+      </button>
+    </ion-col>
+    <ion-col col-4></ion-col>
+  </ion-row>
 </ion-content>
