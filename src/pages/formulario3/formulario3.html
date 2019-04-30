@@ -22,39 +22,33 @@
       <ion-col col-6>          
         <h3>Você se declara PEP?</h3>          
       </ion-col>
-      <ion-col> 
+      <ion-col col-3 class="col-btn">
+        <button ion-button clear color="danger" (click)="declaraPep('s')">Sim</button>
       </ion-col>
-      <ion-col>
-        <button ion-button clear color="danger" >Sim</button>
-      </ion-col>
-      <ion-col>
-        <button ion-button clear color="danger">Não</button>
+      <ion-col col-3 class="col-btn">
+        <button ion-button clear color="danger" (click)="declaraPep('n')">Não</button>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col col-6>
         <h3>Você possui relacionamento PEP?</h3>
       </ion-col>
-      <ion-col>
+      <ion-col col-3 class="col-btn">
+        <button ion-button clear color="danger" (click)="possuiRelPep('s')">Sim</button>
       </ion-col>
-      <ion-col>
-        <button ion-button clear color="danger">Sim</button>
-      </ion-col>
-      <ion-col>
-        <button ion-button clear color="danger">Não</button>
+      <ion-col col-3 class="col-btn">
+        <button ion-button clear color="danger" (click)="possuiRelPep('n')">Não</button>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
         <ion-item>
-          <ion-label floating>Início do exercício</ion-label>
-          <ion-input [(ngModel)]="cliente.cliente.inicioExercicio" type="text"></ion-input>
+          <ion-input [(ngModel)]="cliente.cliente.inicioExercicio" type="text" placeholder="Início do exercício"></ion-input>
         </ion-item>
       </ion-col>
       <ion-col>
           <ion-item>
-            <ion-label floating>Final do exercício</ion-label>
-            <ion-input [(ngModel)]="cliente.cliente.terminoExercicio" type="text"></ion-input>
+            <ion-input [(ngModel)]="cliente.cliente.terminoExercicio" type="text" placeholder="Final do exercício"></ion-input>
           </ion-item>
       </ion-col>
     </ion-row>
@@ -62,84 +56,74 @@
       <ion-col col-6>
         <h3>Possui ligação?</h3>
       </ion-col>
-      <ion-col>
+      <ion-col col-3 class="col-btn">
+        <button ion-button clear color="danger" (click)="possuiLigPep('s')">Sim</button>
       </ion-col>
-      <ion-col>
-        <button ion-button clear color="danger">Sim</button>
-      </ion-col>
-      <ion-col>
-        <button ion-button clear color="danger">Não</button>
+      <ion-col col-3 class="col-btn">
+        <button ion-button clear color="danger" (click)="possuiLigPep('n')">Não</button>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
         <ion-item>
-          <ion-label floating>Ligação</ion-label>
-          <ion-input [(ngModel)]="cliente.cliente.ligacao" type="text"></ion-input>
+          <ion-input [(ngModel)]="cliente.cliente.ligacao" type="text" placeholder="Ligação"></ion-input>
         </ion-item>
       </ion-col>
       <ion-col>
         <ion-item>
-          <ion-label floating>Cargo</ion-label>
-          <ion-input [(ngModel)]="cliente.cliente.cargo" type="text"></ion-input>
+          <ion-input [(ngModel)]="cliente.cliente.cargo" type="text" placeholder="Cargo"></ion-input>
         </ion-item>
       </ion-col>
     </ion-row>    
-    
-    <ion-item>
-      <ion-label floating>Tipo de ligação</ion-label>
-      <ion-input [(ngModel)]="cliente.cliente.tipoLigacao" type="text"></ion-input>
-    </ion-item>
+    <ion-row>
+      <ion-col>    
+        <ion-item>
+          <ion-input [(ngModel)]="cliente.cliente.tipoLigacao" type="text" placeholder="Tipo de ligação"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
     <ion-row>
       <ion-col col-6>
         <h3>Residência Fiscal em Outro País?</h3>
       </ion-col>
-      <ion-col>
+      <ion-col col-3 class="col-btn">
+        <button ion-button clear color="danger" (click)="residFiscal('s')">Sim</button>
       </ion-col>
-      <ion-col>
-        <button ion-button clear color="danger">Sim</button>
-      </ion-col>
-      <ion-col>
-        <button ion-button clear color="danger">Não</button>
+      <ion-col col-3 class="col-btn">
+        <button ion-button clear color="danger" (click)="residFiscal('n')">Não</button>
       </ion-col>
     </ion-row>
-   
-    <ion-item>
-      <ion-label floating>Referência</ion-label>
-      <ion-input [(ngModel)]="cliente.cliente.referencia" type="text"></ion-input>
-    </ion-item>
-
+    <ion-row>
+      <ion-col>   
+        <ion-item>
+          <ion-input [(ngModel)]="cliente.cliente.referencia" type="text" placeholder="Referência"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
     <ion-row>
       <ion-col>
         <ion-item>
-          <ion-label floating>País</ion-label>
-          <ion-input [(ngModel)]="cliente.cliente.pais" type="text"></ion-input>
+          <ion-input [(ngModel)]="cliente.cliente.pais" type="text" placeholder="País"></ion-input>
         </ion-item>
       </ion-col>
       <ion-col>
       <ion-item>
-        <ion-label floating>Nif</ion-label>
-        <ion-input [(ngModel)]="cliente.cliente.nif" type="text"></ion-input>
+        <ion-input [(ngModel)]="cliente.cliente.nif" type="text" placeholder="Nif"></ion-input>
       </ion-item>
       </ion-col>
     </ion-row>
-
     <ion-row>
       <ion-col col-6>
         <h3>Possui Relacionamento na Organização?</h3>
       </ion-col>
-      <ion-col>
+      <ion-col col-3 class="col-btn">
+        <button ion-button clear color="danger" (click)="relacOrg('s')">Sim</button>
       </ion-col>
-      <ion-col>
-        <button ion-button clear color="danger">Sim</button>
-      </ion-col>
-      <ion-col>
-        <button ion-button clear color="danger">Não</button>
+      <ion-col col-3 class="col-btn">
+        <button ion-button clear color="danger" (click)="relacOrg('n')">Não</button>
       </ion-col>
     </ion-row>
-   
   </ion-list>
-
   <ion-row>
     <ion-col col-4></ion-col>
     <ion-col col-4>

@@ -25,4 +25,24 @@ export class Formulario3Page {
     this.navCtrl.push(PlanosPage)
   }
 
+  declaraPep(op){
+    console.log(op);
+  }
+
+  possuiRelPep(op){
+    console.log(op);
+  }
+
+  possuiLigPep(op){
+    console.log(op);
+  }
+
+  residFiscal(op){
+    console.log(op);
+  }
+
+  relacOrg(op){
+    console.log(op);
+  }
+
 }
