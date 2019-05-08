@@ -14,20 +14,21 @@ page-home {
 
    .logo{
        margin-bottom:35px;
+       margin-top: 15%;
    }
 
 
    h1{
-       color:#909090;
-       font-size: 21px;
+       color:#58595b;
+       font-size: 41px;
        font-weight: bold;
    }
    h2{
-       color:#909090;
-       font-size: 21px;
+       color:#58595b;
+       font-size: 41px;
    }
     h3{
-       color:#909090;
+       color:#58595b;
        font-size: 16px;
    }
 
@@ -45,9 +46,34 @@ page-home {
         white-space: normal;
     }
 
-   
+    .button{
+        padding: 30px 0;
+        font-weight: normal;
+    }
 
     .button-inner{
-        font-size: 16px;
+        font-size: 41px;
     }
+
+ 
+    .title{
+        width: 100%;
+        text-align: center; 
+    }
+
+    .toolbar-title {
+        color: #58595b;
+    }
+
+     ion-input{ 
+            .text-input{ 
+                font-size: 23px; 
+            }
+        }
+
+    ion-footer{
+        margin-bottom: 3%;
+        
+    }
+
 }

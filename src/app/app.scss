@@ -20,6 +20,19 @@ h1{
 }
 h2{
     font-size: 41px;
+    color: #58595b;
+}
+
+.modal-wrapper {
+   left: 40%;
+    top: 8%;
+    position: absolute;
+    width: 55%;
+    height: 40%;
+}
+
+.logo ion-col{
+    padding-left: 2%;
 }
 
 .choosen{
@@ -70,9 +83,9 @@ h2{
         margin-bottom: 5px;
     }
 
-    .content, .scroll-content{
-        //padding: 0 !important;
-    }
+   .menu-img{
+       width: 50%;
+   }
 
     #faixa-logo{
         width: 100%;
@@ -123,6 +136,10 @@ h2{
         .icon{
             margin-left: 10px;
         }
+
+        img{
+            margin-left: 10px;
+        }
     }
 
     .button {
@@ -133,5 +150,15 @@ h2{
         height: 44px !important;
         font-size: 16px !important;
         color: #ffffff;
+        padding: 30px 0;
+        font-weight: normal;
+    }
+
+    .button-inner{
+        font-size: 41px;
+    }
+
+    .list-md, .list-md .item-input:last-child, .item-md, .item-block, .item-inner, .input-has-focus, .item-input-has-focus{
+        border: none !important;
     }
 

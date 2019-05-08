@@ -1,0 +1,25 @@
+page-cpf {
+    #inputCpf{
+        margin-top: 20%
+    }
+
+    #botaoValidar{
+        margin-top: 20%
+
+    }
+
+    .button-inner{
+        font-size: 40px;
+        text-transform: lowercase;
+        text-transform: capitalize;
+    }
+
+    .text-input, .text-input-md{
+            padding: 2%;
+    font-size: 30px;
+    }
+
+    ion-input{ 
+            .text-input{ text-align: center; }
+        }
+}

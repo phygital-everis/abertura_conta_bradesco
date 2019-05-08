@@ -1,0 +1,48 @@
+<ion-header no-border>
+  <ion-navbar>
+    <ion-row text-left class="logo">
+      <ion-col col-2 id="faixa-logo">
+        <img class="logo-img" src="assets/imgs/bradesco_logo.png" alt="logo">
+      </ion-col>
+      <ion-col col-8>
+        <h2>Proposta de abertura de conta</h2>
+      </ion-col>
+      <ion-col col-2 (click)="presentDialogMenuModal()">
+        <img class="menu-img" src="assets/imgs/menu.png" alt="menu">
+      </ion-col>
+    </ion-row>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+ 
+  <ion-row id="inputCpf">
+    <ion-col col-1></ion-col>
+    <ion-col col-10 text-center>
+      <h2>Digite o número do CPF do cliente</h2>
+    </ion-col>
+    <ion-col col-1></ion-col>
+  </ion-row>
+  <ion-list>
+    <ion-row >
+      <ion-col col-1></ion-col>
+      <ion-col col-10>
+        <ion-item>
+          <ion-input [(ngModel)]="cpf" type="text" (change)="cpfOk = true" placeholder="Digite seu CPF" [brmasker]="{mask:'000.000.000-00', len:14}">
+          </ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col col-1></ion-col>
+    </ion-row>
+    
+
+  </ion-list>
+  <ion-row id="botaoValidar">
+    <ion-col col-4></ion-col>
+    <ion-col col-4>
+      <button ion-button clear full color="danger" (click)="validaCpf()" [disabled]="!cpfOk">
+        Validar
+      </button>
+    </ion-col>
+    <ion-col col-4></ion-col>
+  </ion-row>
+</ion-content>

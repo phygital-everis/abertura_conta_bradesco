@@ -1,0 +1,76 @@
+<ion-header no-border>
+  <ion-navbar>
+    <ion-row text-center class="logo">
+      <ion-col col-3 id="faixa-logo">
+        <img class="logo-img" src="assets/imgs/atendente.png" alt="logo">
+      </ion-col>
+      <ion-col col-7 text-left>
+        <h1>Correspondente</h1>
+        <h2>Magalli Tavares da Silva</h2>
+      </ion-col>
+      <ion-col col-2 (click)="presentDialogMenuModal()">
+          <img class="menu-img" src="assets/imgs/menu.png" alt="menu">
+      </ion-col>
+    </ion-row>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+<div class="card" (click)="goToCpfPage()">
+    <ion-row>        
+        <ion-col col-2>
+          <ion-icon name="list-box" item-start></ion-icon>
+        </ion-col>
+        <ion-col col-10 >
+          <h2>Abrir nova Proposta</h2>
+        </ion-col>
+    </ion-row>
+</div>
+<div class="card">
+  <ion-row>
+    <ion-col col-2>
+      <ion-icon name="clipboard" item-start></ion-icon>
+    </ion-col>
+    <ion-col col-10>
+      <h2>Continuar uma Proposta</h2>
+    </ion-col>
+  </ion-row>
+</div>
+<div class="card">
+  <ion-row>
+
+    <ion-col col-2>
+      <ion-icon name="analytics" item-start></ion-icon>
+    </ion-col>
+    <ion-col col-10>
+      <h2>Análise de Dashboard</h2>
+    </ion-col>
+
+  </ion-row>
+</div>
+<div class="card">
+  <ion-row>
+
+    <ion-col col-2>
+      <ion-icon name="chatboxes" item-start></ion-icon>
+    </ion-col>
+    <ion-col col-10>
+      <h2>Suporte Técnico</h2>
+    </ion-col>
+
+  </ion-row>
+</div>
+</ion-content>
+<ion-footer no-border>
+  <ion-toolbar>
+    <ion-row>
+      <ion-col col-2>
+        <img  src="assets/imgs/bradesco_logo.png" alt="logo">
+      </ion-col>
+      <ion-col col-10>
+        <ion-title style="margin-top: 50px">Polo de Atendimento: Supermercado Bergamini</ion-title>
+        <ion-title>Endereço: Av. Luis Stamatis, n&#176;123 - São Paulo</ion-title>
+      </ion-col>
+    </ion-row>
+    
+  </ion-toolbar>
+</ion-footer>

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { LocalStorageProvider } from "../../providers/local-storage/local-storage";
 import { AuthService } from '../../providers/firebase/auth';
-import { CaptureDocPage } from "../../pages/capture-doc/capture-doc";
+import { MenuInicialPage } from "../../pages/menu-inicial/menu-inicial";
 
 
 @Component({
@@ -29,7 +29,7 @@ export class HomePage {
   
       this.auth.signInWithEmail(this.userCode, this.userPass)
       .then(
-        () => this.navCtrl.push(CaptureDocPage),
+        () => this.navCtrl.push(MenuInicialPage),
         error => {
           this.loginError = 'Usuário ou senha inválidos';
           console.log(error);
@@ -42,7 +42,7 @@ export class HomePage {
     }
 
     joinChat() {
-      this.navCtrl.push(CaptureDocPage);
+      this.navCtrl.push(MenuInicialPage);
     }
 
 }
