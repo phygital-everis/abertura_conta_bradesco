@@ -1,0 +1,64 @@
+<ion-header no-border>
+  <ion-navbar>
+    <ion-row text-left class="logo">
+      <ion-col col-2 id="faixa-logo">
+        <img class="logo-img" src="assets/imgs/bradesco_logo.png" alt="logo">
+      </ion-col>
+      <ion-col col-8>
+        <h2>Proposta de abertura de conta</h2>
+      </ion-col>
+      <ion-col col-2 (click)="presentDialogMenuModal()">
+        <img class="menu-img" src="assets/imgs/menu.png" alt="menu">
+      </ion-col>
+    </ion-row>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <h2>
+    Oferta de pre-aprovados
+  </h2>
+  <ion-list class="list">
+
+    <div class="options"></div>
+    
+    <div class="values">
+      <h2>R$  {{lme}} </h2>
+    </div>
+    <ion-item>
+      <ion-range min="0" max="1000" [(ngModel)]="lme" color="danger">
+        <ion-label slot="start">0</ion-label>
+        <ion-label slot="end">1000</ion-label>
+      </ion-range>
+    </ion-item>
+
+    
+    <div class="values">
+      <h2>R$ {{chequeEspecial}}</h2>
+    </div>
+    <ion-item>
+      <ion-range min="0" max="500" [(ngModel)]="chequeEspecial" color="danger">
+        <ion-label slot="start">0</ion-label>
+        <ion-label slot="end">500</ion-label>
+      </ion-range>
+    </ion-item>
+    
+    
+    <div class="values">
+      <h2>R$ {{cartaoCredito}}</h2>
+    </div>
+    <ion-item>
+      <ion-range min="0" max="1500" [(ngModel)]="cartaoCredito"  color="danger">
+        <ion-label slot="start">0</ion-label>
+        <ion-label slot="end">1500</ion-label>
+      </ion-range>
+    </ion-item>
+
+  </ion-list>
+
+  <div class="footer">
+    <button class="next-button" ion-button color="danger">Próximo</button>
+  </div>
+
+</ion-content>
