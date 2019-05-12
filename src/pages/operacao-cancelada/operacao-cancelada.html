@@ -14,34 +14,20 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding text-center>
-  <ion-row>
-    <ion-col></ion-col>
-    <ion-col><ion-icon name="checkmark-circle"></ion-icon></ion-col>
-    <ion-col></ion-col>
-  </ion-row>
-  <ion-row>
+ 
+  <ion-row id="main">
     <ion-col col-2></ion-col>
-    <ion-col col-8><h3>Cliente Elegível</h3></ion-col>
-    <ion-col col-2></ion-col>
-  </ion-row>
-  <ion-row>
     <ion-col>
-      <p>O Cliente está elegível e pode prosseguir com a abertura de sua conta e usufruir de outros produtos e serviços
-      </p>
+      <h2>A Operação foi cancelada com sucesso
+      </h2>
     </ion-col>
+    <ion-col col-2></ion-col>
   </ion-row>
 
   <ion-row id="botaoValidar">
     <ion-col col-2></ion-col>
-    <ion-col col-4>
-      <button ion-button clear full color="danger">
-        Prosseguir
-      </button>
-    </ion-col>
-    <ion-col col-4>
-      <button ion-button clear full color="danger" (click)="presentConfirmModal()">
-        Desistir
-      </button>
+    <ion-col col-8>
+     <p (click)="goToMenuInicial()"><ion-icon name="refresh"></ion-icon>Voltar ao Menu</p>
     </ion-col>
     <ion-col col-2></ion-col>
   </ion-row>

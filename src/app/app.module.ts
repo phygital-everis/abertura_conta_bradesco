@@ -38,6 +38,8 @@ import { CpfPage } from "../pages/cpf/cpf";
 import { DialogMenuPage } from "../pages/dialog-menu/dialog-menu";
 import { ClientElegivelPage } from "../pages/client-elegivel/client-elegivel";
 import { ClientNaoElegivelPage } from "../pages/client-nao-elegivel/client-nao-elegivel";
+import { OperacaoCanceladaPage } from "../pages/operacao-cancelada/operacao-cancelada";
+import { ModalConfirmPage } from "../pages/modal-confirm/modal-confirm";
 
 //providers
 import { VisionProvider } from '../providers/vision/vision';
@@ -48,6 +50,7 @@ import { BuscaCepProvider } from '../providers/busca-cep/busca-cep';
 import { FirebaseServiceProvider } from '../providers/firebase-service/firebase-service';
 import { ClienteProvider } from '../providers/cliente/cliente';
 import { PrinterProvider } from '../providers/printer/printer';
+import { ValidaCpfProvider } from '../providers/valida-cpf/valida-cpf';
 
 const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
 
@@ -79,7 +82,9 @@ class CameraMock extends Camera {
     CpfPage,
     DialogMenuPage,
     ClientElegivelPage,
-    ClientNaoElegivelPage
+    ClientNaoElegivelPage,
+    OperacaoCanceladaPage,
+    ModalConfirmPage
   ],
   imports: [
     BrowserModule,
@@ -122,7 +127,9 @@ class CameraMock extends Camera {
     CpfPage,
     DialogMenuPage,
     ClientElegivelPage,
-    ClientNaoElegivelPage
+    ClientNaoElegivelPage,
+    OperacaoCanceladaPage,
+    ModalConfirmPage
   ],
   providers: [
     AuthService,
@@ -140,7 +147,8 @@ class CameraMock extends Camera {
     FirebaseServiceProvider,
     ClienteProvider,
     PrinterProvider,
-    BluetoothSerial
+    BluetoothSerial,
+    ValidaCpfProvider
   ]
 })
 export class AppModule {}

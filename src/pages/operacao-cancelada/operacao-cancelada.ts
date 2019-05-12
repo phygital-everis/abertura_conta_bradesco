@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { HomePage } from "../home/home";
 import { MenuInicialPage } from "../menu-inicial/menu-inicial";
 
+
 @Component({
-  selector: 'page-dialog-menu',
-  templateUrl: 'dialog-menu.html',
+  selector: 'page-operacao-cancelada',
+  templateUrl: 'operacao-cancelada.html',
 })
-export class DialogMenuPage {
+export class OperacaoCanceladaPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -15,17 +15,8 @@ export class DialogMenuPage {
   ionViewDidLoad() {
   }
 
-  goToMenu(){
+  goToMenuInicial() {
     this.navCtrl.push(MenuInicialPage)
-  }
-
-  exit(){
-    this.navCtrl.push(HomePage)
-
-  }
-
-  goBack() {
-    this.navCtrl.pop();
   }
 
 }

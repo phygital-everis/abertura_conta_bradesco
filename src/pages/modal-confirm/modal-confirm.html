@@ -1,0 +1,24 @@
+<ion-content padding>
+  <ion-list no-lines text-center>
+    <ion-row>
+      <ion-col>
+        <h2><ion-icon name="alert"></ion-icon>  Deseja realmente desistir da operação?</h2>
+      </ion-col>
+    </ion-row>
+    <ion-row id="botaoValidar">
+      <ion-col col-1></ion-col>
+      <ion-col col-5>
+        <button ion-button clear full color="danger" (click)="goToMenuInicial()">
+          Sim
+        </button>
+      </ion-col>
+      <ion-col col-5>
+        <button ion-button clear full color="danger" >
+          Não
+        </button>
+      </ion-col>
+      <ion-col col-1></ion-col>
+    </ion-row>
+  </ion-list>
+  <p id="fecharBotao" (click)="goBack()">fechar (X)</p>
+</ion-content>

@@ -11,5 +11,13 @@ page-dialog-menu {
    ion-icon{
         margin-right: 20px;
    }
+
+   #fecharBotao{
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        color: #ffffff;
+        font-size: 30px;
+   }
     
 }
