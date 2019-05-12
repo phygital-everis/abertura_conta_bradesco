@@ -1,0 +1,38 @@
+page-pre-approved-customer {
+    ion-content {
+        h3 {
+            font-size: 30px;
+            color: #58595b;
+            margin-top: 34px;
+        }
+        .list {
+            
+            margin: 245px 0px 30px 140px;
+            width: 70%;
+
+            ion-item {
+                margin-bottom: 150px;
+            }
+        }
+
+        button {
+            width: 100px;
+            margin: 0 358px 0 335px;
+        }
+
+        .footer {
+            width: 30%;
+            .next-button {
+                left: 112%;
+            }
+        }
+
+        .values {
+            position: relative;
+            left: 40%;
+            h2 {
+                color: #e2193d;
+            }
+        }
+    }
+}
