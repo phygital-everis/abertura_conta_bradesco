@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
 import { ModalController, NavController, NavParams } from 'ionic-angular';
 import { DialogMenuPage } from "../dialog-menu/dialog-menu";
-import { ModalConfirmPage } from "../modal-confirm/modal-confirm";
-import { PreApprovedCustomerPage } from "../pre-approved-customer/pre-approved-customer";
+import { CaptureDocPage } from "../capture-doc/capture-doc";
 
 @Component({
-  selector: 'page-client-elegivel',
-  templateUrl: 'client-elegivel.html',
+  selector: 'page-pre-approved-card',
+  templateUrl: 'pre-approved-card.html',
 })
-export class ClientElegivelPage {
+export class PreApprovedCardPage {
+
+  public cartao = [false,false,false,false]
 
   constructor(
     public navCtrl: NavController,
@@ -25,14 +26,14 @@ export class ClientElegivelPage {
     dialogMenuModal.present();
   }
 
-  presentConfirmModal(){
-    let dialogMenuModal = this.modalCtrl.create(ModalConfirmPage);
-    dialogMenuModal.present();
+  selectCard(card){
+
+    this.cartao[card] = !this.cartao[card] 
+
   }
 
   goNext(){
-    this.navCtrl.push(PreApprovedCustomerPage)
+    this.navCtrl.push(CaptureDocPage)
   }
-  
 
 }

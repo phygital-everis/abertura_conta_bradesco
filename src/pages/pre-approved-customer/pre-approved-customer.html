@@ -16,49 +16,93 @@
 
 
 <ion-content padding>
-  <h2>
-    Oferta de pre-aprovados
-  </h2>
-  <ion-list class="list">
-
-    <div class="options"></div>
+  <h3>
+    Oferta de pré-aprovados
+  </h3>  
     
-    <div class="values">
-      <h2>R$  {{lme}} </h2>
+      <ion-row>
+        <ion-col text-center>
+          <h2>Limite</h2>
+        </ion-col>
+      </ion-row>
+    <div class="produtos">
+      <ion-row class="headerProduct">
+        <ion-col col-1></ion-col>
+        <ion-col col-7 class="values">
+            <h2>Disponível R$ 1.000,00 </h2>
+        </ion-col>
+        <ion-col col-3>
+          <button class="naoContrataButton" ion-button (click)="noLme()">não contratar</button>
+        </ion-col>
+        <ion-col col-1></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col text-center>
+          <h2> R$ {{lme}},00 </h2>
+          <ion-range min="0" max="1000" [(ngModel)]="lme" color="danger">
+          <ion-label range-left>0</ion-label>
+          <ion-label range-right>1000</ion-label>
+          </ion-range>
+        </ion-col>
+      </ion-row>
     </div>
-    <ion-item>
-      <ion-range min="0" max="1000" [(ngModel)]="lme" color="danger">
-        <ion-label slot="start">0</ion-label>
-        <ion-label slot="end">1000</ion-label>
-      </ion-range>
-    </ion-item>
 
-    
-    <div class="values">
-      <h2>R$ {{chequeEspecial}}</h2>
+    <ion-row>
+      <ion-col text-center>
+        <h2>Cheque Especial</h2>
+      </ion-col>
+    </ion-row>
+    <div class="produtos">
+      <ion-row class="headerProduct">
+        <ion-col col-1></ion-col>
+        <ion-col col-7 class="values">
+          <h2>Disponível R$ 1.000,00 </h2>
+        </ion-col>
+        <ion-col col-3>
+          <button class="naoContrataButton" ion-button (click)="noCheque()">não contratar</button>
+        </ion-col>
+        <ion-col col-1></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col text-center>
+          <h2> R$ {{chequeEspecial}},00 </h2>
+          <ion-range min="0" max="1000" [(ngModel)]="chequeEspecial" color="danger">
+            <ion-label range-left>0</ion-label>
+            <ion-label range-right>1000</ion-label>
+          </ion-range>
+        </ion-col>
+      </ion-row>
     </div>
-    <ion-item>
-      <ion-range min="0" max="500" [(ngModel)]="chequeEspecial" color="danger">
-        <ion-label slot="start">0</ion-label>
-        <ion-label slot="end">500</ion-label>
-      </ion-range>
-    </ion-item>
-    
-    
-    <div class="values">
-      <h2>R$ {{cartaoCredito}}</h2>
+
+    <ion-row>
+      <ion-col text-center>
+        <h2>Cartão de Crédito</h2>
+      </ion-col>
+    </ion-row>
+    <div class="produtos">
+      <ion-row class="headerProduct">
+        <ion-col col-1></ion-col>
+        <ion-col col-7 class="values">
+          <h2>Disponível R$ 1.000,00 </h2>
+        </ion-col>
+        <ion-col col-3>
+          <button class="naoContrataButton" ion-button (click)="noCartao()">não contratar</button>
+        </ion-col>
+        <ion-col col-1></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col text-center>
+          <h2> R$ {{cartaoCredito}},00 </h2>
+          <ion-range min="0" max="1000" [(ngModel)]="cartaoCredito" color="danger">
+            <ion-label range-left>0</ion-label>
+            <ion-label range-right>1000</ion-label>
+          </ion-range>
+        </ion-col>
+      </ion-row>
     </div>
-    <ion-item>
-      <ion-range min="0" max="1500" [(ngModel)]="cartaoCredito"  color="danger">
-        <ion-label slot="start">0</ion-label>
-        <ion-label slot="end">1500</ion-label>
-      </ion-range>
-    </ion-item>
-
-  </ion-list>
-
-  <div class="footer">
-    <button class="next-button" ion-button color="danger">Próximo</button>
+   
+      <div class="footer">
+    <button class="next-button" ion-button color="danger" (click)="goNext()">Avançar</button>
   </div>
 
 </ion-content>

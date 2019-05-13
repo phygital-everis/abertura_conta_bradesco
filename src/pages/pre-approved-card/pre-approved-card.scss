@@ -1,5 +1,5 @@
-page-pre-approved-customer {
-     padding-left: 5%;
+page-pre-approved-card {
+ padding-left: 5%;
         padding-right: 5%;
     ion-content {
        
@@ -7,6 +7,12 @@ page-pre-approved-customer {
             font-size: 30px;
             color: #58595b;
             margin-top: 34px;
+        }
+        h4 {
+            font-size: 20px;
+            color: #58595b;
+            margin-top: 34px;
+            margin-bottom: 30px;
         }
         .list {
             
@@ -31,27 +37,32 @@ page-pre-approved-customer {
             }
         }
 
-        .values {
-           
-            h2 {
-                color: #ffffff;
-                font-size: 30px;
+      
+
+        .produtos{
+            margin-bottom: 5%;
+            a{
+                color:#4a4a4a;
+                margin-top:5%;
+                font-size: 20px;
+            }
+            ion-icon{
+                color:#4a4a4a;
+                margin-top:-1%;
+                margin-left: 20%;
+                font-size: 60px;
+            }
+
+            .logo-card{
+                    margin-top: 10%;
+                    width: 60%;
             }
         }
 
-        .produtos{
-            border: solid 1px #979797;
-            border-radius: 25px;
-            
-            padding-bottom: 3%;
-        }
-
         .headerProduct{
-            padding-top: 3%;
-            background-color: #979797;
+            background-color: #c9c9c9;
             border: solid 1px #979797;
-            border-top-left-radius: 25px;
-            border-top-right-radius: 25px;
+            border-radius: 10px;
         }   
         
         ion-label{

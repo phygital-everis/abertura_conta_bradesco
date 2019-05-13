@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { ModalController,NavController, NavParams } from 'ionic-angular';
+import { DialogMenuPage } from "../dialog-menu/dialog-menu";
+import { PreApprovedCardPage} from "../pre-approved-card/pre-approved-card";
 
-/**
- * Generated class for the PreApprovedCustomerPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @Component({
   selector: 'page-pre-approved-customer',
@@ -14,18 +10,39 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class PreApprovedCustomerPage {
 
-  lme: number = 0;
-  chequeEspecial: number = 0;
-  cartaoCredito: number = 0;
+  lme: number = 1000;
+  chequeEspecial: number = 1000;
+  cartaoCredito: number = 1000;
   
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    public modalCtrl: ModalController
+) {
   }
 
   ionViewDidLoad() {
   }
 
-  increasceValue() {
+  presentDialogMenuModal() {
+    let dialogMenuModal = this.modalCtrl.create(DialogMenuPage);
+    dialogMenuModal.present();
+  }
 
+  goNext(){
+    this.navCtrl.push(PreApprovedCardPage)
+  }
+
+  noLme(){
+    this.lme = 0
+  }
+
+  noCheque(){
+    this.chequeEspecial = 0
+  }
+
+  noCartao(){
+    this.cartaoCredito = 0
   }
 
 }

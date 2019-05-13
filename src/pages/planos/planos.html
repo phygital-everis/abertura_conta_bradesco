@@ -73,14 +73,18 @@
 
 </ion-content>
 
-<ion-footer (click)="confirmPacote()" *ngIf = "plano !== '' ">
+
+<ion-footer (click)="confirmPacote()" *ngIf="plano !== '' ">
   <ion-toolbar>
     <ion-row>
-      <ion-col text-center>
-        <button ion-button clear color="primary">
-         Confirmar <ion-icon name="md-arrow-forward"></ion-icon>
+      <ion-col col-4></ion-col>
+      <ion-col col-4>
+        <button ion-button clear full color="primary" icon-left>
+          <ion-icon name="md-arrow-forward"></ion-icon>
+        Confirmar
         </button>
       </ion-col>
+      <ion-col col-4></ion-col>
     </ion-row>
   </ion-toolbar>
 </ion-footer>
