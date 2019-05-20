@@ -1,0 +1,43 @@
+<ion-header no-border>
+  <ion-navbar>
+    <ion-row text-left class="logo">
+      <ion-col col-2 id="faixa-logo">
+        <img class="logo-img" src="assets/imgs/bradesco_logo.png" alt="logo">
+      </ion-col>
+      <ion-col col-8>
+        <h2>Proposta de abertura de conta</h2>
+      </ion-col>
+      <ion-col col-2 (click)="presentDialogMenuModal()">
+        <img class="menu-img" src="assets/imgs/menu.png" alt="menu">
+      </ion-col>
+    </ion-row>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-row>
+    <h3>
+      Tipo de conta e Forma de Movimentação
+    </h3>  
+  </ion-row>
+  <div class="select-options-account-type">
+    <ion-item>
+      <ion-label>Tipo da Conta</ion-label>
+      <ion-select id="ionSelectAccTp" interface="popover" placeholder="Selecionar">
+        <ion-option value="individual">00 - Individual</ion-option>
+        <ion-option value="conjunta">11 a 19 Conjunta E/OU</ion-option>
+        <ion-option value="conjunta2">21 a 29 Conjunta E</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Forma de Movimentação</ion-label>
+      <ion-select id="ionSelectMovType" interface="popover" placeholder="Selecionar">
+        <ion-option value="Isolada">Isolada</ion-option>
+        <ion-option value="conjunta">Conjunta</ion-option>
+        <ion-option value="procuracao">Por procuração</ion-option>
+      </ion-select>
+    </ion-item>
+  </div>
+</ion-content>

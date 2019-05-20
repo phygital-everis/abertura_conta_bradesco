@@ -1,0 +1,78 @@
+page-account-type {
+    h3 {
+        font-family: Roboto;
+        font-size: 30px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: -0.8px;
+        text-align: center;
+        color: #58595b;
+        position: absolute;
+        left: 5%;
+    }
+
+    .select-options-account-type {
+        margin-top: 56px;
+        width: 100%;
+        position: absolute;
+        ion-item {
+            margin-top: 83px;
+            #ionSelectAccTp {
+                position: absolute;
+                left: 26%;
+                width: 100%;
+            }
+
+            #ionSelectMovType {
+                position: absolute;
+                left: 40%;
+                width: 100%;
+            }
+            ion-select {
+                width: 352px;
+                border-radius: 30.5px;
+                background-color: #e7e7e7;
+                border: solid 1px #4a4a4a;
+
+                .select-icon {
+                    right: 25px;
+                }
+            }
+            ion-label {
+                margin-left: 25px;
+                font-family: Roboto;
+                font-size: 23px;
+                font-weight: normal;
+                color: #4a4a4a;
+            }
+        }
+    }
+}
+
+ion-popover {
+    .popover-wrapper {
+        .popover-content {
+            width: 352px!important;
+            overflow-y: hidden;
+            .popover-viewport {
+                ng-component {
+                    ion-list {
+                        ion-item {
+                            background-color: #e7e7e7!important;
+                            .item-inner {
+                                ion-radio {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .popover-arrow {
+            display: none;
+        }
+    }
+}
