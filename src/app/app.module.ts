@@ -35,6 +35,8 @@ import { SmsConfirmPage } from '../pages/sms-confirm/sms-confirm';
 import { ReciboPage } from "../pages/recibo/recibo";
 import { MenuInicialPage } from "../pages/menu-inicial/menu-inicial";
 import { CpfPage } from "../pages/cpf/cpf";
+import { packageDetailsPage } from "../pages/package-details/package-details";
+import { packageComparativePage } from "../pages/package-comparative/package-comparative";
 import { DialogMenuPage } from "../pages/dialog-menu/dialog-menu";
 import { ClientElegivelPage } from "../pages/client-elegivel/client-elegivel";
 import { ClientNaoElegivelPage } from "../pages/client-nao-elegivel/client-nao-elegivel";
@@ -78,6 +80,8 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     ReciboPage,
     MenuInicialPage,
     CpfPage,
+    packageDetailsPage,
+    packageComparativePage,
     DialogMenuPage,
     ClientElegivelPage,
     ClientNaoElegivelPage,
@@ -128,6 +132,8 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     ReciboPage,
     MenuInicialPage,
     CpfPage,
+    packageDetailsPage,
+    packageComparativePage,
     DialogMenuPage,
     ClientElegivelPage,
     ClientNaoElegivelPage,
