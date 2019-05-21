@@ -1,0 +1,125 @@
+<ion-header no-border>
+    <ion-navbar>
+      <ion-row text-center class="logo">
+        <ion-col col-2 id="faixa-logo">
+          <img class="logo-img" src="assets/imgs/bradesco_logo.png" alt="logo">
+        </ion-col>
+        <ion-col col-10>
+          <h2>Proposta de abertura de conta</h2>
+        </ion-col>
+      </ion-row>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    
+    <ion-row>
+        <h3 class="page-title">
+          Adesão a Cestas de Serviços
+        </h3>
+        <p id="backAnchor">
+            <a href="">Voltar</a>
+        </p>
+    </ion-row>
+    
+    <div class="container-menu">
+        <div class="container-buttons">
+            <button>
+                Cesta/Pacote de Serviços
+            </button>
+            <button>
+                Mensalidade
+            </button>
+            <button [disabled]="!plan" [ngClass]="{'disabled': !plan}" (click)="checkAnswer()">
+                Comparar
+            </button>
+        </div>
+    </div>
+    
+    <div class="services-lst">
+        <ion-list radio-group [(ngModel)]="plan">
+
+            <ion-item>
+                <ion-radio value="Bradesco Expresso 6"></ion-radio>
+                <ion-label>Bradesco Expresso 6</ion-label>
+                <ion-label class="align-price">R$ 32,50</ion-label>
+                <ion-label>
+                    <a href="">Ver detalhes</a>
+                </ion-label>
+            </ion-item>
+
+            <ion-item>
+                <ion-radio value="Bradesco Expresso 5"></ion-radio>
+                <ion-label>Bradesco Expresso 5</ion-label>
+                <ion-label class="align-price">R$ 25,20</ion-label>
+                <ion-label>
+                    <a href="">Ver detalhes</a>
+                </ion-label>
+            </ion-item>
+
+            <ion-item>
+                <ion-radio value="Bradesco Expresso 4"></ion-radio>
+                <ion-label>Bradesco Expresso 4</ion-label>
+                <ion-label class="align-price">R$ 19,70</ion-label>
+                <ion-label>
+                    <a href="">Ver detalhes</a>
+                </ion-label>
+            </ion-item>
+
+            <ion-item>
+                <ion-radio value="Beneficiário 1"></ion-radio>
+                <ion-label>Beneficiário 1</ion-label>
+                <ion-label class="align-price">R$ 15,00</ion-label>
+                <ion-label>
+                    <a href="">Ver detalhes</a>
+                </ion-label>
+            </ion-item>
+
+            <ion-item>
+                <ion-radio value="Beneficiário 2"></ion-radio>
+                <ion-label>Beneficiário 2</ion-label>
+                <ion-label class="align-price">R$ 22,00</ion-label>
+                <ion-label>
+                    <a href="">Ver detalhes</a>
+                </ion-label>
+            </ion-item>
+
+            <ion-item>
+                <ion-radio value="Serviços Prioritários I"></ion-radio>
+                <ion-label>Serviços Prioritários I</ion-label>
+                <ion-label class="align-price">R$ 12,45</ion-label>
+                <ion-label>
+                    <a href="">Ver detalhes</a>
+                </ion-label>
+            </ion-item>
+
+            <ion-item>
+                <ion-radio value="Serviços Prioritários II"></ion-radio>
+                <ion-label>Serviços Prioritários II</ion-label>
+                <ion-label class="align-price">R$ 19,80</ion-label>
+                <ion-label>
+                    <a href="">Ver detalhes</a>
+                </ion-label>
+            </ion-item>
+
+            <ion-item>
+                <ion-radio value="Serviços Prioritários III"></ion-radio>
+                <ion-label>Serviços Prioritários III</ion-label>
+                <ion-label class="align-price">R$ 25,80</ion-label>
+                <ion-label>
+                    <a href="">Ver detalhes</a>
+                </ion-label>
+            </ion-item>
+
+            <ion-item>
+                <ion-radio value="Serviços Prioritários IV"></ion-radio>
+                <ion-label>Serviços Prioritários IV</ion-label>
+                <ion-label class="align-price">R$ 38,90</ion-label>
+                <ion-label>
+                    <a href="">Ver detalhes</a>
+                </ion-label>
+            </ion-item>    
+        </ion-list>
+    </div>
+</ion-content>
+  

@@ -43,6 +43,7 @@ import { ModalConfirmPage } from "../pages/modal-confirm/modal-confirm";
 import {PreApprovedCustomerPage} from "../pages/pre-approved-customer/pre-approved-customer"
 import { PreApprovedCardPage } from "../pages/pre-approved-card/pre-approved-card";
 import { AccountTypePage } from '../pages/account-type/account-type';
+import { BasketOfServicesPage } from '../pages/basket-of-services/basket-of-services';
 
 //providers
 import { VisionProvider } from '../providers/vision/vision';
@@ -83,7 +84,8 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     ModalConfirmPage,
     PreApprovedCustomerPage,
     PreApprovedCardPage,
-    AccountTypePage
+    AccountTypePage,
+    BasketOfServicesPage
   ],
   imports: [
     BrowserModule,
@@ -131,7 +133,8 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     ModalConfirmPage,
     PreApprovedCustomerPage,
     PreApprovedCardPage,
-    AccountTypePage
+    AccountTypePage,
+    BasketOfServicesPage
   ],
   providers: [
     AuthService,
