@@ -1,0 +1,44 @@
+page-contrato-eletronico {
+    button {
+      width: 100px;
+      margin: 0 358px 0 335px;
+  }
+
+  .footer {
+      padding-top: 3%;
+      width: 30%;
+      .next-button {
+          left: 112%;
+      }
+  }
+
+  .card {
+    border: #e2193d solid 1px;
+    border-radius: 8px;
+    background-color: #e2193d;
+    margin-bottom: 3px;
+
+    header {
+      color: #fff;
+      font-family: Roboto;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: -0.7px;
+      padding: 10px;
+    }
+
+    .content {
+      color: #e2193d;
+      background-color: #fff;
+      font-family: Roboto;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: -0.7px;
+      padding: 10px;
+    }
+  }
+}

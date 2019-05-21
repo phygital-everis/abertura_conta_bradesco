@@ -45,6 +45,7 @@ import { PreApprovedCardPage } from "../pages/pre-approved-card/pre-approved-car
 import { AccountTypePage } from '../pages/account-type/account-type';
 import { BasketOfServicesPage } from '../pages/basket-of-services/basket-of-services';
 import { ConfirmaDesejaNovoDocPage } from '../pages/confirma-deseja-novo-doc/confirma-deseja-novo-doc';
+import { ContratoEletronicoPage } from '../pages/contrato-eletronico/contrato-eletronico';
 
 //providers
 import { VisionProvider } from '../providers/vision/vision';
@@ -87,7 +88,8 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     PreApprovedCardPage,
     AccountTypePage,
     BasketOfServicesPage,
-    ConfirmaDesejaNovoDocPage
+    ConfirmaDesejaNovoDocPage,
+    ContratoEletronicoPage
   ],
   imports: [
     BrowserModule,
@@ -137,7 +139,8 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     PreApprovedCardPage,
     AccountTypePage,
     BasketOfServicesPage,
-    ConfirmaDesejaNovoDocPage
+    ConfirmaDesejaNovoDocPage,
+    ContratoEletronicoPage
   ],
   providers: [
     AuthService,
