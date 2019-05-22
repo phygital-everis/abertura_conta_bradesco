@@ -156,6 +156,8 @@ page-modal-confirm {
   background-color: #ffffff !important;
 }
 
+/*
+Não é necessario
 .header {
   background-color: #ffffff !important;
   padding-top: 10px;
@@ -265,6 +267,59 @@ page-modal-confirm {
       border-radius: 10px;
     }
   }
+}
+*/
+
+.header{
+
+  border-color: transparent !important;
+
+  ion-navbar{
+
+    padding: 25px;
+
+  }
+
+  .toolbar-background{
+
+    background-color: white !important;
+    border-color: transparent !important;
+
+  }
+
+  .toolbar-content{
+
+    padding-left: 20px;
+
+
+  }
+  .title{
+
+    font-size:  40px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: -1.1px;
+    color: #58595b;
+
+  }
+
+
+  button{
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+  }
+
+  .logo{
+
+    padding-right: 40px;
+    border-right: solid 1.5px #58595b;
+
+  }
+
 }
 
 .choosen {
