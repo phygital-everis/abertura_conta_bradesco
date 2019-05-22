@@ -10,20 +10,24 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class ValidaCpfProvider {
 
-  constructor(public http: HttpClient) {
-    console.log('Hello ValidaCpfProvider Provider');
-  }
+  private notAllowedCpf =
+    ['00000000000', '11111111111', '22222222222', '33333333333', '44444444444', '55555555555',
+      '66666666666', '77777777777', '88888888888', '99999999999'];
 
   validaCPF(cpf: string): boolean {
     if (cpf == null) {
       return false;
     }
+    cpf = cpf.replace(/\D/g, '');
+
     if (cpf.length != 11) {
       return false;
     }
-    if ((cpf == '00000000000') || (cpf == '11111111111') || (cpf == '22222222222') || (cpf == '33333333333') || (cpf == '44444444444') || (cpf == '55555555555') || (cpf == '66666666666') || (cpf == '77777777777') || (cpf == '88888888888') || (cpf == '99999999999')) {
+
+    if (this.notAllowedCpf.find(f => f == cpf)) {
       return false;
     }
+
     let numero: number = 0;
     let caracter: string = '';
     let numeros: string = '0123456789';
@@ -34,6 +38,7 @@ export class ValidaCpfProvider {
     let digito2: number = 0;
     let cpfAux: string = '';
     cpfAux = cpf.substring(0, 9);
+
     for (let i: number = 0; i < 9; i++) {
       caracter = cpfAux.charAt(i);
       if (numeros.search(caracter) == -1) {
@@ -43,6 +48,7 @@ export class ValidaCpfProvider {
       somatorio = somatorio + (numero * j);
       j--;
     }
+
     resto = somatorio % 11;
     digito1 = 11 - resto;
     if (digito1 > 9) {
@@ -63,12 +69,8 @@ export class ValidaCpfProvider {
       digito2 = 0;
     }
     cpfAux = cpfAux + digito2;
-    if (cpf != cpfAux) {
-      return false;
-    }
-    else {
-      return true;
-    }
+    return cpf == cpfAux;
+
   }
 
 }

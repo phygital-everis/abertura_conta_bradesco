@@ -1,55 +1,44 @@
-<ion-header no-border>
-    <ion-navbar>
-      <ion-row text-center class="logo">
-        <ion-col col-2 id="faixa-logo">
-          <img class="logo-img" src="assets/imgs/bradesco_logo.png" alt="logo">
-        </ion-col>
-        <ion-col col-8>
-          <h2>Proposta de abertura de conta</h2>
-        </ion-col>
-        <ion-col col-2>
-          <img class="menu-img" src="assets/imgs/menu.png" alt="menu">
-        </ion-col>
-      </ion-row>
-    </ion-navbar>
-</ion-header>
-
 <ion-content padding>
   <ion-row>
     <p class="backAnchor">
       <a (tap)="close()">Voltar</a>
     </p>
-    <ion-col col-2 ></ion-col>
+    <ion-col col-2></ion-col>
     <ion-col col-8 text-center>
-        <h1>Titular</h1>
-        <div id="menu">
-          <ion-row>
-            <ion-col>
-              <h3>Selecione o tipo de documento</h3>
-            </ion-col>
-          </ion-row>
-          <ion-row>
-              <ion-col text-center>
-                <button ion-button #rg value="RG" [ngClass]="{'choosen': tipoDoc == 'RG'}" (click)="choseType(rg)">RG</button>
-              </ion-col>
-              <ion-col text-center>
-                <button ion-button #cnh value="CNH" [ngClass]="{'choosen': tipoDoc == 'CNH'}" (click)="choseType(cnh)">CNH</button>
-              </ion-col>
-              <ion-col text-center>
-                <button [disabled]="1 == 1" ion-button #RNE value="RNE" [ngClass]="{'choosen': tipoDoc == 'RNE'}" (click)="choseType(RNE)">RNE</button>
-              </ion-col>
-              <ion-col text-center>
-                <button [disabled]="1 == 1" ion-button #pass value="PASS" [ngClass]="{'choosen': tipoDoc == 'PASS'}" (click)="choseType(PASS)">Passaporte</button>
-              </ion-col>
-              <ion-col text-center>
-                <button [disabled]="1 == 1" ion-button #cnh value="CDT" [ngClass]="{'choosen': tipoDoc == 'CDT'}" (click)="choseType(CDT)">Carteira de trabalho</button>
-              </ion-col>
-          </ion-row>
-        </div>
+      <h1>Titular</h1>
+      <div id="menu">
+        <ion-row>
+          <ion-col>
+            <h3>Selecione o tipo de documento</h3>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col text-center>
+            <button ion-button #rg value="RG" [ngClass]="{'choosen': tipoDoc == 'RG'}"
+              (click)="choseType(rg)">RG</button>
+          </ion-col>
+          <ion-col text-center>
+            <button ion-button #cnh value="CNH" [ngClass]="{'choosen': tipoDoc == 'CNH'}"
+              (click)="choseType(cnh)">CNH</button>
+          </ion-col>
+          <ion-col text-center>
+            <button [disabled]="1 == 1" ion-button #RNE value="RNE" [ngClass]="{'choosen': tipoDoc == 'RNE'}"
+              (click)="choseType(RNE)">RNE</button>
+          </ion-col>
+          <ion-col text-center>
+            <button [disabled]="1 == 1" ion-button #pass value="PASS" [ngClass]="{'choosen': tipoDoc == 'PASS'}"
+              (click)="choseType(PASS)">Passaporte</button>
+          </ion-col>
+          <ion-col text-center>
+            <button [disabled]="1 == 1" ion-button #cnh value="CDT" [ngClass]="{'choosen': tipoDoc == 'CDT'}"
+              (click)="choseType(CDT)">Carteira de trabalho</button>
+          </ion-col>
+        </ion-row>
+      </div>
 
-      </ion-col>
-      <ion-col col-2></ion-col>
-    </ion-row>
+    </ion-col>
+    <ion-col col-2></ion-col>
+  </ion-row>
   <ion-card *ngIf="photo !== ''">
     <img [src]="photo" />
   </ion-card>

@@ -1,18 +1,6 @@
-<ion-header no-border>
-  <ion-navbar>
-    <ion-row text-center class="logo">
-      <ion-col col-2 id="faixa-logo">
-        <img class="logo-img" src="assets/imgs/bradesco_logo.png" alt="logo">
-      </ion-col>
-      <ion-col col-10>
-        <h2>Proposta de abertura de conta</h2>
-      </ion-col>
-    </ion-row>
-  </ion-navbar>
-</ion-header>
 <ion-content padding>
   <ion-row>
-    <ion-col >
+    <ion-col>
       <h3>Segurança da conta</h3>
     </ion-col>
   </ion-row>
@@ -22,24 +10,25 @@
     </ion-col>
   </ion-row>
   <ion-list>
-  <ion-row>
-    <ion-col col-3></ion-col>
-    <ion-col col-6>
+    <ion-row>
+      <ion-col col-3></ion-col>
+      <ion-col col-6>
         <ion-item>
-          <ion-input [(ngModel)]="senha1" type="password" (change)="senhaOk = true" placeholder="Digite sua senha"></ion-input>
+          <ion-input [(ngModel)]="senha1" type="password" (change)="senhaOk = true" placeholder="Digite sua senha">
+          </ion-input>
         </ion-item>
-    </ion-col>
-    <ion-col col-3></ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col col-3></ion-col>
-    <ion-col col-6>
-      <ion-item>
-        <ion-input [(ngModel)]="senha2" type="password" placeholder="Repita sua senha"></ion-input>
-      </ion-item>
-    </ion-col>
-    <ion-col col-3></ion-col>
-  </ion-row>    
+      </ion-col>
+      <ion-col col-3></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-3></ion-col>
+      <ion-col col-6>
+        <ion-item>
+          <ion-input [(ngModel)]="senha2" type="password" placeholder="Repita sua senha"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col col-3></ion-col>
+    </ion-row>
 
   </ion-list>
   <ion-row>

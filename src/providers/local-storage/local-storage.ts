@@ -5,12 +5,12 @@ import { Storage } from '@ionic/storage';
 @Injectable()
 export class LocalStorageProvider {
 
-  constructor(public http: HttpClient, private storage:Storage) {
-    
+  constructor(public http: HttpClient, private storage: Storage) {
+
   }
 
   // CREATE
-  addItem(chave:string,value:any): Promise<any> {
+  addItem(chave: string, value: any): Promise<any> {
     return this.storage.set(chave, value)
   }
 
@@ -24,4 +24,7 @@ export class LocalStorageProvider {
     return this.storage.clear()
   }
 
+  removeItem(key: string) {
+    return this.storage.remove(key);
+  }
 }

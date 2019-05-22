@@ -1,10 +1,3 @@
-<ion-header no-border>
-  <ion-navbar>
-    <ion-title>
-      <img src="assets/imgs/bradesco_logo.png" width="120px" alt="logo">
-    </ion-title>
-  </ion-navbar>
-</ion-header>
 <ion-content>
   <ion-grid>
     <ion-row class="text-planos">
@@ -12,15 +5,15 @@
         <h2>Monte o seu pacote</h2>
       </ion-col>
     </ion-row>
-      <ion-row class="info-plano">
-          <ion-col col-12 text-center>
-            <p class="text-valor-plano">Valor total do plano</p>
-          </ion-col>
-          <ion-col col-12 text-center class="valor-plano-div">
-            <p class="valor-plano">R$ {{total + cheques + transferencias + saques}},00</p>
-          </ion-col>          
-        </ion-row>
-    </ion-grid>
+    <ion-row class="info-plano">
+      <ion-col col-12 text-center>
+        <p class="text-valor-plano">Valor total do plano</p>
+      </ion-col>
+      <ion-col col-12 text-center class="valor-plano-div">
+        <p class="valor-plano">R$ {{total + cheques + transferencias + saques}},00</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
   <ion-grid>
     <div class="bot">
     </div>

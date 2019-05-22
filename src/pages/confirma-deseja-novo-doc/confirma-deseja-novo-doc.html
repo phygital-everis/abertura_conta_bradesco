@@ -1,31 +1,19 @@
-<ion-header no-border>
-  <ion-navbar>
-    <ion-row text-center class="logo">
-      <ion-col col-2 id="faixa-logo">
-        <img class="logo-img" src="assets/imgs/bradesco_logo.png" alt="logo" />
-      </ion-col>
-      <ion-col col-10>
-        <h2>Proposta de abertura de conta</h2>
-      </ion-col>
-    </ion-row>
-  </ion-navbar>
-</ion-header>
 <ion-content padding>
   <ion-row>
     <ion-col text-center>
       <h3>Deseja fotografar algum outro documento?</h3>
     </ion-col>
-  </ion-row >
+  </ion-row>
   <ion-row justify-content-center>
     <ion-col col-3>
       <ion-item>
         <button ion-button clear full color="danger" (click)="goBack()">Sim</button>
       </ion-item>
-  </ion-col>
-  <ion-col col-3>
-    <ion-item>
-      <button ion-button clear full color="danger" (click)="goAhead()">Não</button>
-    </ion-item>
-  </ion-col>
-</ion-row>
+    </ion-col>
+    <ion-col col-3>
+      <ion-item>
+        <button ion-button clear full color="danger" (click)="goAhead()">Não</button>
+      </ion-item>
+    </ion-col>
+  </ion-row>
 </ion-content>
