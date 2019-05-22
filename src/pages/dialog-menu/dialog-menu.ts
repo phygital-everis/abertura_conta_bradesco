@@ -16,8 +16,8 @@ export class DialogMenuPage {
   }
 
   goToMenu() {
-    console.log('Deveria ir ao menu inicial');
     this.navCtrl.setRoot(MenuInicialPage)
+    this.navCtrl.popToRoot();
   }
 
   exit() {
