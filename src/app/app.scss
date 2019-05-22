@@ -92,6 +92,8 @@ ion-popover {
   }
 }
 
+/*
+Não é necessario
 page-dialog-menu {
   left: 40% !important;
   top: 8% !important;
@@ -99,6 +101,29 @@ page-dialog-menu {
   width: 55% !important;
   height: 40% !important;
 }
+*/
+
+
+.popover-menu{
+
+  .popover-content{
+
+    background-color: #e2193d !important;
+    color: white !important;
+    -webkit-box-shadow: 3px 3px 6px 0 rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 3px 6px 0 rgba(0,0,0,0.75);
+    box-shadow: 3px 3px 6px 0 rgba(0,0,0,0.75);
+
+    top: 25px !important;
+    margin-left: -15px !important;
+    max-width: fit-content;
+    border-radius: 20px;
+
+  }
+
+
+}
+
 
 page-modal-confirm {
   left: 20% !important;
@@ -131,6 +156,8 @@ page-modal-confirm {
   background-color: #ffffff !important;
 }
 
+/*
+Não é necessario
 .header {
   background-color: #ffffff !important;
   padding-top: 10px;
@@ -240,6 +267,59 @@ page-modal-confirm {
       border-radius: 10px;
     }
   }
+}
+*/
+
+.header{
+
+  border-color: transparent !important;
+
+  ion-navbar{
+
+    padding: 25px;
+
+  }
+
+  .toolbar-background{
+
+    background-color: white !important;
+    border-color: transparent !important;
+
+  }
+
+  .toolbar-content{
+
+    padding-left: 20px;
+
+
+  }
+  .title{
+
+    font-size:  40px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: -1.1px;
+    color: #58595b;
+
+  }
+
+
+  button{
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+  }
+
+  .logo{
+
+    padding-right: 40px;
+    border-right: solid 1.5px #58595b;
+
+  }
+
 }
 
 .choosen {

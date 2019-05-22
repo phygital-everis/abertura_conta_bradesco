@@ -1,17 +1,19 @@
-<ion-header no-border>
-    <ion-navbar>
-        <ion-row text-left class="logo">
-            <ion-col col-2 id="faixa-logo">
-                <img class="logo-img" src="assets/imgs/bradesco_logo.png" alt="logo">
-            </ion-col>
-            <ion-col col-8>
-                <h2>Proposta de abertura de conta</h2>
-            </ion-col>
-            <ion-col col-2 (click)="presentDialogMenuModal()">
-                <img class="menu-img" src="assets/imgs/menu.png" alt="menu">
-            </ion-col>
-        </ion-row>
-    </ion-navbar>
+<ion-header mode="ios">
+  <ion-navbar mode="ios">
+    <ion-buttons start class="logo">
+      <button ion-button icon-only disabled style="opacity: 1">
+        <img class="logo-img" src="assets/imgs/bradesco_logo.png" width="80" height="80" alt="logo">
+      </button>
+    </ion-buttons>
+    <span class="title">
+      Proposta de abertura de conta
+    </span>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="presentDialogMenuModal($event)">
+        <img class="menu-img" src="assets/imgs/menu.png" width="80" height="80" alt="menu">
+      </button>
+    </ion-buttons>
+  </ion-navbar>
 </ion-header>
 <ion-content>
     <ion-nav #appNav [root]="rootPage">
