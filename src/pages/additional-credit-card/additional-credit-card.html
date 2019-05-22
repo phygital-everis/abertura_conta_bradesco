@@ -25,32 +25,75 @@
     <ion-row>
       <ion-col col-12>
         <ion-item>
-          <a item-end>Incluir adicional</a>
+          <button class="default-button" ion-button color="light" item-end (click)="addCard()"
+            [attr.disabled]="additionals.length >= 2 ? '' : null">Incluir adicional</button>
         </ion-item>
       </ion-col>
     </ion-row>
-    <ion-row [style.marginBottom.px]="30">
+    <ion-row [style.marginBottom.px]="30" *ngFor="let card of additionals;let i = index">
       <ion-col col-12>
         <ion-item>
           <ion-label stacked>Nome do adicional (até 19 caracteres)</ion-label>
-          <ion-input type="text"></ion-input>
+          <ion-input type="text" [(ngModel)]="card.nome"></ion-input>
         </ion-item>
       </ion-col>
       <ion-col col-3>
         <ion-item>
           <ion-label stacked>Data de Nascimento</ion-label>
-          <ion-input type="text" placeholder="dd/mm/aaaa"></ion-input>
+          <ion-input type="text" placeholder="dd/mm/aaaa" [(ngModel)]="card.nascimento"
+            [brmasker]="{mask:'00/00/0000', len:10}"></ion-input>
         </ion-item>
       </ion-col>
       <ion-col col-4>
         <ion-item>
           <ion-label stacked>CPF</ion-label>
-          <ion-input type="text"></ion-input>
+          <ion-input type="text" [(ngModel)]="card.cpf" [brmasker]="{mask:'000.000.000-00', len:14}"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col col-5>
+        <ion-item>
+          <button class="default-button" ion-button color="light" item-end (click)="removeCard(i)">Excluir
+            adicional</button>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row margin-top>
+      <ion-col col-12>
+        <ion-item>
+          <ion-label>
+            <h1>Adicionar Seguro Superprotegido Premiável?</h1>
+          </ion-label>
+          <ion-toggle checked="false" color="danger"></ion-toggle>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row class="seguro">
+      <ion-col col-12>
+        <ion-item>
+          <h1>
+            Quais serão os segurados do {{card.nome}}?
+          </h1>
+        </ion-item>
+      </ion-col>
+      <ion-col col-12 col-sm-4>
+        <ion-item>
+          <ion-label>
+            <h1>Titular</h1>
+          </ion-label>
+          <ion-checkbox color="dark" checked="true"></ion-checkbox>
+        </ion-item>
+      </ion-col>
+      <ion-col col-12 col-sm-4 *ngFor="let card of additionals;let i = index">
+        <ion-item>
+          <ion-label>
+            <h1>Adicional {{i+1}}</h1>
+          </ion-label>
+          <ion-checkbox color="dark" [(ngModel)]="card.seguro"></ion-checkbox>
         </ion-item>
       </ion-col>
     </ion-row>
   </ion-grid>
-  <div class="footer">
-    <button class="next-button" ion-button color="danger" (click)="goNext()">Avançar</button>
-  </div>
 </ion-content>
+<div class="footer">
+  <button class="next-button" ion-button color="danger" (click)="goNext()">Avançar</button>
+</div>
