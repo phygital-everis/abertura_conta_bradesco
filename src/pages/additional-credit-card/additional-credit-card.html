@@ -14,22 +14,31 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding *ngIf="card">
   <ion-item>
     Produtos e Serviços - Cartão de Crédito
     <a item-end (click)="goBack()" class="voltar">voltar</a>
   </ion-item>
-  <ion-item>
-    <h1>
-      Modalidade (Distribuição do limite entre cartões)
-    </h1>
-  </ion-item>
-  <ion-grid *ngFor="let card of cards;let i = index" [style.marginBottom.px]="30">
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12 col-sm-6>
+        <ion-item>
+          <h1>
+            {{card.nome}}
+          </h1>
+          <img [src]="card.bandeira" item-end width="35px">
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid [style.marginBottom.px]="30">
     <ion-row>
       <ion-col col-12 col-md-6>
         <ion-item>
           <ion-label stacked>Modalidade cartão {{i}}</ion-label>
-          <ion-input type="text" disabled="true" value="{{card.nome}}" class="bandeira" [style.background]="'url(' + card.bandeira + ')'"></ion-input>
+          <ion-input type="text" disabled="true" value="{{card.nome}}" class="bandeira"
+            [style.background]="'url(' + card.bandeira + ')'"></ion-input>
         </ion-item>
       </ion-col>
       <ion-col col-6 col-md-3>

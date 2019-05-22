@@ -240,82 +240,82 @@ page-modal-confirm {
       border-radius: 10px;
     }
   }
+}
 
-  .choosen {
-    background-color: #001e7c !important;
-  }
+.choosen {
+  background-color: #001e7c !important;
+}
 
-  .footer {
-    color: #ffffff;
-    .toolbar {
-      .toolbar-background {
-        background-color: #ffffff !important;
-        color: #ffffff;
-      }
-    }
-    .button {
+.footer {
+  color: #ffffff;
+  .toolbar {
+    .toolbar-background {
+      background-color: #ffffff !important;
       color: #ffffff;
-      opacity: 1;
-    }
-    .icon {
-      margin-left: 10px;
-    }
-
-    img {
-      margin-left: 10px;
     }
   }
-
   .button {
-    border-radius: 25px;
-    background-color: #cc092f;
-    //border-bottom: 4px solid #c40101;
-    width: 100%;
-    height: 44px !important;
-    font-size: 16px !important;
     color: #ffffff;
-    padding: 30px 0;
-    font-weight: normal;
+    opacity: 1;
+  }
+  .icon {
+    margin-left: 10px;
   }
 
-  .footer {
-    padding-top: 3%;
-    width: 100%;
-    height: 18%;
-    bottom: 0px;
-    position: absolute !important;
-    .next-button {
-      transform: translate(0%, 30%);
-      left: 33%;
-      height: 61px !important;
-      width: 283px;
-    }
+  img {
+    margin-left: 10px;
   }
+}
 
-  .button:hover,
-  .button:active {
-    background-color: #9e1321 !important;
-    border-bottom: 4px solid #9e1321 !important;
-    span {
-      color: #ffffff !important;
-    }
-  }
+.button {
+  border-radius: 25px;
+  background-color: #cc092f;
+  //border-bottom: 4px solid #c40101;
+  width: 100%;
+  height: 44px !important;
+  font-size: 16px !important;
+  color: #ffffff;
+  padding: 30px 0;
+  font-weight: normal;
+}
 
-  .button-inner {
-    font-size: 41px;
-    padding: 0px 10px 0px 10px;
+.footer {
+  padding-top: 3%;
+  width: 100%;
+  height: 18%;
+  bottom: 0px;
+  position: absolute !important;
+  .next-button {
+    transform: translate(0%, 30%);
+    left: 33%;
+    height: 61px !important;
+    width: 283px;
   }
+}
 
-  .list-md,
-  .list-md .item-input:last-child,
-  .item-md,
-  .item-block,
-  .item-inner,
-  .input-has-focus,
-  .item-input-has-focus {
-    border: none !important;
-    text-decoration: none !important;
+.button:hover,
+.button:active {
+  background-color: #9e1321 !important;
+  border-bottom: 4px solid #9e1321 !important;
+  span {
+    color: #ffffff !important;
   }
+}
+
+.button-inner {
+  font-size: 41px;
+  padding: 0px 10px 0px 10px;
+}
+
+.list-md,
+.list-md .item-input:last-child,
+.item-md,
+.item-block,
+.item-inner,
+.input-has-focus,
+.item-input-has-focus {
+  border: none !important;
+  text-decoration: none !important;
 }
 
 .no-padding {

@@ -50,6 +50,7 @@ import { ChooseServicesPage } from '../pages/choose-services/choose-services';
 import { ConfirmaDesejaNovoDocPage } from '../pages/confirma-deseja-novo-doc/confirma-deseja-novo-doc';
 import { CreditCardPage } from '../pages/credit-card/credit-card';
 import { ContratoEletronicoPage } from '../pages/contrato-eletronico/contrato-eletronico';
+import { AdditionalCreditCardPage } from '../pages/additional-credit-card/additional-credit-card';
 
 //providers
 import { VisionProvider } from '../providers/vision/vision';
@@ -98,7 +99,8 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     CreditCardPage,
     ChooseServicesPage,
     ConfirmaDesejaNovoDocPage,
-    ContratoEletronicoPage
+    ContratoEletronicoPage,
+    AdditionalCreditCardPage
   ],
   imports: [
     BrowserModule,
@@ -154,7 +156,8 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     CreditCardPage,
     ChooseServicesPage,
     ConfirmaDesejaNovoDocPage,
-    ContratoEletronicoPage
+    ContratoEletronicoPage,
+    AdditionalCreditCardPage
   ],
   providers: [
     AuthService,
