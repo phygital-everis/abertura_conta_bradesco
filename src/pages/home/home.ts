@@ -3,9 +3,6 @@ import { NavController } from 'ionic-angular';
 import { LocalStorageProvider } from "../../providers/local-storage/local-storage";
 import { AuthService } from '../../providers/firebase/auth';
 import { MenuInicialPage } from "../../pages/menu-inicial/menu-inicial";
-import { BasketOfServicesPage } from "../../pages/basket-of-services/basket-of-services";
-import { ChooseServicesPage } from '../choose-services/choose-services';
-import { AccountTypePage } from '../account-type/account-type';
 
 
 @Component({

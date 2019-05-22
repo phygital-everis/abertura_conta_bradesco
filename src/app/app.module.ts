@@ -1,3 +1,4 @@
+import { NavHelper } from './../providers/nav-helper/nav-helper';
 //modules
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
@@ -9,7 +10,7 @@ import { BrMaskerModule } from 'brmasker-ionic-3';
 import { IonicStorageModule } from '@ionic/storage';
 import { SocketIoModule, SocketIoConfig } from 'ng-socket-io';
 import { Camera } from '@ionic-native/camera';
-import { MediaCapture} from '@ionic-native/media-capture';
+import { MediaCapture } from '@ionic-native/media-capture';
 import { AngularFireModule } from "angularfire2";
 import { AngularFireDatabaseModule } from "angularfire2/database";
 import { AngularFireStorageModule } from "angularfire2/Storage";
@@ -42,7 +43,7 @@ import { ClientElegivelPage } from "../pages/client-elegivel/client-elegivel";
 import { ClientNaoElegivelPage } from "../pages/client-nao-elegivel/client-nao-elegivel";
 import { OperacaoCanceladaPage } from "../pages/operacao-cancelada/operacao-cancelada";
 import { ModalConfirmPage } from "../pages/modal-confirm/modal-confirm";
-import {PreApprovedCustomerPage} from "../pages/pre-approved-customer/pre-approved-customer"
+import { PreApprovedCustomerPage } from "../pages/pre-approved-customer/pre-approved-customer"
 import { PreApprovedCardPage } from "../pages/pre-approved-card/pre-approved-card";
 import { AccountTypePage } from '../pages/account-type/account-type';
 import { BasketOfServicesPage } from '../pages/basket-of-services/basket-of-services';
@@ -106,7 +107,7 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     AngularFireModule.initializeApp(firebaseConfig.fire),
     IonicModule.forRoot(MyApp, {
       backButtonText: '',
-      backButtonIcon:'arrow-back',
+      backButtonIcon: 'arrow-back',
       iconMode: 'md',
       modalEnter: 'modal-slide-in',
       modalLeave: 'modal-slide-out',
@@ -162,7 +163,7 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     AngularFireAuth,
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
     VisionProvider,
     Camera,
     LocalStorageProvider,
@@ -176,6 +177,7 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     BluetoothSerial,
     ValidaCpfProvider,
     SessionHelper
+
   ]
 })
-export class AppModule {}
+export class AppModule { }

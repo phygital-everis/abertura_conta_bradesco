@@ -26,7 +26,6 @@ export class SessionHelper {
 
 
     public checkSessionIsValid(): boolean {
-        debugger;
         let sessionInfo = this.getSessionData();
         return sessionInfo && sessionInfo.edTm > 0 && sessionInfo.stTm > 0 && (sessionInfo.edTm - sessionInfo.stTm < (300 * 1000));
     }

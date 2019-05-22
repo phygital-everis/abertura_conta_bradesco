@@ -1,7 +1,6 @@
 import { ValidaCpfProvider } from './../../providers/valida-cpf/valida-cpf';
 import { Component } from '@angular/core';
 import { ModalController, NavController, NavParams } from 'ionic-angular';
-import { DialogMenuPage } from "../dialog-menu/dialog-menu";
 import { ClientElegivelPage } from "../client-elegivel/client-elegivel";
 import { ClientNaoElegivelPage } from "../client-nao-elegivel/client-nao-elegivel"
 import { SessionHelper } from '../../providers/session-helper/session-helper';
@@ -17,7 +16,6 @@ export class CpfPage {
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    public modalCtrl: ModalController,
     private cpfSvc: ValidaCpfProvider,
     private sessionSvc: SessionHelper
   ) {
@@ -45,10 +43,6 @@ export class CpfPage {
 
   }
 
-  presentDialogMenuModal() {
-    let dialogMenuModal = this.modalCtrl.create(DialogMenuPage);
-    dialogMenuModal.present();
-  }
 
   getRandomInt() {
 

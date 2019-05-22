@@ -1,56 +1,39 @@
-<ion-header no-border>
-    <ion-navbar>
-      <ion-row text-left class="logo">
-        <ion-col col-2 id="faixa-logo">
-          <img class="logo-img" src="assets/imgs/bradesco_logo.png" alt="logo">
-        </ion-col>
-        <ion-col col-8>
-          <h2>Proposta de abertura de conta</h2>
-        </ion-col>
-        <ion-col col-2 (click)="presentDialogMenuModal()">
-          <img class="menu-img" src="assets/imgs/menu.png" alt="menu">
-        </ion-col>
-      </ion-row>
-    </ion-navbar>
-  </ion-header>
-
-
 <ion-content>
   <ion-row>
     <h3>
       Cadastro/Adesão de Serviços
     </h3>
     <p class="backAnchor">
-        <a href="">Voltar</a>
+      <a href="">Voltar</a>
     </p>
   </ion-row>
   <div class="select-options-account-type">
     <ion-item>
-        <ion-label>Aderir qual serviço ?</ion-label>
-        <ion-select id="ionSelectSerTp" (ionChange)="selectService($event)" interface="popover" placeholder="Selecionar">
-          <ion-option value="1" >Centralização da Conta Salário</ion-option>
-          <ion-option value="2" >Centralização da Conta Benefício</ion-option>
-        </ion-select>
+      <ion-label>Aderir qual serviço ?</ion-label>
+      <ion-select id="ionSelectSerTp" (ionChange)="selectService($event)" interface="popover" placeholder="Selecionar">
+        <ion-option value="1">Centralização da Conta Salário</ion-option>
+        <ion-option value="2">Centralização da Conta Benefício</ion-option>
+      </ion-select>
     </ion-item>
   </div>
 
-  
+
   <div class="account-details" *ngIf="service">
-    
+
     <div *ngIf="service == 2" class="category">
       <ion-label>Qual categoria ?</ion-label>
 
-        <ion-item>
-          <ion-label>Conta do Beneficio</ion-label>
-          <ion-radio item-left value="cdb" ></ion-radio>
-        </ion-item>
+      <ion-item>
+        <ion-label>Conta do Beneficio</ion-label>
+        <ion-radio item-left value="cdb"></ion-radio>
+      </ion-item>
 
-        <ion-item style="float: right;">
-          <ion-label> Conta do Beneficio</ion-label>
-          <ion-radio item-left value="cdb"></ion-radio>
-        </ion-item>
-        
-      
+      <ion-item style="float: right;">
+        <ion-label> Conta do Beneficio</ion-label>
+        <ion-radio item-left value="cdb"></ion-radio>
+      </ion-item>
+
+
     </div>
     <div class="account-fields">
       <ion-item>
@@ -77,6 +60,8 @@
     </div>
   </div>
   <div class="footer">
-    <button [disabled]="!account.number && !account.account && !account.digit" [ngClass]="{'disabled': !account.number && !account.account && !account.digit}" class="next-button" ion-button color="danger" (click)="goNext()">Avançar</button>
+    <button [disabled]="!account.number && !account.account && !account.digit"
+      [ngClass]="{'disabled': !account.number && !account.account && !account.digit}" class="next-button" ion-button
+      color="danger" (click)="goNext()">Avançar</button>
   </div>
 </ion-content>

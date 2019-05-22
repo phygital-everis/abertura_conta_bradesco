@@ -1,15 +1,3 @@
-<ion-header no-border>
-  <ion-navbar>
-    <ion-row text-center class="logo">
-      <ion-col col-2 id="faixa-logo">
-        <img class="logo-img" src="assets/imgs/bradesco_logo.png" alt="logo" />
-      </ion-col>
-      <ion-col col-10>
-        <h2>Proposta de abertura de conta</h2>
-      </ion-col>
-    </ion-row>
-  </ion-navbar>
-</ion-header>
 <ion-content padding>
   <ion-row>
     <ion-col>
@@ -45,9 +33,7 @@
             {{ cartao.limite | currency:'BRL':'symbol':'2.2-2' }}
           </header>
           <div class="content">
-            <ng-container
-              *ngFor="let adicional of cartao.nomePessoasCartaoAdicional"
-            >
+            <ng-container *ngFor="let adicional of cartao.nomePessoasCartaoAdicional">
               01 Cartão Adicional para {{ adicional }}
             </ng-container>
           </div>

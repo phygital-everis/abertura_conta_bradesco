@@ -15,13 +15,13 @@ export class DialogMenuPage {
   ionViewDidLoad() {
   }
 
-  goToMenu(){
-    this.navCtrl.push(MenuInicialPage)
+  goToMenu() {
+    console.log('Deveria ir ao menu inicial');
+    this.navCtrl.setRoot(MenuInicialPage)
   }
 
-  exit(){
-    this.navCtrl.push(HomePage)
-
+  exit() {
+    this.navCtrl.popToRoot()
   }
 
   goBack() {
