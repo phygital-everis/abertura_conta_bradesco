@@ -118,8 +118,11 @@
                 <ion-label>
                     <a (tap)="details()">Ver detalhes</a>
                 </ion-label>
-            </ion-item>    
+            </ion-item>
         </ion-list>
+    </div>
+    <div *ngIf="plan" class="footer">
+        <button class="next-button" ion-button color="danger" (click)="goNext()">Avançar</button>
     </div>
 </ion-content>
   

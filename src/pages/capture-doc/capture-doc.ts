@@ -4,6 +4,7 @@ import { Camera, CameraOptions } from '@ionic-native/camera';
 import { VisionProvider } from "../../providers/vision/vision";
 import { FormularioPage } from "../../pages/formulario/formulario";
 import { HomePage } from '../home/home';
+import { BasketOfServicesPage } from '../basket-of-services/basket-of-services';
 import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
@@ -54,6 +55,11 @@ export class CaptureDocPage {
       console.log(err);
       this.presentAlertConfirm();
     });
+  }
+
+  public close() {
+    console.log('close');
+    this.navCtrl.popTo(BasketOfServicesPage);
   }
 
   choseType(el) {

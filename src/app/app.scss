@@ -39,6 +39,17 @@ h2{
         }
     }
 }
+
+.disabled-menu-2 {
+    ion-col {
+        color: rgba(204, 9, 48, 0.24)!important;
+        h2 {
+            color: rgba(204, 9, 48, 0.24)!important
+
+        }
+    }
+    
+}
 .modal-wrapper {
     left: 0;
     top: 0;
@@ -52,8 +63,37 @@ h2{
     right: 20px;
     text-decoration: underline;
     a {
-        z-index: 99999;
+        z-index: 999999;
         color: #e2193d;
+    }
+}
+ion-select {
+    width: 352px;
+    border-radius: 30.5px;
+    background-color: #e7e7e7;
+    border: solid 1px #4a4a4a;
+
+    .select-icon {
+        right: 25px;
+    }
+}
+ion-popover {
+    .popover-wrapper {
+        .popover-content {
+            width: 45%!important;
+            .popover-viewport {
+                ng-component {
+                    ion-list {
+                        ion-item {
+                            background-color: #e7e7e7!important;
+                        }
+                    }
+                }
+            }
+        }
+        .popover-arrow {
+            display: none;
+        }
     }
 }
 
@@ -92,7 +132,7 @@ page-modal-confirm {
     left: 2.5%;
 }
 
-.choosen{
+.choosen:active{
     background-color: #ffffff !important;
 }
 
@@ -235,6 +275,7 @@ page-modal-confirm {
 
     .button-inner{
         font-size: 41px;
+        padding: 0px 10px 0px 10px;
     }
 
     .list-md, .list-md .item-input:last-child, .item-md, .item-block, .item-inner, .input-has-focus, .item-input-has-focus{
