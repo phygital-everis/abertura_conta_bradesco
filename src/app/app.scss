@@ -92,6 +92,8 @@ ion-popover {
   }
 }
 
+/*
+Não é necessario
 page-dialog-menu {
   left: 40% !important;
   top: 8% !important;
@@ -99,6 +101,29 @@ page-dialog-menu {
   width: 55% !important;
   height: 40% !important;
 }
+*/
+
+
+.popover-menu{
+
+  .popover-content{
+
+    background-color: #e2193d !important;
+    color: white !important;
+    -webkit-box-shadow: 3px 3px 6px 0 rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 3px 6px 0 rgba(0,0,0,0.75);
+    box-shadow: 3px 3px 6px 0 rgba(0,0,0,0.75);
+
+    top: 25px !important;
+    margin-left: -15px !important;
+    max-width: fit-content;
+    border-radius: 20px;
+
+  }
+
+
+}
+
 
 page-modal-confirm {
   left: 20% !important;

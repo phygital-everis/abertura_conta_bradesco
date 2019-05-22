@@ -1,14 +1,14 @@
-<ion-content padding style="background-color: #e2193d">
-  <ion-list no-lines text-right>
-    <h2 (click)="goToMenu()">
-      <ion-icon name="refresh"></ion-icon>Voltar ao Menu
-    </h2>
-    <h2>
-      <ion-icon name="cog"></ion-icon>Configurações
-    </h2>
-    <h2 (click)="exit()">
-      <ion-icon name="exit"></ion-icon>Sair
-    </h2>
-  </ion-list>
-  <p id="fecharBotao" (click)="goBack()">fechar (X)</p>
-</ion-content>
+<ion-list>
+  <ion-item (click)="goToMenu()">
+    <ion-icon name="refresh" item-start></ion-icon>
+    Voltar ao Menu
+  </ion-item>
+  <ion-item>
+    <ion-icon name="cog" item-start></ion-icon>
+    Configurações
+  </ion-item>
+  <ion-item (click)="exit()">
+    <ion-icon name="exit" item-start></ion-icon>
+    Sair
+  </ion-item>
+</ion-list>

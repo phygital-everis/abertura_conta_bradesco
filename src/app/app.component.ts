@@ -1,6 +1,6 @@
 import { DialogMenuPage } from './../pages/dialog-menu/dialog-menu';
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { Platform, ModalController, NavParams } from 'ionic-angular';
+import {Platform, NavParams, PopoverController} from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
@@ -19,16 +19,23 @@ export class MyApp {
 
   @ViewChild('appNav') nav: NavController
 
-  constructor(public platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, private modalCtrl: ModalController
+  constructor(public platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public popoverCtrl: PopoverController
   ) {
     platform.ready().then(() => {
       statusBar.styleDefault();
       splashScreen.hide();
     });
   }
-  presentDialogMenuModal() {
-    let dialogMenuModal = this.modalCtrl.create(DialogMenuPage);
-    dialogMenuModal.present();
+
+
+  presentDialogMenuModal(ev) {
+
+    let popover = this.popoverCtrl.create(DialogMenuPage, {}, {cssClass: "popover-menu"});
+
+    popover.present({
+      ev: ev
+    });
+
   }
 
 
