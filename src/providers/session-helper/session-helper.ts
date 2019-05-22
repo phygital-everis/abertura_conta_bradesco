@@ -6,7 +6,6 @@ import { SessionInfo } from "../../models/session.model";
 export class SessionHelper {
     constructor(private str: LocalStorageProvider) { }
     public createSession(cpf: string): void {
-        debugger;
         let sessionInfo = new SessionInfo();
         sessionInfo.clientData.cpf = (cpf).replace(/\D/g, '');
         sessionStorage.setItem('sessionInfo', JSON.stringify(sessionInfo));
