@@ -16,97 +16,35 @@
 
 
 <ion-content padding>
-  <h3>
+  <ion-item>
     Oferta de pré-aprovados
-  </h3>
-    <h4>
+    <a item-end (click)="goBack()" class="voltar">voltar</a>
+  </ion-item>
+  <ion-item>
+    <h1>
       Modalidade (Selecione uma ou mais modalidades de cartão)
-    </h4>
-    <div class="produtos">
-      <ion-row>
+    </h1>
+  </ion-item>
+  <div class="produtos" *ngFor="let card of cards;let i = index">
+    <ion-row>
       <ion-col col-3 text-center style="padding-top: 5%">
-          <a href="#">Detalhes</a>
-        </ion-col>
-        <ion-col col-6 class="headerProduct" (click)="selectCard(0)">
-          <ion-row>
-            <ion-col col-4>
-              <img class="logo-card" src="assets/imgs/elo-logo.png" alt="logo">
-            </ion-col>
-            <ion-col col-8>
-              <h2>Função Crédito Elo</h2>
-            </ion-col>
-          </ion-row>
-        </ion-col>
-        <ion-col col-3 style="padding-top: 5%" *ngIf="cartao[0]">
-          <ion-icon name="checkmark"></ion-icon>
-        </ion-col>
-      </ion-row>
-    </div>
-
-    <div class="produtos">
-      <ion-row>
-        <ion-col col-3 text-center style="padding-top: 5%">
-          <a href="">Detalhes</a>
-        </ion-col>
-        <ion-col col-6 class="headerProduct" (click)="selectCard(1)">
-          <ion-row>
-            <ion-col col-4>
-              <img class="logo-card" src="assets/imgs/elo-logo.png" alt="logo">
-            </ion-col>
-            <ion-col col-8>
-              <h2>Internacional Elo</h2>
-            </ion-col>
-          </ion-row>
-        </ion-col>
-        <ion-col col-3 style="padding-top: 5%" *ngIf="cartao[1]">
-          <ion-icon name="checkmark"></ion-icon>
-        </ion-col>
-      </ion-row>
-    </div>
-
-    <div class="produtos">
-      <ion-row>
-        <ion-col col-3 text-center style="padding-top: 5%">
-          <a href="#">Detalhes</a>
-        </ion-col>
-        <ion-col col-6 class="headerProduct" (click)="selectCard(2)">
-          <ion-row>
-            <ion-col col-4>
-              <img class="logo-card" src="assets/imgs/elo-logo.png" alt="logo">
-            </ion-col>
-            <ion-col col-8>
-              <h2>Elo Plus</h2>
-            </ion-col>
-          </ion-row>
-        </ion-col>
-        <ion-col col-3 style="padding-top: 5%" *ngIf="cartao[2]">
-          <ion-icon name="checkmark"></ion-icon>
-        </ion-col>
-      </ion-row>
-    </div>
-
-    <div class="produtos">
-      <ion-row>
-        <ion-col col-3 text-center style="padding-top: 5%">
-          <a href="#">Detalhes</a>
-        </ion-col>
-        <ion-col col-6 class="headerProduct" (click)="selectCard(3)">
-          <ion-row>
-            <ion-col col-4>
-              <img class="logo-card" src="assets/imgs/visa-logo.png" alt="logo">
-            </ion-col>
-            <ion-col col-8>
-              <h2>Internacional Visa</h2>
-            </ion-col>
-          </ion-row>
-        </ion-col>
-        <ion-col col-3 style="padding-top: 5%" *ngIf="cartao[3]">
-          <ion-icon name="checkmark"></ion-icon>
-        </ion-col>
-      </ion-row>
-    </div>
-   
-    
+        <a href="#">Detalhes</a>
+      </ion-col>
+      <ion-col col-6 class="headerProduct" (click)="selectCard(card,i)">
+        <ion-row>
+          <ion-col col-4>
+            <img class="logo-card" src="{{card.bandeira}}" alt="logo">
+          </ion-col>
+          <ion-col col-8>
+            <h2>{{card.nome}}</h2>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+      <ion-col col-3 style="padding-top: 5%" *ngIf="cartao[i]">
+        <ion-icon name="checkmark"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </div>
 
   <div class="footer">
     <button class="next-button" ion-button color="danger" (click)="goNext()">Avançar</button>

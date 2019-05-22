@@ -1,0 +1,107 @@
+page-credit-card {
+  padding-left: 5%;
+  padding-right: 5%;
+  ion-content {
+    h3 {
+      font-size: 30px;
+      color: #58595b;
+      margin-top: 34px;
+    }
+    h4 {
+      font-size: 20px;
+      color: #58595b;
+      margin-top: 34px;
+      margin-bottom: 30px;
+    }
+    .list {
+      margin: 245px 0px 30px 140px;
+      width: 70%;
+
+      ion-item {
+        margin-bottom: 150px;
+      }
+    }
+
+    button {
+      width: 100px;
+      margin: 0 358px 0 335px;
+    }
+
+    .footer {
+      padding-top: 3px; 
+      width: 30%;
+      .next-button {
+        left: 112%;
+      }
+    }
+
+    .produtos {
+      margin-bottom: 5%;
+      a {
+        color: #4a4a4a;
+        margin-top: 5%;
+        font-size: 20px;
+      }
+      ion-icon {
+        color: #4a4a4a;
+        margin-top: -1%;
+        margin-left: 20%;
+        font-size: 60px;
+      }
+
+      .logo-card {
+        margin-top: 10%;
+        width: 60%;
+      }
+    }
+
+    .headerProduct {
+      background-color: #c9c9c9;
+      border: solid 1px #979797;
+      border-radius: 10px;
+    }
+
+    ion-label {
+      font-size: 30px;
+    }
+
+    .action-btn {
+      ion-label,
+      ion-icon {
+        font-size: 20px;
+      }
+      .item-inner {
+        background: none !important;
+      }
+    }
+
+    .naoContrataButton {
+      background-color: #ffffff;
+      border: none;
+      margin-top: -20px;
+
+      .button-inner {
+        font-size: 20px;
+        color: #58595b;
+      }
+    }
+  }
+  .select-options-account-type {
+    ion-item {
+      ion-select {
+        border-radius: 30.5px;
+        background-color: #e7e7e7;
+        border: solid 1px #4a4a4a;
+
+        .select-icon {
+          right: 25px;
+        }
+      }
+    }
+  }
+  .bandeira {
+    background-size: 35px auto!important;
+    background-repeat: no-repeat!important;
+    background-position: right!important;
+  }
+}
