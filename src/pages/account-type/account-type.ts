@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { CpfPage } from '../cpf/cpf';
 
 /**
  * Generated class for the AccountTypePage page.
@@ -18,6 +19,10 @@ export class AccountTypePage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AccountTypePage');
+  }
+
+  goToNextPage() {
+    this.navCtrl.push(CpfPage);
   }
 
 }

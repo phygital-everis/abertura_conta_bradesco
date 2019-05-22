@@ -1,0 +1,111 @@
+<ion-header no-border>
+  <ion-navbar>
+    <ion-row text-center class="logo">
+      <ion-col col-2 id="faixa-logo">
+        <img class="logo-img" src="assets/imgs/bradesco_logo.png" alt="logo" />
+      </ion-col>
+      <ion-col col-10>
+        <h2>Proposta de abertura de conta</h2>
+      </ion-col>
+    </ion-row>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-row>
+    <ion-col>
+      <h3>Contrato eletrônico</h3>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <h3>Produtos e Serviços Contratados</h3>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <p>
+        Eu, {{ data.nome }}, Portador do CPF {{ data.cpf }} e do RG
+        {{ data.rg }}, contratrei os seguintes produtos e serviços:
+      </p>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <strong>CARTÕES</strong>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ng-container *ngFor="let cartao of data.cartoes">
+        <div class="card">
+          <header>
+            {{ cartao.nomeCartao }} com limite de
+            {{ cartao.limite | currency:'BRL':'symbol':'2.2-2' }}
+          </header>
+          <div class="content">
+            <ng-container
+              *ngFor="let adicional of cartao.nomePessoasCartaoAdicional"
+            >
+              01 Cartão Adicional para {{ adicional }}
+            </ng-container>
+          </div>
+        </div>
+      </ng-container>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book. It has survived not only five
+        centuries, but also the leap into electronic typesetting, remaining
+        essentially unchanged. It was popularised in the 1960s with the release
+        of Letraset sheets containing Lorem Ipsum passages
+      </p>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <strong>CESTAS</strong>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ng-container *ngFor="let cesta of data.cestas">
+        <div class="card">
+          <header>Cesta de Serviços {{ cesta.nomeServico }}</header>
+          <div class="content">
+            Valor da cesta {{ cesta.valor | currency:'BRL':'symbol':'2.2-2' }}
+          </div>
+        </div>
+      </ng-container>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book. It has survived not only five
+        centuries, but also the leap into electronic typesetting, remaining
+        essentially unchanged. It was popularised in the 1960s with the release
+        of Letraset sheets containing Lorem Ipsum passages
+      </p>
+    </ion-col>
+  </ion-row>
+
+  <div class="footer">
+    <button class="next-button" ion-button color="danger" (click)="goNext()">
+      Avançar
+    </button>
+  </div>
+</ion-content>

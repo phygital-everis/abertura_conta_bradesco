@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { packageComparativePage } from '../package-comparative/package-comparative';
+import { packageDetailsPage } from '../package-details/package-details';
+import { CaptureDocPage } from '../capture-doc/capture-doc';
 
 /**
  * Generated class for the BasketOfServicesPage page.
@@ -21,8 +24,17 @@ export class BasketOfServicesPage {
 
   ionViewDidLoad() {  }
 
-  checkAnswer() {
-    console.log(this.plan);
+  public compare(): void {
+    this.navCtrl.push(packageComparativePage);
   }
+
+  public details(): void {
+    this.navCtrl.push(packageDetailsPage);
+  }
+
+  public goNext(): void {
+   this.navCtrl.push(CaptureDocPage)
+  }
+
 
 }

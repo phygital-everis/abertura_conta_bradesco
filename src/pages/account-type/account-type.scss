@@ -51,28 +51,28 @@ page-account-type {
     }
 }
 
-ion-popover {
-    .popover-wrapper {
-        .popover-content {
-            width: 45%!important;
-            overflow-y: hidden;
-            .popover-viewport {
-                ng-component {
-                    ion-list {
-                        ion-item {
-                            background-color: #e7e7e7!important;
-                            .item-inner {
-                                ion-radio {
-                                    display: none;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        .popover-arrow {
-            display: none;
-        }
-    }
-}
+// ion-popover {
+//     .popover-wrapper {
+//         .popover-content {
+//             width: 45%!important;
+//             overflow-y: hidden;
+//             .popover-viewport {
+//                 ng-component {
+//                     ion-list {
+//                         ion-item {
+//                             background-color: #e7e7e7!important;
+//                             // .item-inner {
+//                             //     ion-radio {
+//                             //         color: #CC092F!important;
+//                             //     }
+//                             // }
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//         .popover-arrow {
+//             display: none;
+//         }
+//     }
+// }
