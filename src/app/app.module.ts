@@ -61,6 +61,7 @@ import { FirebaseServiceProvider } from '../providers/firebase-service/firebase-
 import { ClienteProvider } from '../providers/cliente/cliente';
 import { PrinterProvider } from '../providers/printer/printer';
 import { ValidaCpfProvider } from '../providers/valida-cpf/valida-cpf';
+import { SessionHelper } from '../providers/session-helper/session-helper';
 
 const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
 
@@ -173,7 +174,8 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     ClienteProvider,
     PrinterProvider,
     BluetoothSerial,
-    ValidaCpfProvider
+    ValidaCpfProvider,
+    SessionHelper
   ]
 })
 export class AppModule {}
