@@ -1,4 +1,3 @@
-import { NavHelper } from './../providers/nav-helper/nav-helper';
 //modules
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
