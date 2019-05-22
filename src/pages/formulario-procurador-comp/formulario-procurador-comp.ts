@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { ClienteProvider } from "../../providers/cliente/cliente";
-import { CaptureAdditionallyDocPage } from '../capture-additionally-doc/capture-additionally-doc';
+import { CadastraSenhaPage } from '../cadastra-senha/cadastra-senha';
 
 @Component({
-  selector: 'page-formulario2',
-  templateUrl: 'formulario2.html',
+  selector: 'page-formulario-procurador-comp',
+  templateUrl: 'formulario-procurador-comp.html',
 })
-export class Formulario2Page {
+export class FormularioProcuradorCompPage {
 
   constructor(
     public navCtrl: NavController, 
@@ -46,7 +46,7 @@ export class Formulario2Page {
   }
 
   goNext() {
-    this.navCtrl.push(CaptureAdditionallyDocPage)
+    this.navCtrl.push(CadastraSenhaPage);
   }
 
 }

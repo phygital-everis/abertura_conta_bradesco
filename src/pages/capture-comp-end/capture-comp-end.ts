@@ -38,9 +38,6 @@ export class CaptureCompEndPage {
 
     this.camera.getPicture(options).then((imageData) => {
 
-      this.photo = this._sanitizer.bypassSecurityTrustResourceUrl('data:image/jpg;base64,'
-        + imageData);
-
       this.presentLoadingOptions();
 
       this.vision.sendVision(imageData).subscribe((data) => {

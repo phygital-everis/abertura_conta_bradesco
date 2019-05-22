@@ -2,17 +2,14 @@ import { Component } from '@angular/core';
 import { NavController, NavParams, LoadingController, AlertController } from 'ionic-angular';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import { VisionProvider } from "../../providers/vision/vision";
-import { FormularioPage } from "../../pages/formulario/formulario";
 import { HomePage } from '../home/home';
-import { BasketOfServicesPage } from '../basket-of-services/basket-of-services';
-import { DomSanitizer } from '@angular/platform-browser';
+import { FormularioFromAdditionallyDocPage } from '../formulario-from-additionally-doc/formulario-from-additionally-doc';
 
 @Component({
-  selector: 'page-capture-doc',
-  templateUrl: 'capture-doc.html',
-  providers: [VisionProvider]
+  selector: 'page-capture-additionally-doc',
+  templateUrl: 'capture-additionally-doc.html',
 })
-export class CaptureDocPage {
+export class CaptureAdditionallyDocPage {
 
   photo: any = ''
   tipoDoc: string
@@ -23,9 +20,14 @@ export class CaptureDocPage {
     public navCtrl: NavController,
     public navParams: NavParams,
     private vision: VisionProvider,
-    private _sanitizer: DomSanitizer,
     private loadingCtrl: LoadingController,
-    private alertController: AlertController) { }
+    private alertController: AlertController
+  ) { }
+
+
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad CaptureAdditionallyDocPage');
+  }
 
   getPhoto() {
     if (!this.tipoDoc) return
@@ -44,7 +46,7 @@ export class CaptureDocPage {
       this.presentLoadingOptions();
 
       this.vision.sendVision(imageData).subscribe((data) => {        
-        this.navCtrl.push(FormularioPage, { data: data, tipo: this.tipoDoc });
+        this.navCtrl.push(FormularioFromAdditionallyDocPage, { data: data, tipo: this.tipoDoc });
       });
 
       
@@ -52,10 +54,6 @@ export class CaptureDocPage {
       console.log(err);
       this.presentAlertConfirm();
     });
-  }
-
-  public close() {
-    this.navCtrl.popTo(BasketOfServicesPage);
   }
 
   choseType(el) {
@@ -86,5 +84,6 @@ export class CaptureDocPage {
     });
     await alert.present();
   }
+
 
 }

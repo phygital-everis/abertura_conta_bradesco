@@ -51,6 +51,12 @@ import { ConfirmaDesejaNovoDocPage } from '../pages/confirma-deseja-novo-doc/con
 import { CreditCardPage } from '../pages/credit-card/credit-card';
 import { ContratoEletronicoPage } from '../pages/contrato-eletronico/contrato-eletronico';
 import { AdditionalCreditCardPage } from '../pages/additional-credit-card/additional-credit-card';
+import { CaptureAdditionallyDocPage } from '../pages/capture-additionally-doc/capture-additionally-doc';
+import { FormularioFromAdditionallyDocPage } from '../pages/formulario-from-additionally-doc/formulario-from-additionally-doc';
+import { CaputreProcuradorDocPage } from '../pages/caputre-procurador-doc/caputre-procurador-doc';
+import { FormularioFromProcuradorPage } from '../pages/formulario-from-procurador/formulario-from-procurador';
+import { CaptureProcuradorCompPage } from '../pages/capture-procurador-comp/capture-procurador-comp';
+import { FormularioProcuradorCompPage } from '../pages/formulario-procurador-comp/formulario-procurador-comp';
 
 //providers
 import { VisionProvider } from '../providers/vision/vision';
@@ -101,7 +107,13 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     ChooseServicesPage,
     ConfirmaDesejaNovoDocPage,
     ContratoEletronicoPage,
-    AdditionalCreditCardPage
+    AdditionalCreditCardPage,
+    CaptureAdditionallyDocPage,
+    FormularioFromAdditionallyDocPage,
+    CaputreProcuradorDocPage,
+    FormularioFromProcuradorPage,
+    CaptureProcuradorCompPage,
+    FormularioProcuradorCompPage
   ],
   imports: [
     BrowserModule,
@@ -158,7 +170,13 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     ChooseServicesPage,
     ConfirmaDesejaNovoDocPage,
     ContratoEletronicoPage,
-    AdditionalCreditCardPage
+    AdditionalCreditCardPage,
+    CaptureAdditionallyDocPage,
+    FormularioFromAdditionallyDocPage,
+    CaputreProcuradorDocPage,
+    FormularioFromProcuradorPage,
+    CaptureProcuradorCompPage,
+    FormularioProcuradorCompPage
   ],
   providers: [
     AuthService,

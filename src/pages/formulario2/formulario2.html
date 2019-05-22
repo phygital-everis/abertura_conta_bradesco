@@ -1,10 +1,9 @@
 <ion-content padding>
   <ion-row>
-    <ion-col text-center>
-      <h3>Dados do Endereço</h3>
-    </ion-col>
+      <ion-col>
+          <h3>Dados do Endereço</h3>
+      </ion-col>
   </ion-row>
-
   <ion-list>
     <ion-row>
       <ion-col>
@@ -47,8 +46,8 @@
       </ion-col>
       <ion-col>
         <ion-item>
-          <ion-label>Estado</ion-label>
-          <ion-select [(ngModel)]="cliente.cliente.ufNascimento">
+          
+          <ion-select interface="popover" placeholder="Estado" [(ngModel)]="cliente.cliente.ufNascimento">
             <ion-option value="sp">São Paulo</ion-option>
             <ion-option value="rj">Rio de Janeiro</ion-option>
             <ion-option value="es">Espirito Santo</ion-option>
@@ -87,8 +86,7 @@
       </ion-col>
       <ion-col>
         <ion-item>
-          <ion-label floating>Tipo de Residência</ion-label>
-          <ion-select [(ngModel)]="cliente.cliente.tipoResidencia">
+          <ion-select interface="popover" placeholder="Tipo de Residência" [(ngModel)]="cliente.cliente.tipoResidencia">
             <ion-option value="casa">Casa</ion-option>
             <ion-option value="apartamento">Apartamento</ion-option>
             <ion-option value="sobrado">Sobrado</ion-option>
@@ -115,15 +113,35 @@
         </ion-item>
       </ion-col>
     </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Autoriza envio de SMS?</ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <button class="rounded-button">Sim</button>
+          <button class="rounded-button">Não</button>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Autoriza envio de e-mail?</ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <button class="rounded-button">Sim</button>
+          <button class="rounded-button">Não</button>
+        </ion-item>
+      </ion-col>
+   </ion-row>
   </ion-list>
 
-  <ion-row>
-    <ion-col col-4></ion-col>
-    <ion-col col-4>
-      <button ion-button clear full color="danger" (click)="goNext()">
-        próximo
-      </button>
-    </ion-col>
-    <ion-col col-4></ion-col>
-  </ion-row>
+  <div class="footer">
+    <button class="next-button" ion-button color="danger" (click)="goNext()">Avançar</button>
+  </div>
 </ion-content>

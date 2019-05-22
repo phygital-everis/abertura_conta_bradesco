@@ -2,18 +2,15 @@ import { Component } from '@angular/core';
 import { NavController, NavParams, LoadingController, AlertController } from 'ionic-angular';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import { VisionProvider } from "../../providers/vision/vision";
-import { FormularioPage } from "../../pages/formulario/formulario";
 import { HomePage } from '../home/home';
-import { BasketOfServicesPage } from '../basket-of-services/basket-of-services';
-import { DomSanitizer } from '@angular/platform-browser';
+import { FormularioFromProcuradorPage } from '../formulario-from-procurador/formulario-from-procurador';
 
 @Component({
-  selector: 'page-capture-doc',
-  templateUrl: 'capture-doc.html',
-  providers: [VisionProvider]
+  selector: 'page-caputre-procurador-doc',
+  templateUrl: 'caputre-procurador-doc.html',
 })
-export class CaptureDocPage {
-
+export class CaputreProcuradorDocPage {
+  
   photo: any = ''
   tipoDoc: string
   loading
@@ -23,9 +20,13 @@ export class CaptureDocPage {
     public navCtrl: NavController,
     public navParams: NavParams,
     private vision: VisionProvider,
-    private _sanitizer: DomSanitizer,
     private loadingCtrl: LoadingController,
-    private alertController: AlertController) { }
+    private alertController: AlertController
+  ) { }
+
+  ionViewDidLoad() {
+    //console.log('ionViewDidLoad CaputreProcuradorDocPage');
+  }
 
   getPhoto() {
     if (!this.tipoDoc) return
@@ -44,7 +45,7 @@ export class CaptureDocPage {
       this.presentLoadingOptions();
 
       this.vision.sendVision(imageData).subscribe((data) => {        
-        this.navCtrl.push(FormularioPage, { data: data, tipo: this.tipoDoc });
+        this.navCtrl.push(FormularioFromProcuradorPage, { data: data, tipo: this.tipoDoc });
       });
 
       
@@ -54,10 +55,6 @@ export class CaptureDocPage {
     });
   }
 
-  public close() {
-    this.navCtrl.popTo(BasketOfServicesPage);
-  }
-
   choseType(el) {
     this.tipoDoc = el._elementRef.nativeElement.value
   }
@@ -65,7 +62,7 @@ export class CaptureDocPage {
   async presentLoadingOptions() {
     const loading = await this.loadingCtrl.create({
       spinner: null,
-      duration: 8000,
+      duration: 7000,
       content: 'Estamos processando as suas informações, aguarde!'
     });
     return await loading.present();
