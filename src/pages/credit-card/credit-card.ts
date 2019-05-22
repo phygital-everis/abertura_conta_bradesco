@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, ModalController } from 'ionic-angular';
 import { DialogMenuPage } from "../dialog-menu/dialog-menu";
+import { AdditionalCreditCardPage } from '../additional-credit-card/additional-credit-card';
 
 @Component({
   selector: 'page-credit-card',
@@ -31,6 +32,10 @@ export class CreditCardPage {
 
   removeCard(index):void {
     this.cards.splice(index,1)
+  }
+
+  goNext(){
+    this.navCtrl.push(AdditionalCreditCardPage, {cards:this.cards,index:0})
   }
 
 }
