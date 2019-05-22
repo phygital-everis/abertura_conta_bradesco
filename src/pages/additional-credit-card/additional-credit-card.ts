@@ -35,7 +35,7 @@ export class AdditionalCreditCardPage {
   }
 
   goNext(){
-    if (this.index < this.cards.length){
+    if (this.index < this.cards.length - 1){
       this.navCtrl.push(AdditionalCreditCardPage, {cards:this.cards,index:this.index + 1})
     } else {
       this.navCtrl.push(ChooseServicesPage)
