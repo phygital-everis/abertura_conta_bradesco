@@ -26,13 +26,6 @@ page-basket-of-services {
             }
         }
     }
-    #backAnchor {
-        position: absolute;
-        right: 20px;
-        a {
-            color: #e2193d;
-        }
-    }
     .services-lst {
         height: 100%;
         margin-top: 20%;
@@ -48,11 +41,12 @@ page-basket-of-services {
                     font-weight: bold;
                     color: #4a4a4a;
                     margin-left: 55%;
-
+                    z-index: 99999;
 
                     a {
                         color: #4a4a4a;
                         font-size: 15px;
+                       
                     }
                 }
             }

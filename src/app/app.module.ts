@@ -35,6 +35,8 @@ import { SmsConfirmPage } from '../pages/sms-confirm/sms-confirm';
 import { ReciboPage } from "../pages/recibo/recibo";
 import { MenuInicialPage } from "../pages/menu-inicial/menu-inicial";
 import { CpfPage } from "../pages/cpf/cpf";
+import { packageDetailsPage } from "../pages/package-details/package-details";
+import { packageComparativePage } from "../pages/package-comparative/package-comparative";
 import { DialogMenuPage } from "../pages/dialog-menu/dialog-menu";
 import { ClientElegivelPage } from "../pages/client-elegivel/client-elegivel";
 import { ClientNaoElegivelPage } from "../pages/client-nao-elegivel/client-nao-elegivel";
@@ -45,6 +47,8 @@ import { PreApprovedCardPage } from "../pages/pre-approved-card/pre-approved-car
 import { AccountTypePage } from '../pages/account-type/account-type';
 import { BasketOfServicesPage } from '../pages/basket-of-services/basket-of-services';
 import { ChooseServicesPage } from '../pages/choose-services/choose-services';
+import { ConfirmaDesejaNovoDocPage } from '../pages/confirma-deseja-novo-doc/confirma-deseja-novo-doc';
+import { ContratoEletronicoPage } from '../pages/contrato-eletronico/contrato-eletronico';
 
 //providers
 import { VisionProvider } from '../providers/vision/vision';
@@ -78,6 +82,8 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     ReciboPage,
     MenuInicialPage,
     CpfPage,
+    packageDetailsPage,
+    packageComparativePage,
     DialogMenuPage,
     ClientElegivelPage,
     ClientNaoElegivelPage,
@@ -87,7 +93,9 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     PreApprovedCardPage,
     AccountTypePage,
     BasketOfServicesPage,
-    ChooseServicesPage
+    ChooseServicesPage,
+    ConfirmaDesejaNovoDocPage,
+    ContratoEletronicoPage
   ],
   imports: [
     BrowserModule,
@@ -100,7 +108,7 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
       modalLeave: 'modal-slide-out',
       tabsPlacement: 'bottom',
       pageTransition: 'ios-transition',
-      
+
     }),
     HttpClientModule,
     SocketIoModule.forRoot(config),
@@ -128,6 +136,8 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     ReciboPage,
     MenuInicialPage,
     CpfPage,
+    packageDetailsPage,
+    packageComparativePage,
     DialogMenuPage,
     ClientElegivelPage,
     ClientNaoElegivelPage,
@@ -137,7 +147,9 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     PreApprovedCardPage,
     AccountTypePage,
     BasketOfServicesPage,
-    ChooseServicesPage
+    ChooseServicesPage,
+    ConfirmaDesejaNovoDocPage,
+    ContratoEletronicoPage
   ],
   providers: [
     AuthService,

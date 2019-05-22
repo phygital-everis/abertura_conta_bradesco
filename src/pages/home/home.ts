@@ -3,6 +3,9 @@ import { NavController } from 'ionic-angular';
 import { LocalStorageProvider } from "../../providers/local-storage/local-storage";
 import { AuthService } from '../../providers/firebase/auth';
 import { MenuInicialPage } from "../../pages/menu-inicial/menu-inicial";
+import { BasketOfServicesPage } from "../../pages/basket-of-services/basket-of-services";
+import { ChooseServicesPage } from '../choose-services/choose-services';
+import { AccountTypePage } from '../account-type/account-type';
 
 
 @Component({
@@ -24,6 +27,12 @@ export class HomePage {
      }
   
      authUser() {
+      //this.navCtrl.push(ChooseServicesPage);
+      //this.navCtrl.push(AccountTypePage);
+      // this.navCtrl.push(ChooseServicesPage);
+      this.navCtrl.push(MenuInicialPage);
+      if(1 == 1)
+        return;
       if(!this.userCode) return this.loginError = 'Usuário não pode ser vazio';
       if(!this.userPass) return this.loginError = 'Senha não pode ser vazio';
   
