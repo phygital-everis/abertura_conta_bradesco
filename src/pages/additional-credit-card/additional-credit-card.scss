@@ -27,14 +27,6 @@ page-additional-credit-card {
       margin: 0 358px 0 335px;
     }
 
-    .footer {
-      padding-top: 3px;
-      width: 30%;
-      .next-button {
-        left: 112%;
-      }
-    }
-
     .produtos {
       margin-bottom: 5%;
       a {
@@ -103,5 +95,10 @@ page-additional-credit-card {
     background-size: 35px auto !important;
     background-repeat: no-repeat !important;
     background-position: right !important;
+  }
+  .seguro {
+    border: 1px solid #4a4a4a;
+    border-radius: 25px;
+    margin: 21px;
   }
 }
