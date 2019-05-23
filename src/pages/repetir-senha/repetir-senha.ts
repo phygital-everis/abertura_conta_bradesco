@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {NavController, NavParams, ToastController} from 'ionic-angular';
 import {SucessoCadastroSenhaPage} from "../sucesso-cadastro-senha/sucesso-cadastro-senha";
+import {ClienteProvider} from "../../providers/cliente/cliente";
 
 @Component({
   selector: 'page-repetir-senha',
@@ -13,7 +14,9 @@ export class RepetirSenhaPage {
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    public toastCtrl: ToastController) {
+    public toastCtrl: ToastController,
+    private cliente: ClienteProvider
+  ) {
   }
 
 
@@ -32,7 +35,7 @@ export class RepetirSenhaPage {
 
   goNext(){
 
-    if (this.senha == this.navParams.get("senha"))
+    if (Number(this.senha) == this.cliente.cliente.senha)
       this.navCtrl.push(SucessoCadastroSenhaPage);
 
     else {

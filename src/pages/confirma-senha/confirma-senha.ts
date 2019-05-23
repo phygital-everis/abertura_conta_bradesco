@@ -3,6 +3,7 @@ import { NavController, NavParams } from 'ionic-angular';
 import { ToastController } from 'ionic-angular';
 import { ClienteProvider } from "../../providers/cliente/cliente";
 import {DadosPreAberturaPage} from "../dados-pre-abertura/dados-pre-abertura";
+import {SucessoCadastroSenhaPage} from "../sucesso-cadastro-senha/sucesso-cadastro-senha";
 @Component({
   selector: 'page-confirma-senha',
   templateUrl: 'confirma-senha.html',
@@ -15,7 +16,7 @@ export class ConfirmaSenhaPage {
     public navCtrl: NavController,
     public navParams: NavParams,
     public toastCtrl: ToastController,
-
+    private cliente: ClienteProvider
   ) {
   }
 
@@ -34,7 +35,17 @@ export class ConfirmaSenhaPage {
   }
 
   goNext(){
-    this.navCtrl.push(DadosPreAberturaPage, {senha: this.senha})
+
+    if (Number(this.senha) == this.cliente.cliente.senha)
+      this.navCtrl.push(DadosPreAberturaPage);
+
+    else {
+
+      this.senha = "";
+      this.presentToast('senha não confere')
+
+    }
+
   }
 
   presentToast(msg) {

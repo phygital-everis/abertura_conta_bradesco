@@ -37,7 +37,10 @@ export class CadastraSenhaPage {
   }
 
   goNext(){
-    this.navCtrl.push(RepetirSenhaPage, {senha: this.senha})
+
+    this.cliente.cliente.senha = Number(this.senha);
+
+    this.navCtrl.push(RepetirSenhaPage);
   }
 
   presentToast(msg) {
