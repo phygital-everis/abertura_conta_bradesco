@@ -3,13 +3,18 @@ page-formulario-from-procurador {
         min-width: 100%;
      }
  
-     ion-col {
-         h3 {
-             margin-left: 20%;
-         }
-     }
+    ion-col {
+        h3 {
+            margin-left: 20%;
+        }
+    }
  
-     .footer {
-         position: relative!important;
-     }
+    .footer {
+        position: relative!important;
+    }
+
+    p {
+        color: #e2193d;
+        margin-left: 20px;
+    }
 }

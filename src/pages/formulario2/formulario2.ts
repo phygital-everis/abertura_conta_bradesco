@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { ClienteProvider } from "../../providers/cliente/cliente";
+import { LocalStorageProvider } from "../../providers/local-storage/local-storage";
 import { CaptureAdditionallyDocPage } from '../capture-additionally-doc/capture-additionally-doc';
-
 @Component({
   selector: 'page-formulario2',
   templateUrl: 'formulario2.html',
@@ -12,7 +12,8 @@ export class Formulario2Page {
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
-    private cliente: ClienteProvider
+    private cliente: ClienteProvider,
+    private localstorage: LocalStorageProvider
     ) {
   }
 
@@ -46,6 +47,8 @@ export class Formulario2Page {
   }
 
   goNext() {
+    let accType;
+    accType = this.localstorage.getItems('accountType')
     this.navCtrl.push(CaptureAdditionallyDocPage)
   }
 
