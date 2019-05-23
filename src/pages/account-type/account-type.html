@@ -16,10 +16,10 @@
 
     <ion-item>
       <ion-label>Forma de Movimentação</ion-label>
-      <ion-select [(ngModel)]="moveType" id="ionSelectMovType" (ionChange)="goToNextPage()" interface="popover" placeholder="Selecionar">
-        <ion-option value="Isolada">Isolada</ion-option>
-        <ion-option value="conjunta">Conjunta</ion-option>
-        <ion-option value="procuracao">Por procuração</ion-option>
+      <ion-select id="ionSelectMovType" (ionChange)="goToNextPage()" interface="popover" placeholder="Selecionar" [(ngModel)]="cliente.cliente.tipoDeConta">
+        <ion-option value="1">Isolada</ion-option>
+        <ion-option value="2">Conjunta</ion-option>
+        <ion-option value="3">Por procuração</ion-option>
       </ion-select>
     </ion-item>
   </div>

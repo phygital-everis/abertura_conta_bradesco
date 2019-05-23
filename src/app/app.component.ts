@@ -9,6 +9,7 @@ import {DadosPreAberturaPage} from "../pages/dados-pre-abertura/dados-pre-abertu
 import {ReciboPage} from "../pages/recibo/recibo";
 import { FormularioPage } from '../pages/formulario/formulario';
 import { Formulario2Page } from '../pages/formulario2/formulario2';
+import { AccountTypePage } from "../pages/account-type/account-type";
 
 @Component({
   templateUrl: 'app.html'
@@ -19,7 +20,7 @@ export class MyApp {
     let curr = this.nav.getActive();
     console.log('Current: ', curr);
   }
-  rootPage: any = Formulario2Page;
+  rootPage: any = AccountTypePage;
 
   @ViewChild('appNav') nav: NavController
 

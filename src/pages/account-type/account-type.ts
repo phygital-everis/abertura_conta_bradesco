@@ -2,13 +2,8 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { CpfPage } from '../cpf/cpf';
 import { LocalStorageProvider } from '../../providers/local-storage/local-storage';
+import { ClienteProvider } from "./../../providers/cliente/cliente";
 
-/**
- * Generated class for the AccountTypePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 @Component({
   selector: 'page-account-type',
   templateUrl: 'account-type.html',
@@ -18,11 +13,15 @@ export class AccountTypePage {
   accType: string = '';
   moveType: string = '';
   
-  constructor(public navCtrl: NavController, public navParams: NavParams, public localStorage: LocalStorageProvider) {
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams, 
+    public localStorage: LocalStorageProvider,
+    public cliente: ClienteProvider
+    ) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad AccountTypePage');
   }
 
   goToNextPage() {
@@ -33,5 +32,6 @@ export class AccountTypePage {
     
     this.navCtrl.push(CpfPage);
   }
+
 
 }

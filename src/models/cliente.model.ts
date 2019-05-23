@@ -44,7 +44,8 @@ export class Cliente{
     pais: string= "";
     nif: string= "";
     propositoRelacaoNegocioOrganizacao: string= "";
-    senha:number
+    senha:number;
+    tipoDeConta:number = 0;
 
     constructor(){
         
