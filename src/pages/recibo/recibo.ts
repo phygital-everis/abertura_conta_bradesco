@@ -50,6 +50,7 @@ export class ReciboPage {
       CD_KICK_2: '\x1b\x70\x00', // Sends a pulse to pin 2 []
       CD_KICK_5: '\x1b\x70\x01', // Sends a pulse to pin 5 []
     },
+    
     MARGINS: {
       BOTTOM: '\x1b\x4f', // Fix bottom size
       LEFT: '\x1b\x6c', // Fix left size

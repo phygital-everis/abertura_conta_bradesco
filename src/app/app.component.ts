@@ -6,6 +6,7 @@ import { Platform, PopoverController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
+import { ReciboPage } from '../pages/recibo/recibo';
 import { NavController } from 'ionic-angular';
 
 @Component({
@@ -17,7 +18,7 @@ export class MyApp {
     let curr = this.nav.getActive();
     console.log('Current: ', curr);
   }
-  rootPage: any = HomePage;
+  rootPage: any = ReciboPage;
 
   @ViewChild('appNav') nav: NavController
 
