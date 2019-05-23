@@ -65,6 +65,7 @@ import { ValidaCpfProvider } from '../providers/valida-cpf/valida-cpf';
 import { SessionHelper } from '../providers/session-helper/session-helper';
 import {DadosPreAberturaPage} from "../pages/dados-pre-abertura/dados-pre-abertura";
 import {RepetirSenhaPage} from "../pages/repetir-senha/repetir-senha";
+import {SucessoCadastroSenhaPage} from "../pages/sucesso-cadastro-senha/sucesso-cadastro-senha";
 
 const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
 
@@ -105,7 +106,8 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     ContratoEletronicoPage,
     AdditionalCreditCardPage,
     DadosPreAberturaPage,
-    RepetirSenhaPage
+    RepetirSenhaPage,
+    SucessoCadastroSenhaPage
   ],
   imports: [
     BrowserModule,
@@ -164,7 +166,8 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     ContratoEletronicoPage,
     AdditionalCreditCardPage,
     DadosPreAberturaPage,
-    RepetirSenhaPage
+    RepetirSenhaPage,
+    SucessoCadastroSenhaPage
   ],
   providers: [
     AuthService,
