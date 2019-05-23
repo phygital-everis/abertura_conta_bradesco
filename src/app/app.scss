@@ -76,7 +76,7 @@ ion-select {
 ion-popover {
   .popover-wrapper {
     .popover-content {
-      width: 45% !important;
+      min-width: 45% !important;
       .popover-viewport {
         ng-component {
           ion-list {
