@@ -6,8 +6,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { NavController } from 'ionic-angular';
 
-import { PreApprovedCardPage } from '../pages/pre-approved-card/pre-approved-card'
-
 @Component({
   templateUrl: 'app.html'
 })
@@ -17,7 +15,7 @@ export class MyApp {
     let curr = this.nav.getActive();
     console.log('Current: ', curr);
   }
-  rootPage: any = PreApprovedCardPage;
+  rootPage: any = HomePage;
 
   @ViewChild('appNav') nav: NavController
 
