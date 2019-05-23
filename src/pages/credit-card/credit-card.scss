@@ -92,8 +92,16 @@ page-credit-card {
     }
   }
   .bandeira {
-    background-size: 35px auto!important;
-    background-repeat: no-repeat!important;
-    background-position: right!important;
+    background-size: 35px auto !important;
+    background-repeat: no-repeat !important;
+    background-position: right !important;
+  }
+}
+
+ion-popover {
+  .popover-wrapper {
+    .popover-content {
+      width: 20% !important;
+    }
   }
 }

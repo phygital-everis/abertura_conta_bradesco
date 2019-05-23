@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, ModalController } from 'ionic-angular';
 import { DialogMenuPage } from "../dialog-menu/dialog-menu";
+import { CreditCardModalPage } from '../credit-card-modal/credit-card-modal';
 import { AdditionalCreditCardPage } from '../additional-credit-card/additional-credit-card';
+import { ModalConfirmPage } from "../modal-confirm/modal-confirm";
 
 @Component({
   selector: 'page-credit-card',
@@ -24,6 +26,11 @@ export class CreditCardPage {
   presentDialogMenuModal() {
     let dialogMenuModal = this.modalCtrl.create(DialogMenuPage);
     dialogMenuModal.present();
+  }
+
+  creditCardView() {
+    let ccModal = this.modalCtrl.create(CreditCardModalPage);
+    ccModal.present();
   }
 
   goBack():void {
