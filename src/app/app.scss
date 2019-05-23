@@ -368,7 +368,6 @@ Não é necessario
 }
 
 .footer {
-
   width: 97%;
   height: 10%;
   bottom: 0;
@@ -382,7 +381,8 @@ Não é necessario
 
     text-align: center;
     transform: translate(0%, 30%);
-
+    width: initial;
+    padding: 30px;
   }
 }
 
