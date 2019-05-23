@@ -3,6 +3,7 @@ import { NavController, NavParams } from "ionic-angular";
 import { HomePage } from "../home/home";
 import { IContratoEletronico } from "./contrato.interface";
 import {ReciboPage} from "../recibo/recibo";
+import {ConfirmaSenhaPage} from "../confirma-senha/confirma-senha";
 
 @Component({
   selector: "page-contrato-eletronico",
@@ -22,7 +23,7 @@ export class ContratoEletronicoPage {
 
 
   goNext() {
-    this.navCtrl.push(ReciboPage);
+    this.navCtrl.push(ConfirmaSenhaPage);
   }
 
   mockData(): IContratoEletronico {

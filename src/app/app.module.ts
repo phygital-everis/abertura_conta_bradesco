@@ -1,3 +1,4 @@
+import { CapturePicPage } from './../pages/capture-pic/capture-pic';
 //modules
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
@@ -53,6 +54,13 @@ import { CreditCardModalPage } from '../pages/credit-card-modal/credit-card-moda
 import { ContratoEletronicoPage } from '../pages/contrato-eletronico/contrato-eletronico';
 import { AdditionalCreditCardPage } from '../pages/additional-credit-card/additional-credit-card';
 import { ShellPage } from '../pages/shell/shell';
+import { CaptureAdditionallyDocPage } from '../pages/capture-additionally-doc/capture-additionally-doc';
+import { FormularioFromAdditionallyDocPage } from '../pages/formulario-from-additionally-doc/formulario-from-additionally-doc';
+import { CaputreProcuradorDocPage } from '../pages/caputre-procurador-doc/caputre-procurador-doc';
+import { FormularioFromProcuradorPage } from '../pages/formulario-from-procurador/formulario-from-procurador';
+import { CaptureProcuradorCompPage } from '../pages/capture-procurador-comp/capture-procurador-comp';
+import { FormularioProcuradorCompPage } from '../pages/formulario-procurador-comp/formulario-procurador-comp';
+import { DadosDoDocumentoPage } from '../pages/dados-do-documento/dados-do-documento';
 
 //providers
 import { VisionProvider } from '../providers/vision/vision';
@@ -65,7 +73,11 @@ import { ClienteProvider } from '../providers/cliente/cliente';
 import { PrinterProvider } from '../providers/printer/printer';
 import { ValidaCpfProvider } from '../providers/valida-cpf/valida-cpf';
 import { SessionHelper } from '../providers/session-helper/session-helper';
-import {DadosPreAberturaPage} from "../pages/dados-pre-abertura/dados-pre-abertura";
+import { CameraMock } from '../providers/camera-mock/camera-mock';
+import { DadosComplementaresPage } from '../pages/dados-complementares/dados-complementares';
+import { DadosPreAberturaPage } from "../pages/dados-pre-abertura/dados-pre-abertura";
+import { RepetirSenhaPage } from "../pages/repetir-senha/repetir-senha";
+import { SucessoCadastroSenhaPage } from "../pages/sucesso-cadastro-senha/sucesso-cadastro-senha";
 
 const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
 
@@ -108,6 +120,18 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     AdditionalCreditCardPage,
     DadosPreAberturaPage,
     ShellPage
+    CaptureAdditionallyDocPage,
+    FormularioFromAdditionallyDocPage,
+    CaputreProcuradorDocPage,
+    FormularioFromProcuradorPage,
+    CaptureProcuradorCompPage,
+    FormularioProcuradorCompPage,
+    DadosDoDocumentoPage,
+    CapturePicPage,
+    DadosPreAberturaPage,
+    DadosComplementaresPage,
+    RepetirSenhaPage,
+    SucessoCadastroSenhaPage
   ],
   imports: [
     BrowserModule,
@@ -168,6 +192,18 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     AdditionalCreditCardPage,
     DadosPreAberturaPage,
     ShellPage
+    CaptureAdditionallyDocPage,
+    FormularioFromAdditionallyDocPage,
+    CaputreProcuradorDocPage,
+    FormularioFromProcuradorPage,
+    CaptureProcuradorCompPage,
+    FormularioProcuradorCompPage,
+    DadosDoDocumentoPage,
+    CapturePicPage,
+    DadosPreAberturaPage,
+    DadosComplementaresPage,
+    RepetirSenhaPage,
+    SucessoCadastroSenhaPage
   ],
   providers: [
     AuthService,
@@ -188,7 +224,6 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     BluetoothSerial,
     ValidaCpfProvider,
     SessionHelper
-
   ]
 })
 export class AppModule { }

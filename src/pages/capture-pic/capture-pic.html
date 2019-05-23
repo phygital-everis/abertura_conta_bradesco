@@ -1,0 +1,43 @@
+<ion-content padding>
+  <p class="backAnchor">
+    <a (tap)="close()">Voltar</a>
+  </p>
+  <ion-col col-2></ion-col>
+  <ion-col col-8 text-center>
+    <h1>{{tipoFoto}}</h1>
+  </ion-col>
+</ion-content>
+<ion-footer no-border>
+  <ion-toolbar>
+    <ion-row *ngIf="allowSkip;else cannotSkip">
+      <ion-col col-2></ion-col>
+      <ion-col col-4>
+        <button ion-button clear full color="primary" icon-left (click)="getPhoto()">
+          <ion-icon name='camera'></ion-icon>
+          Tirar foto
+        </button>
+      </ion-col>
+      <ion-col col-4>
+        <button ion-button clear full color="primary" (click)="goToNext()">
+          Pular
+        </button>
+      </ion-col>
+      <ion-col col-2>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>
+
+<ng-template #cannotSkip>
+  <ion-row>
+    <ion-col col-4></ion-col>
+    <ion-col col-4>
+      <button ion-button clear full color="primary" icon-left (click)="getPhoto()">
+        <ion-icon name='camera'></ion-icon>
+        Tirar foto
+      </button>
+    </ion-col>
+    <ion-col col-4>
+    </ion-col>
+  </ion-row>
+</ng-template>

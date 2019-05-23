@@ -1,0 +1,274 @@
+<ion-content padding>
+  <ion-row>
+    <ion-col text-center>
+      <h3>Dados Complementares</h3>
+    </ion-col>
+  </ion-row>
+  <ion-list>
+    <ion-row>
+      <ion-col col-6>
+        <ion-item>
+          <ion-select placeholder="Referência 1" interface="popover" [(ngModel)]="viewModel.tipoReferencia1">
+            <ion-option *ngFor='let i of listaTipoReferencia' value="{{i.id}}">{{i.ds}}</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+      <ion-col col-6></ion-col>
+    </ion-row>
+    <ion-row *ngIf="viewModel.tipoReferencia1 && viewModel.tipoReferencia1=='bancaria'">
+      <ion-col col-12>
+        <ion-item>
+          <ion-input placeholder="Nome do Banco" [(ngModel)]="viewModel.referenciaBancaria1.nomeBanco"
+            [ngClass]="{'error-validation-input': viewModel.tipoReferencia1=='bancaria' && !viewModel.referenciaBancaria1.nomeBanco}">
+          </ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="viewModel.tipoReferencia1 && viewModel.tipoReferencia1=='bancaria'">
+      <ion-col col-12>
+        <ion-item>
+          <ion-input placeholder="Nome da Agencia" [(ngModel)]="viewModel.referenciaBancaria1.nomeAgencia"
+            [ngClass]="{'error-validation-input': viewModel.tipoReferencia1=='bancaria' && !viewModel.referenciaBancaria1.nomeAgencia}">
+          </ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="viewModel.tipoReferencia1 && viewModel.tipoReferencia1=='bancaria'">
+      <ion-col col-4>
+        <ion-item>
+          <ion-input placeholder="Código da Agência" [(ngModel)]="viewModel.referenciaBancaria1.codigoAgencia"
+            [ngClass]="{'error-validation-input': viewModel.tipoReferencia1=='bancaria' && !viewModel.referenciaBancaria1.codigoAgencia}">
+          </ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col col-4>
+        <ion-item>
+          <ion-input placeholder="Número" [(ngModel)]="viewModel.referenciaBancaria1.numeroAgencia"
+            [ngClass]="{'error-validation-input': viewModel.tipoReferencia1=='bancaria' && !viewModel.referenciaBancaria1.numeroAgencia}">
+          </ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col col-4>
+        <ion-item>
+          <ion-input placeholder="Conta e Dígito" [(ngModel)]="viewModel.referenciaBancaria1.contaDigito"
+            [ngClass]="{'error-validation-input': viewModel.tipoReferencia1=='bancaria' && !viewModel.referenciaBancaria1.contaDigito}">
+          </ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row *ngIf="viewModel.tipoReferencia1 && viewModel.tipoReferencia1!='bancaria'">
+      <ion-col col-8>
+        <ion-item>
+          <ion-input placeholder="Nome da Referência" [(ngModel)]="viewModel.referenciaGenerica1.nomeReferencia"
+            [ngClass]="{'error-validation-input': viewModel.tipoReferencia1!='bancaria' && !viewModel.referenciaGenerica1.nomeReferencia}">
+          </ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col col-4>
+        <ion-item>
+          <ion-input placeholder="Número" [(ngModel)]="viewModel.referenciaGenerica1.numeroReferencia"
+            [ngClass]="{'error-validation-input': viewModel.tipoReferencia1!='bancaria' && !viewModel.referenciaGenerica1.numeroReferencia}">
+          </ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6>
+        <ion-item>
+          <ion-select placeholder="Referência 2" interface="popover" [(ngModel)]="viewModel.tipoReferencia2">
+            <ion-option *ngFor='let i of listaTipoReferencia' value="{{i.id}}">{{i.ds}}</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+      <ion-col col-6></ion-col>
+    </ion-row>
+    <ion-row *ngIf="viewModel.tipoReferencia2 && viewModel.tipoReferencia2=='bancaria'">
+      <ion-col col-12>
+        <ion-item>
+          <ion-input placeholder="Nome do Banco" [(ngModel)]="viewModel.referenciaBancaria2.nomeBanco"
+            [ngClass]="{'error-validation-input': viewModel.tipoReferencia2=='bancaria' && !viewModel.referenciaBancaria2.nomeBanco}">
+          </ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="viewModel.tipoReferencia2 && viewModel.tipoReferencia2=='bancaria'">
+      <ion-col col-12>
+        <ion-item>
+          <ion-input placeholder="Nome da Agencia" [(ngModel)]="viewModel.referenciaBancaria2.nomeAgencia"
+            [ngClass]="{'error-validation-input': viewModel.tipoReferencia2=='bancaria' && !viewModel.referenciaBancaria2.nomeAgencia}">
+          </ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="viewModel.tipoReferencia2 && viewModel.tipoReferencia2=='bancaria'">
+      <ion-col col-4>
+        <ion-item>
+          <ion-input placeholder="Código da Agência" [(ngModel)]="viewModel.referenciaBancaria2.codigoAgencia"
+            [ngClass]="{'error-validation-input': viewModel.tipoReferencia2=='bancaria' && !viewModel.referenciaBancaria2.codigoAgencia}">
+          </ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col col-4>
+        <ion-item>
+          <ion-input placeholder="Número" [(ngModel)]="viewModel.referenciaBancaria2.numeroAgencia"
+            [ngClass]="{'error-validation-input': viewModel.tipoReferencia2=='bancaria' && !viewModel.referenciaBancaria2.numeroAgencia}">
+          </ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col col-4>
+        <ion-item>
+          <ion-input placeholder="Conta e Dígito" [(ngModel)]="viewModel.referenciaBancaria2.contaDigito"
+            [ngClass]="{'error-validation-input': viewModel.tipoReferencia2=='bancaria' && !viewModel.referenciaBancaria2.contaDigito}">
+          </ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row *ngIf="viewModel.tipoReferencia2 && viewModel.tipoReferencia2!='bancaria'">
+      <ion-col col-8>
+        <ion-item>
+          <ion-input placeholder="Nome da Referência" [(ngModel)]="viewModel.referenciaGenerica2.nomeReferencia"
+            [ngClass]="{'error-validation-input': viewModel.tipoReferencia2!='bancaria' && !viewModel.referenciaGenerica2.numeroReferencia}">
+          </ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col col-4>
+        <ion-item>
+          <ion-input placeholder="Número" [(ngModel)]="viewModel.referenciaGenerica2.numeroReferencia"
+            [ngClass]="{'error-validation-input': viewModel.tipoReferencia2!='bancaria' && !viewModel.referenciaGenerica2.numeroReferencia}">
+          </ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-8>
+        <ion-item>
+          <ion-label>Cliente se declara Pessoa Politicamente Exposta - PEP</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Possui algum relacionamento com PEP</ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col col-2>
+        <ion-item>
+          <button class="rounded-button" (click)="clientIsHasPep(true)">SIM</button>
+        </ion-item>
+      </ion-col>
+      <ion-col col-2>
+        <ion-item>
+          <button class="rounded-button" (click)="clientIsHasPep(false)">NÃO</button>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row *ngIf="viewModel.clientPep">
+      <ion-col col-6>
+        <ion-item>
+          <ion-input placeholder="CPF do Relacionado"
+            [ngClass]="{'error-validation-input': viewModel.clientPep && !viewModel.cpfRelacionadoPep}"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col col-6>
+        <ion-item>
+          <ion-input placeholder="Cargo"
+            [ngClass]="{'error-validation-input': viewModel.clientPep && !viewModel.cargoPep}"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="viewModel.clientPep">
+      <ion-col col-6>
+        <ion-item>
+          <ion-input placeholder="Início do Exercício"
+            [ngClass]="{'error-validation-input': viewModel.clientPep && !viewModel.inicioPep}"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col col-6>
+        <ion-item>
+          <ion-input placeholder="Final do Exercício"
+            [ngClass]="{'error-validation-input': viewModel.clientPep && !viewModel.terminoPep}"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="viewModel.clientPep">
+      <ion-col col-6>
+        <ion-item>
+          <ion-input placeholder="Orgão Público"
+            [ngClass]="{'error-validation-input': viewModel.clientPep && !viewModel.orgaoPep}"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col col-6>
+        <ion-item>
+          <ion-input placeholder="CNPJ"
+            [ngClass]="{'error-validation-input': viewModel.clientPep && !viewModel.cnpjPep}"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-8>
+        <ion-item>
+          <ion-label>Cliente possui relacionamento/ligação com Agente Público ?</ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col col-2>
+        <ion-item>
+          <button class="rounded-button" (click)="clientIsHasPubAgent(true)">SIM</button>
+        </ion-item>
+      </ion-col>
+      <ion-col col-2>
+        <ion-item>
+          <button class="rounded-button" (click)="clientIsHasPubAgent(false)">NÃO</button>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row *ngIf="viewModel.clientIsAgent">
+      <ion-col col-12>
+        <ion-item>
+          <ion-input placeholder="Nome do Relacionamento / Ligação"
+            [ngClass]="{'error-validation-input': viewModel.clientIsAgent && !viewModel.nomeRelacaoAgente}"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="viewModel.clientIsAgent">
+      <ion-col col-6>
+        <ion-item>
+          <ion-input placeholder="CPF do Relacionado"
+            [ngClass]="{'error-validation-input': viewModel.clientIsAgent && !viewModel.cpfRelacaoAgente}"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col col-6>
+        <ion-item>
+          <ion-input placeholder="Cargo"
+            [ngClass]="{'error-validation-input': viewModel.clientIsAgent && !viewModel.cargoRelacaoAgente}">
+          </ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="viewModel.clientIsAgent">
+      <ion-col col-12>
+        <ion-item>
+          <ion-input placeholder="Tipo do Relacionamento/Ligação"
+            [ngClass]="{'error-validation-input': viewModel.clientIsAgent && !viewModel.cargoRelacaoAgente}">
+          </ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <ion-item>
+          <ion-label>
+            Quais os propósitos e/ou natureza da relação de negócios com a Organização? (Selecione 01 ou mais)
+          </ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-list>
+
+</ion-content>
+<ion-footer>
+  <button [ngClass]="{'disabled': hasError}" [disabled]="hasError" class="next-button" ion-button color="danger"
+    (click)="goNext()">Avançar</button>
+</ion-footer>

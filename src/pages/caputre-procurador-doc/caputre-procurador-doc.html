@@ -1,0 +1,62 @@
+<ion-content padding>
+  <ion-row>
+    <p class="backAnchor">
+      <a (tap)="close()">Voltar</a>
+    </p>
+    <ion-col col-2></ion-col>
+    <ion-col col-8 text-center>
+      <h1>Procurador</h1>
+      <div class="menu">
+        <ion-row>
+          <ion-col>
+            <h3>Selecione o tipo de documento</h3>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col text-center>
+            <button ion-button #rg value="RG" [ngClass]="{'choosen': tipoDoc == 'RG'}"
+              (click)="choseType(rg)">RG</button>
+          </ion-col>
+          <ion-col text-center>
+            <button ion-button #cnh value="CNH" [ngClass]="{'choosen': tipoDoc == 'CNH'}"
+              (click)="choseType(cnh)">CNH</button>
+          </ion-col>
+          <ion-col text-center>
+            <button [disabled]="1 == 1" ion-button #RNE value="RNE" [ngClass]="{'choosen': tipoDoc == 'RNE'}"
+              (click)="choseType(RNE)">RNE</button>
+          </ion-col>
+          <ion-col text-center>
+            <button [disabled]="1 == 1" ion-button #pass value="PASS" [ngClass]="{'choosen': tipoDoc == 'PASS'}"
+              (click)="choseType(PASS)">Passaporte</button>
+          </ion-col>
+          <ion-col text-center>
+            <button [disabled]="1 == 1" ion-button #cnh value="CDT" [ngClass]="{'choosen': tipoDoc == 'CDT'}"
+              (click)="choseType(CDT)">Carteira de trabalho</button>
+          </ion-col>
+        </ion-row>
+      </div>
+
+    </ion-col>
+    <ion-col col-2></ion-col>
+  </ion-row>
+
+  <!-- <ion-card *ngIf="photo !== ''">
+    <img [src]="photo" />
+  </ion-card> -->
+
+  <ion-footer no-border (click)="getPhoto()">
+    <ion-toolbar>
+      <ion-row>
+        <ion-col col-4></ion-col>
+        <ion-col *ngIf="tipoDoc" col-4>
+          <button ion-button clear full color="primary" icon-left [disabled]='!tipoDoc'>
+            <ion-icon name='camera'></ion-icon>
+            Tirar foto
+          </button>
+        </ion-col>
+        <ion-col col-4></ion-col>
+      </ion-row>
+    </ion-toolbar>
+  </ion-footer>
+</ion-content>
+  

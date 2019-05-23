@@ -16,26 +16,21 @@
       </ion-select>
     </ion-item>
   </div>
-
-
   <div class="account-details" *ngIf="service">
-
     <div *ngIf="service == 2" class="category">
       <ion-label>Qual categoria ?</ion-label>
-
-      <ion-item>
-        <ion-label>Conta do Beneficio</ion-label>
-        <ion-radio item-left value="cdb"></ion-radio>
-      </ion-item>
-
-      <ion-item style="float: right;">
-        <ion-label> Conta do Beneficio</ion-label>
-        <ion-radio item-left value="cdb"></ion-radio>
-      </ion-item>
-
-
+      <ion-list radio-group>
+        <ion-item>
+          <ion-label>Conta do Beneficio</ion-label>
+          <ion-radio item-left value="cdb" (click)="setServiceType(1)"></ion-radio>
+        </ion-item>
+        <ion-item style="float: right;">
+          <ion-label> Numero do Beneficio</ion-label>
+          <ion-radio item-left value="ndb" (click)="setServiceType(2)"></ion-radio>
+        </ion-item>
+      </ion-list>
     </div>
-    <div class="account-fields">
+    <div class="account-fields" *ngIf="service && (serviceType==1||service==1)">
       <ion-item>
         <ion-list>
           <ion-row>
@@ -52,6 +47,24 @@
             <ion-col>
               <ion-item>
                 <ion-input [(ngModel)]='account.digit' type="number" placeholder="Digito"></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+        </ion-list>
+      </ion-item>
+    </div>
+    <div class="account-fields" *ngIf="service && serviceType==2">
+      <ion-item>
+        <ion-list>
+          <ion-row>
+            <ion-col col-8>
+              <ion-item>
+                <ion-input [(ngModel)]="account.number" type="number" placeholder="Número do Benefício"></ion-input>
+              </ion-item>
+            </ion-col>
+            <ion-col>
+              <ion-item>
+                <ion-input [(ngModel)]='account.digit' type="number" placeholder="Digito do Benefício"></ion-input>
               </ion-item>
             </ion-col>
           </ion-row>

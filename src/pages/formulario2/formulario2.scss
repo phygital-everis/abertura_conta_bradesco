@@ -1,4 +1,39 @@
 page-formulario2 {
+    ion-select {
+        min-width: 100%;
+     }
+ 
+    ion-col {
+        h3 {
+            margin-left: 25%;
+        }
+    }
+ 
+    .footer {
+        position: relative!important;
+     }
 
+     p {
+        color: #e2193d;
+        margin-left: 20px;
+    }
+    
+     ion-col {
+        ion-item {
+           .rounded-button {
+                width: 113px;
+                background-color: #ffffff;
+                height: 61px;
+                border-radius: 30.5px;
+                border: solid 1px #4a4a4a;
+                margin-left: 15px;
+           }
+           .rounded-button:active {
+                width: 113px;
+                background-color: #9e1321;
+                color: #ffffff;
+            }
+        }
+     }
 }
 
