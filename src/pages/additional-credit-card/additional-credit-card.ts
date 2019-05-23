@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
+import { NavController, NavParams, ModalController } from 'ionic-angular';
 import { DialogMenuPage } from "../dialog-menu/dialog-menu";
 import { ChooseServicesPage } from '../choose-services/choose-services';
 
@@ -11,6 +11,7 @@ export class AdditionalCreditCardPage {
   public cards: any[];
   public card: any;
   public index: number;
+  public additionals = [];
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
@@ -28,6 +29,14 @@ export class AdditionalCreditCardPage {
   presentDialogMenuModal() {
     let dialogMenuModal = this.modalCtrl.create(DialogMenuPage);
     dialogMenuModal.present();
+  }
+
+  addCard():void {
+    this.additionals.push({nome:"",nascimento:"",cpf:"",seguro:false})
+  }
+
+  removeCard(index):void {
+    this.additionals.splice(index,1);
   }
 
   goBack():void {

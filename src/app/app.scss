@@ -373,7 +373,9 @@ Não é necessario
   width: 100%;
   height: 18%;
   bottom: 0px;
+  left: 0;
   position: absolute !important;
+  background: #fff;
   .next-button {
     transform: translate(0%, 30%);
     left: 33%;
@@ -414,4 +416,24 @@ Não é necessario
   color: #9e1321;
   text-decoration: underline;
   font-style: italic;
+}
+
+.default-button{
+  background-color: #e7e7e7;
+  width: auto;
+  border: 1px solid #4a4a4a;
+  margin: 23.4px 0 0 0!important;
+  .button-inner{
+    font-size: 20px;
+    color: #4a4a4a;
+    font-style: italic;
+  }
+}
+
+.scroll-content{
+  max-height: 85%;
+}
+
+ion-title{
+  position: relative!important;
 }
