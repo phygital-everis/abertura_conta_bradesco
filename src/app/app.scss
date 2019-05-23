@@ -76,7 +76,6 @@ ion-select {
 ion-popover {
   .popover-wrapper {
     .popover-content {
-      min-width: 45% !important;
       .popover-viewport {
         ng-component {
           ion-list {
@@ -445,10 +444,6 @@ Não é necessario
     color: #4a4a4a;
     font-style: italic;
   }
-}
-
-.scroll-content{
-  max-height: 85%;
 }
 
 ion-title{
