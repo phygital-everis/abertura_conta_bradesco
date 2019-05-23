@@ -7,11 +7,15 @@ page-credit-card-modal {
     margin-right: 20px;
   }
 
-  .card{
-    position: absolute;
+  ion-item{
+    background: transparent;
+    img{
+      &.cardimg{
+        width: 100%;
+      }
+    }
+  }
+  .fixed-content, .scroll-content{
     height: 100%;
-    width: 100%;
-    border-radius: 15px;
-    background: #cc092f;
   }
 }
