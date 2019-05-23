@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { CaptureCompEndPage } from "../capture-comp-end/capture-comp-end";
 import { ClienteProvider } from "../../providers/cliente/cliente";
+import { DadosDoDocumentoPage } from '../dados-do-documento/dados-do-documento';
 
 @Component({
   selector: 'page-formulario',
@@ -162,8 +163,7 @@ export class FormularioPage {
   }
 
   goNext(){
-   
-    this.navCtrl.push(CaptureCompEndPage)
+    this.navCtrl.push(DadosDoDocumentoPage)
   }
 
 }

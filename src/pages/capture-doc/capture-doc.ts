@@ -38,19 +38,11 @@ export class CaptureDocPage {
       targetHeight: 600,
       targetWidth: 900
     }
-
     this.camera.getPicture(options).then((imageData) => {
-
-      this.photo = this._sanitizer.bypassSecurityTrustResourceUrl('data:image/jpg;base64,'
-        + imageData);
-
       this.presentLoadingOptions();
-
-      this.vision.sendVision(imageData).subscribe((data) => {        
+      this.vision.sendVision(imageData).subscribe((data) => {
         this.navCtrl.push(FormularioPage, { data: data, tipo: this.tipoDoc });
       });
-
-      
     }, (err) => {
       console.log(err);
       this.presentAlertConfirm();
@@ -58,7 +50,6 @@ export class CaptureDocPage {
   }
 
   public close() {
-    console.log('close');
     this.navCtrl.popTo(BasketOfServicesPage);
   }
 
@@ -90,5 +81,4 @@ export class CaptureDocPage {
     });
     await alert.present();
   }
-
 }

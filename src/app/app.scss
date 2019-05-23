@@ -165,6 +165,10 @@ page-credit-card-modal {
   background-color: #ffffff !important;
 }
 
+.error-validation-input {
+  background-color: #ffe5ea;
+  border-color: #e2193d!important; 
+}
 /*
 Não é necessario
 .header {
@@ -397,6 +401,12 @@ Não é necessario
     color: #ffffff !important;
   }
 }
+
+.button-active {
+  background-color: #9e1321 !important;
+  border-bottom: 0px solid #9e1321 !important;
+}
+
 
 .button-inner {
   font-size: 41px;

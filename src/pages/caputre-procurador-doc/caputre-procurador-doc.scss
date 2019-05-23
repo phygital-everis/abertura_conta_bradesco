@@ -1,0 +1,27 @@
+page-caputre-procurador-doc {
+    ion-row {
+        height: 100%;
+        width: 100%;
+        ion-col {
+            width: 100%;
+            h1 {
+                font-family: Roboto;
+                font-size: 49px;
+                font-style: italic;
+                color: #4a4a4a;
+                transform: translateY(490%);
+            }
+            .menu{
+                border: 1px solid #4a4a4a;
+                border-radius: 25px;
+                padding: 20px 50px;
+                transform: translateY(95%);
+            }
+        }
+    }
+    .button-inner{
+        font-size: 40px;
+        text-transform: lowercase;
+        text-transform: capitalize;
+    }
+}

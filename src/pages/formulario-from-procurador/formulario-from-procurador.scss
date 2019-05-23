@@ -1,0 +1,24 @@
+page-formulario-from-procurador {
+    ion-select {
+        min-width: 100%;
+     }
+ 
+    ion-col {
+        h3 {
+            margin-left: 20%;
+        }
+    }
+ 
+    .footer {
+        position: relative!important;
+    }
+
+    .scroll-content {
+        max-height: 100%!important;
+    }
+
+    p {
+        color: #e2193d;
+        margin-left: 20px;
+    }
+}
