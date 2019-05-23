@@ -63,6 +63,7 @@ import { ClienteProvider } from '../providers/cliente/cliente';
 import { PrinterProvider } from '../providers/printer/printer';
 import { ValidaCpfProvider } from '../providers/valida-cpf/valida-cpf';
 import { SessionHelper } from '../providers/session-helper/session-helper';
+import {DadosPreAberturaPage} from "../pages/dados-pre-abertura/dados-pre-abertura";
 
 const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
 
@@ -101,7 +102,8 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     ChooseServicesPage,
     ConfirmaDesejaNovoDocPage,
     ContratoEletronicoPage,
-    AdditionalCreditCardPage
+    AdditionalCreditCardPage,
+    DadosPreAberturaPage
   ],
   imports: [
     BrowserModule,
@@ -158,7 +160,8 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     ChooseServicesPage,
     ConfirmaDesejaNovoDocPage,
     ContratoEletronicoPage,
-    AdditionalCreditCardPage
+    AdditionalCreditCardPage,
+    DadosPreAberturaPage
   ],
   providers: [
     AuthService,
