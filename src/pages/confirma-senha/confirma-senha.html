@@ -1,30 +1,70 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      <ion-row>
-        <ion-col>
-          <img src="assets/imgs/bradesco_logo.png" alt="logo">
-        </ion-col>
-
-      </ion-row>
-    </ion-title>
-  </ion-navbar>
-</ion-header>
 <ion-content padding>
-  <ion-row>
-    <ion-col text-center>
-      <h2>Confirme com a sua senha</h2>
-    </ion-col>
-  </ion-row>
-
-  <ion-list>
-    <ion-item>
-      <ion-label floating>Digite sua senha</ion-label>
-      <ion-input [(ngModel)]="senha1" type="password" ></ion-input>
-    </ion-item>
-
-  </ion-list>
-
-  <div padding>
-    <button ion-button full color="danger" (click)="confereSenha()" >próximo</button></div>
+  <ion-grid>
+    <ion-row class="sub-titulo">
+      <ion-col>
+        <h3>Segurança da conta - Senha</h3>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="crie-senha-texto">
+        <h2>
+          Insira a senha cadastrada <br>
+          para confirmação do contrato
+        </h2>
+        <p>A senha necessita ter 06 (seis) caracteres</p>
+      </ion-col>
+    </ion-row>
+    <ion-row class="input-container">
+      <ion-col col-3></ion-col>
+      <ion-col col-6>
+        <ion-item>
+          <ion-input [(ngModel)]="senha" type="password">
+          </ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col col-3></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-grid class="texto-numerico">
+        <ion-row>
+          <ion-col>
+            <span (click)="escolherNumero(1)" class="left numeric-button">1</span>
+            <span (click)="escolherNumero(2)" class="numeric-button">2</span>
+            <span (click)="escolherNumero(3)" class="right numeric-button">3</span>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <span (click)="escolherNumero(4)" class="left numeric-button">4</span>
+            <span (click)="escolherNumero(5)" class="numeric-button">5</span>
+            <span (click)="escolherNumero(6)" class="right numeric-button">6</span>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <span (click)="escolherNumero(7)" class="left numeric-button">7</span>
+            <span (click)="escolherNumero(8)" class="numeric-button">8</span>
+            <span (click)="escolherNumero(9)" class="right numeric-button">9</span>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <span (click)="escolherNumero(0)" class="numeric-button">0</span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-row>
+    <ion-row class="sim-nao">
+      <ion-col>
+        <button ion-button (click)="limpar()" color="danger">
+          Limpar
+        </button>
+      </ion-col>
+      <ion-col >
+        <button ion-button [disabled]="senha.length < 6" (click)="goNext()" color="danger">
+          Enviar
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
