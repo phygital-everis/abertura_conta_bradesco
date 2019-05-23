@@ -1,13 +1,12 @@
-<ion-content>
-  <ion-row>
-    <h3>
-      Tipo de conta e Forma de Movimentação
-    </h3>
-  </ion-row>
+<ion-content padding>
+  <ion-item>
+    Tipo de conta e Forma de Movimentação
+    <a item-end (click)="goBack()" class="voltar">voltar</a>
+  </ion-item>
   <div class="select-options-account-type">
     <ion-item>
       <ion-label>Tipo da Conta</ion-label>
-      <ion-select id="ionSelectAccTp" interface="popover" placeholder="Selecionar">
+      <ion-select id="ionSelectAccTp" interface="popover" placeholder="Selecionar" class="myCustomSelect">
         <ion-option value="1">00 - Individual</ion-option>
         <ion-option value="2">11 a 19 Conjunta E/OU</ion-option>
         <ion-option value="3">21 a 29 Conjunta E</ion-option>

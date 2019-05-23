@@ -49,6 +49,7 @@ import { BasketOfServicesPage } from '../pages/basket-of-services/basket-of-serv
 import { ChooseServicesPage } from '../pages/choose-services/choose-services';
 import { ConfirmaDesejaNovoDocPage } from '../pages/confirma-deseja-novo-doc/confirma-deseja-novo-doc';
 import { CreditCardPage } from '../pages/credit-card/credit-card';
+import { CreditCardModalPage } from '../pages/credit-card-modal/credit-card-modal';
 import { ContratoEletronicoPage } from '../pages/contrato-eletronico/contrato-eletronico';
 import { AdditionalCreditCardPage } from '../pages/additional-credit-card/additional-credit-card';
 
@@ -101,6 +102,7 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     BasketOfServicesPage,
     ConfirmaDesejaNovoDocPage,
     CreditCardPage,
+    CreditCardModalPage,
     ChooseServicesPage,
     ConfirmaDesejaNovoDocPage,
     ContratoEletronicoPage,
@@ -161,6 +163,7 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     BasketOfServicesPage,
     ConfirmaDesejaNovoDocPage,
     CreditCardPage,
+    CreditCardModalPage,
     ChooseServicesPage,
     ConfirmaDesejaNovoDocPage,
     ContratoEletronicoPage,
