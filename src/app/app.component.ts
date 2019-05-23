@@ -1,6 +1,7 @@
+import { CapturePicPage } from './../pages/capture-pic/capture-pic';
 import { DialogMenuPage } from './../pages/dialog-menu/dialog-menu';
 import { Component, OnInit, ViewChild } from '@angular/core';
-import {Platform, NavParams, PopoverController} from 'ionic-angular';
+import { Platform, NavParams, PopoverController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
@@ -30,13 +31,17 @@ export class MyApp {
 
   presentDialogMenuModal(ev) {
 
-    let popover = this.popoverCtrl.create(DialogMenuPage, {}, {cssClass: "popover-menu"});
+    let popover = this.popoverCtrl.create(DialogMenuPage, {}, { cssClass: "popover-menu" });
 
     popover.present({
       ev: ev
     });
 
   }
-
+  //TODO
+  //remover ao integrar
+  goToPic(picType: string, previous: string, next: string, nextData: any, canSkip = true) {
+    this.nav.push(CapturePicPage, { tipoFoto: picType, anterior: previous, proxima: next, nextData: nextData, canSkip: canSkip });
+  }
 
 }

@@ -1,3 +1,4 @@
+import { CapturePicPage } from './../pages/capture-pic/capture-pic';
 //modules
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
@@ -70,6 +71,7 @@ import { ClienteProvider } from '../providers/cliente/cliente';
 import { PrinterProvider } from '../providers/printer/printer';
 import { ValidaCpfProvider } from '../providers/valida-cpf/valida-cpf';
 import { SessionHelper } from '../providers/session-helper/session-helper';
+import { CameraMock } from '../providers/camera-mock/camera-mock';
 
 const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
 
@@ -115,7 +117,11 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     FormularioFromProcuradorPage,
     CaptureProcuradorCompPage,
     FormularioProcuradorCompPage,
+<<<<<<< Updated upstream
     DadosDoDocumentoPage
+=======
+    CapturePicPage
+>>>>>>> Stashed changes
   ],
   imports: [
     BrowserModule,
@@ -179,7 +185,11 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     FormularioFromProcuradorPage,
     CaptureProcuradorCompPage,
     FormularioProcuradorCompPage,
+<<<<<<< Updated upstream
     DadosDoDocumentoPage
+=======
+    CapturePicPage
+>>>>>>> Stashed changes
   ],
   providers: [
     AuthService,
@@ -199,7 +209,8 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     PrinterProvider,
     BluetoothSerial,
     ValidaCpfProvider,
-    SessionHelper
+    SessionHelper,
+    { provide: Camera, useClass: CameraMock }
 
   ]
 })
