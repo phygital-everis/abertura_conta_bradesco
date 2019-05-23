@@ -20,7 +20,8 @@
       <ion-col col-6 col-md-3>
         <ion-item>
           <ion-label stacked>Cartão de Crédito</ion-label>
-          <ion-input type="text" placeholder="(R$) Real" [brmasker]="{money: true}"></ion-input>
+          <ion-input type="text" placeholder="(R$) Real" [brmasker]="{money: true}" [(ngModel)]="limiteCartao">
+          </ion-input>
         </ion-item>
       </ion-col>
       <ion-col col-6 col-md-3 class="select-options-account-type">
@@ -49,7 +50,7 @@
     <ion-row justify-content-center>
       <ion-col col-12 col-md-10 text-center>
         <ion-item>
-          <ion-range min="0" max="1500" color="danger">
+          <ion-range min="0" max="1500" color="danger"  [(ngModel)]="limiteCartao">
             <ion-label range-left>0</ion-label>
             <ion-label range-right>1.500</ion-label>
           </ion-range>
