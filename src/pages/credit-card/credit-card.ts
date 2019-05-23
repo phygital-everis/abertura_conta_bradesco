@@ -10,8 +10,10 @@ import { ModalConfirmPage } from "../modal-confirm/modal-confirm";
   templateUrl: 'credit-card.html',
 })
 export class CreditCardPage {
-  vencimentoFatura: string[] = ['01','05','08','10','12','13','15','17','20','25']
-  public cards: any[];
+
+  vencimentoFatura: string[] = ['01','05','08','10','12','13','15','17','20','25'];
+  valor = 1500;
+  cards: any[];
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
@@ -19,8 +21,30 @@ export class CreditCardPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad CreditCardPage');
+
     this.cards = this.navParams.get('cards');
+
+    let vlCartao = this.valor / this.cards.length;
+
+    this.cards.forEach((card) => {
+
+      card.valor = vlCartao;
+
+    });
+
+  }
+
+  mudarValor(index, valorCartao) {
+
+    let valorRestante = (this.valor - valorCartao) / (this.cards.length - 1);
+
+    this.cards.forEach((card, i) => {
+
+      if(index != i)
+        card.valor = valorRestante;
+
+    });
+
   }
 
   presentDialogMenuModal() {
@@ -42,7 +66,7 @@ export class CreditCardPage {
   }
 
   goNext(){
-    this.navCtrl.push(AdditionalCreditCardPage, {cards:this.cards,index:0})
+    this.navCtrl.push(AdditionalCreditCardPage, {cards:this.cards, index:0})
   }
 
 }

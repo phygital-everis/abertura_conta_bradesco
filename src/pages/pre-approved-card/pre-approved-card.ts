@@ -9,30 +9,34 @@ import { CreditCardPage } from "../credit-card/credit-card";
 })
 export class PreApprovedCardPage {
 
-  public cards: any[] = [
+  cards: any[] = [
     {
       nome: 'Função Crédito Elo',
       bandeira: 'assets/imgs/elo-logo.png',
+      valor: 0,
       selecionado: false,
     },
     {
       nome: 'Elo Plus',
       bandeira: 'assets/imgs/elo-logo.png',
+      valor: 0,
       selecionado: false,
     },
     {
       nome: 'Internacional Elo',
       bandeira: 'assets/imgs/elo-logo.png',
+      valor: 0,
       selecionado: false,
     },
     {
       nome: 'Internacional Visa',
       bandeira: 'assets/imgs/visa-logo.png',
+      valor: 0,
       selecionado: false,
     }
   ];
 
-  public cartoesSelecionados = [];
+  cartoesSelecionados = [];
 
   constructor(
     public navCtrl: NavController,
@@ -75,7 +79,7 @@ export class PreApprovedCardPage {
     }
 
     this.cards[index].selecionado = !this.cards[index].selecionado;
-    
+
   }
 
   goNext(){

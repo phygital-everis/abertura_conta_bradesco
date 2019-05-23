@@ -23,6 +23,10 @@ page-pre-approved-card {
     }
 
     button {
+
+      :disabled{
+        opacity: 0.2 !important;
+      }
       width: 100px;
       margin: 0 358px 0 335px;
     }
