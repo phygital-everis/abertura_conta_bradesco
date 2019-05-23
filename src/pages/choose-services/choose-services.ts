@@ -15,8 +15,9 @@ import { BasketOfServicesPage } from '../basket-of-services/basket-of-services';
 export class ChooseServicesPage {
 
   service: number;
+  serviceType: number;
   account = {};
-  
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
@@ -27,10 +28,15 @@ export class ChooseServicesPage {
   public selectService(event): void {
     console.log(event);
     this.service = event;
+    if (this.service == 1) {
+      this.serviceType = null;
+    }
   }
 
   public goNext(): void {
     this.navCtrl.push(BasketOfServicesPage);
   }
-
+  setServiceType(svcType: number) {
+    this.serviceType = svcType;
+  }
 }
