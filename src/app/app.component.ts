@@ -1,11 +1,14 @@
+import { DadosComplementaresPage } from './../pages/dados-complementares/dados-complementares';
+import { CapturePicPage } from './../pages/capture-pic/capture-pic';
 import { DialogMenuPage } from './../pages/dialog-menu/dialog-menu';
-import { Component, OnInit, ViewChild } from '@angular/core';
-import {Platform, NavParams, PopoverController} from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { Platform, PopoverController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { NavController } from 'ionic-angular';
 import {DadosPreAberturaPage} from "../pages/dados-pre-abertura/dados-pre-abertura";
+import { DadosDoDocumentoPage } from '../pages/dados-do-documento/dados-do-documento';
 import {ReciboPage} from "../pages/recibo/recibo";
 import { FormularioPage } from '../pages/formulario/formulario';
 import { Formulario2Page } from '../pages/formulario2/formulario2';
@@ -19,7 +22,7 @@ export class MyApp {
     let curr = this.nav.getActive();
     console.log('Current: ', curr);
   }
-  rootPage: any = Formulario2Page;
+  rootPage: any = HomePage;
 
   @ViewChild('appNav') nav: NavController
 
@@ -34,13 +37,17 @@ export class MyApp {
 
   presentDialogMenuModal(ev) {
 
-    let popover = this.popoverCtrl.create(DialogMenuPage, {}, {cssClass: "popover-menu"});
+    let popover = this.popoverCtrl.create(DialogMenuPage, {}, { cssClass: "popover-menu" });
 
     popover.present({
       ev: ev
     });
 
   }
-
+  //TODO
+  //remover ao integrar
+  goToPic(picType: string, previous: string, next: string, nextData: any, canSkip = true) {
+    this.nav.push(CapturePicPage, { tipoFoto: picType, anterior: previous, proxima: next, nextData: nextData, canSkip: canSkip });
+  }
 
 }
