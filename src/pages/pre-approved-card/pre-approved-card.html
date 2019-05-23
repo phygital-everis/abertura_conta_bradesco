@@ -5,7 +5,7 @@
   </ion-item>
   <ion-item>
     <h1>
-      Modalidade (Selecione uma ou mais modalidades de cartão)
+      Modalidade (Selecione uma ou duas modalidades de cartão)
     </h1>
   </ion-item>
   <div class="produtos" *ngFor="let card of cards;let i = index">
@@ -13,17 +13,17 @@
       <ion-col col-3 text-center style="padding-top: 5%">
         <a href="#">Detalhes</a>
       </ion-col>
-      <ion-col col-6 class="headerProduct" (click)="selectCard(card,i)">
+      <ion-col col-6 class="headerProduct" (click)="selectCard(card, i)">
         <ion-row>
           <ion-col col-4>
-            <img class="logo-card" src="{{card.bandeira}}" alt="logo">
+            <img class="logo-card" [src]="card.bandeira" alt="logo">
           </ion-col>
           <ion-col col-8>
             <h2>{{card.nome}}</h2>
           </ion-col>
         </ion-row>
       </ion-col>
-      <ion-col col-3 style="padding-top: 5%; max-width: 10%;" *ngIf="cartao[i]">
+      <ion-col col-3 style="padding-top: 5%; max-width: 10%;" *ngIf="card.selecionado">
         <ion-icon name="checkmark"></ion-icon>
       </ion-col>
     </ion-row>
