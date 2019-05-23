@@ -1,0 +1,91 @@
+<ion-content padding>
+  <div class="centralizado">
+    <ion-row>
+      <p class="backAnchor">
+        <a href="">Voltar</a>
+      </p>
+    </ion-row>
+
+    <ion-row>
+      <ion-col><h2 style="text-align: left;">Dados do documento</h2></ion-col>
+      <ion-col><h2 style="text-align: right;">Titular</h2></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Autoriza envio de e-mail?</ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <button class="rounded-button">Sim</button>
+          <button class="rounded-button">Não</button>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <div class="Rectangle-div">
+        <p class="Legenda">Legenda:</p>
+        <p class="Legenda">( 1 ) para informações relativas ao país de nascimento</p>
+        <p class="Legenda">( 2 ) para informações relativas à nacionalidade</p>
+        <p class="Legenda">( 3 ) para informações relativas à residência fiscal</p>
+        <p class="Legenda">( 4 ) para informações relativas ao visto de residência permanente</p>
+      </div>
+    </ion-row>
+
+    <ion-row col-12>
+      <ion-col>
+        <ion-item>
+          <ion-select interface="popover" placeholder="Ref">
+            <ion-option value="REF">REF</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <ion-select interface="popover" placeholder="País">
+            <ion-option value="BR">Brasil</ion-option>
+            <ion-option value="UR">Uruguai</ion-option>
+            <ion-option value="AG">Argentina</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <ion-input type="number" placeholder="Número de Identificação Fiscal"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <div class="Rectangle-div" style="margin-top: 46px; padding-bottom: 21px;">
+        <p class="Legenda">Número de Identificação Fiscal (NIF)</p>
+        <ion-list radio-group name="opcao">
+        <ion-item style="width: 97%;border: none;">
+          <ion-label class="Legenda">Aguardando a emissão do número de identificação fiscal, 
+              o qual comprometo-me a entregar tão logo o receba.</ion-label>
+          <ion-radio class="input-radio" item-left value="0" name="opcao"></ion-radio>
+        </ion-item>
+        
+        <ion-item style="width: 97%;border: none;">
+          <ion-label class="Legenda">Sua jurisdição não exige o NIF</ion-label>
+          <ion-radio class="input-radio" item-left value="1" name="opcao"></ion-radio>
+        </ion-item>
+        
+        <ion-item style="width: 97%;border: none;">
+          <ion-label class="Legenda">É dispensado do NIF, de acordo com as regras do órgão 
+              de administração tributária no exterior.</ion-label>
+          <ion-radio class="input-radio" item-left value="2" name="opcao"></ion-radio>
+        </ion-item>
+        </ion-list>
+      
+      </div>
+    </ion-row>
+
+    <div class="footer-class">
+      <button class="next-button" ion-button color="danger" (click)="goNext()">Avançar</button>
+    </div>
+  </div>
+</ion-content>

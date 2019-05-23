@@ -57,6 +57,7 @@ import { CaputreProcuradorDocPage } from '../pages/caputre-procurador-doc/caputr
 import { FormularioFromProcuradorPage } from '../pages/formulario-from-procurador/formulario-from-procurador';
 import { CaptureProcuradorCompPage } from '../pages/capture-procurador-comp/capture-procurador-comp';
 import { FormularioProcuradorCompPage } from '../pages/formulario-procurador-comp/formulario-procurador-comp';
+import { DadosDoDocumentoPage } from '../pages/dados-do-documento/dados-do-documento';
 
 //providers
 import { VisionProvider } from '../providers/vision/vision';
@@ -113,7 +114,8 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     CaputreProcuradorDocPage,
     FormularioFromProcuradorPage,
     CaptureProcuradorCompPage,
-    FormularioProcuradorCompPage
+    FormularioProcuradorCompPage,
+    DadosDoDocumentoPage
   ],
   imports: [
     BrowserModule,
@@ -176,7 +178,8 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     CaputreProcuradorDocPage,
     FormularioFromProcuradorPage,
     CaptureProcuradorCompPage,
-    FormularioProcuradorCompPage
+    FormularioProcuradorCompPage,
+    DadosDoDocumentoPage
   ],
   providers: [
     AuthService,

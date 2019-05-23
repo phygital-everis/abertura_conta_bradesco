@@ -16,17 +16,17 @@
       </ion-col>
       </ion-row>
       <ion-row>
-      <ion-col>
+        <ion-col>
+            <ion-item>
+            <ion-input [ngClass]="{'error-validation-input': cliente.cliente.cpf.length < 11}" [(ngModel)]="cliente.cliente.cpf" type="text" placeholder="CPF"></ion-input>
+            </ion-item>
+        </ion-col>
+        <ion-col>
           <ion-item>
-          <ion-input [ngClass]="{'error-validation-input': cliente.cliente.cpf.length < 11}" [(ngModel)]="cliente.cliente.cpf" type="text" placeholder="CPF"></ion-input>
-          </ion-item>
-      </ion-col>
-          <ion-col>
-          <ion-item>
-              <ion-select [ngClass]="{'error-validation-input': !cliente.cliente.sexo}"  placeholder="Sexo" interface="popover" [(ngModel)]="cliente.cliente.sexo">
-              <ion-option value="masculino">Masculino</ion-option>
-              <ion-option value="feminino">Feminino</ion-option>
-              </ion-select>
+            <ion-select [ngClass]="{'error-validation-input': !cliente.cliente.sexo}"  placeholder="Sexo" interface="popover" [(ngModel)]="cliente.cliente.sexo">
+                <ion-option value="masculino">Masculino</ion-option>
+                <ion-option value="feminino">Feminino</ion-option>
+            </ion-select>
           </ion-item>
       </ion-col>
       </ion-row>
