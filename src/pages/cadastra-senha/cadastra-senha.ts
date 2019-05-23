@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { ReciboPage} from '../recibo/recibo';
 import { ToastController } from 'ionic-angular';
 import { ClienteProvider } from "../../providers/cliente/cliente";
-import {ContratoEletronicoPage} from "../contrato-eletronico/contrato-eletronico";
+import {RepetirSenhaPage} from "../repetir-senha/repetir-senha";
 
 @Component({
   selector: 'page-cadastra-senha',
@@ -38,7 +37,7 @@ export class CadastraSenhaPage {
   }
 
   goNext(){
-    this.navCtrl.push(ContratoEletronicoPage)
+    this.navCtrl.push(RepetirSenhaPage, {senha: this.senha})
   }
 
   presentToast(msg) {

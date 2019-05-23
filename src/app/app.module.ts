@@ -64,6 +64,7 @@ import { PrinterProvider } from '../providers/printer/printer';
 import { ValidaCpfProvider } from '../providers/valida-cpf/valida-cpf';
 import { SessionHelper } from '../providers/session-helper/session-helper';
 import {DadosPreAberturaPage} from "../pages/dados-pre-abertura/dados-pre-abertura";
+import {RepetirSenhaPage} from "../pages/repetir-senha/repetir-senha";
 
 const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
 
@@ -103,7 +104,8 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     ConfirmaDesejaNovoDocPage,
     ContratoEletronicoPage,
     AdditionalCreditCardPage,
-    DadosPreAberturaPage
+    DadosPreAberturaPage,
+    RepetirSenhaPage
   ],
   imports: [
     BrowserModule,
@@ -161,7 +163,8 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     ConfirmaDesejaNovoDocPage,
     ContratoEletronicoPage,
     AdditionalCreditCardPage,
-    DadosPreAberturaPage
+    DadosPreAberturaPage,
+    RepetirSenhaPage
   ],
   providers: [
     AuthService,
@@ -181,8 +184,7 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     PrinterProvider,
     BluetoothSerial,
     ValidaCpfProvider,
-    SessionHelper
-
+    SessionHelper,
   ]
 })
 export class AppModule { }
