@@ -123,7 +123,10 @@
       </ion-col>
       <ion-col>
         <ion-item>
-          <button [ngClass]="{'button-active': button3}" (click)="button3 = true"  class="rounded-button">Sim</button>
+            <!-- <button [ngClass]="{'button-active': button1}" (click)="button2 ? button1 = true && button2 = false : button1 = true" class="rounded-button">Sim</button>
+            <button [ngClass]="{'button-active': button2}" (click)="button1 ? button2 = true && button1 = false : button2 = true" class="rounded-button">Não</button> -->
+
+          <button [ngClass]="{'button-active': button3}" (click)="button4 ? button3 = true && button4 = false : button3 = true"  class="rounded-button">Sim</button>
           <button [ngClass]="{'button-active': button4}" (click)="button3 ? button4 = true && button3 = false : button4 = true" class="rounded-button">Não</button>
         </ion-item>
       </ion-col>
@@ -135,8 +138,8 @@
         </ion-item>
       </ion-col>
       <ion-col>
-        <ion-item>
-          <button [ngClass]="{'button-active': button1}" (click)="button1 = true"  class="rounded-button">Sim</button>
+        <ion-item> 
+          <button [ngClass]="{'button-active': button1}" (click)="button2 ? button1 = true && button2 = false : button1 = true"  class="rounded-button">Sim</button>
           <button [ngClass]="{'button-active': button2}" (click)="button1 ? button2 = true && button1 = false : button2 = true" class="rounded-button">Não</button>
         </ion-item>
       </ion-col>
