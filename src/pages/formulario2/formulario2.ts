@@ -9,6 +9,12 @@ import { CaptureAdditionallyDocPage } from '../capture-additionally-doc/capture-
 })
 export class Formulario2Page {
 
+  button1: boolean = false;
+  button2: boolean = false;
+
+  button3: boolean = false;
+  button4: boolean = false;
+  
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,

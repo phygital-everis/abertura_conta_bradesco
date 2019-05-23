@@ -115,15 +115,35 @@
         </ion-item>
       </ion-col>
     </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Autoriza envio de SMS?</ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <button [ngClass]="{'button-active': button3}" (click)="button3 = true"  class="rounded-button">Sim</button>
+          <button [ngClass]="{'button-active': button4}" (click)="button3 ? button4 = true && button3 = false : button4 = true" class="rounded-button">Não</button>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Autoriza envio de e-mail?</ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <button [ngClass]="{'button-active': button1}" (click)="button1 = true"  class="rounded-button">Sim</button>
+          <button [ngClass]="{'button-active': button2}" (click)="button1 ? button2 = true && button1 = false : button2 = true" class="rounded-button">Não</button>
+        </ion-item>
+      </ion-col>
+   </ion-row>
   </ion-list>
-
-  <ion-row>
-    <ion-col col-4></ion-col>
-    <ion-col col-4>
-      <button ion-button clear full color="danger" (click)="goNext()">
-        próximo
-      </button>
-    </ion-col>
-    <ion-col col-4></ion-col>
-  </ion-row>
+  <p *ngIf="!cliente.cliente.ocupacao">*Os campos em destaque não foram gravados e são obrigatórios</p>
+  <div class="footer">
+    <button [ngClass]="{'disabled': !cliente.cliente.ocupacao}" [disabled]="!cliente.cliente.ocupacao" class="next-button" ion-button color="danger" (click)="goNext()">Avançar</button>
+  </div>
 </ion-content>
