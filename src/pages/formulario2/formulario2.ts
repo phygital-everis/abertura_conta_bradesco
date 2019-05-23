@@ -11,7 +11,6 @@ export class Formulario2Page {
 
   button1: boolean = false;
   button2: boolean = false;
-
   button3: boolean = false;
   button4: boolean = false;
   

@@ -19,6 +19,9 @@ export class DadosDoDocumentoPage {
   service: number;
   account = {};
 
+  button1: boolean = false;
+  button2: boolean = false;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
