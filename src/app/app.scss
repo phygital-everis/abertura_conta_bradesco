@@ -93,18 +93,6 @@ ion-popover {
   }
 }
 
-/*
-Não é necessario
-page-dialog-menu {
-  left: 40% !important;
-  top: 8% !important;
-  position: absolute;
-  width: 55% !important;
-  height: 40% !important;
-}
-*/
-
-
 .popover-menu{
 
   .popover-content{
@@ -380,8 +368,7 @@ Não é necessario
 }
 
 .footer {
-
-  width: 100%;
+  width: 97%;
   height: 10%;
   bottom: 0;
   left: 0;
@@ -395,7 +382,8 @@ Não é necessario
 
     text-align: center;
     transform: translate(0%, 30%);
-
+    width: initial;
+    padding: 30px;
   }
 }
 
