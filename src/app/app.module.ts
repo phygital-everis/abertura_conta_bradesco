@@ -52,6 +52,7 @@ import { CreditCardPage } from '../pages/credit-card/credit-card';
 import { CreditCardModalPage } from '../pages/credit-card-modal/credit-card-modal';
 import { ContratoEletronicoPage } from '../pages/contrato-eletronico/contrato-eletronico';
 import { AdditionalCreditCardPage } from '../pages/additional-credit-card/additional-credit-card';
+import { ShellPage } from '../pages/shell/shell';
 
 //providers
 import { VisionProvider } from '../providers/vision/vision';
@@ -105,7 +106,8 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     ConfirmaDesejaNovoDocPage,
     ContratoEletronicoPage,
     AdditionalCreditCardPage,
-    DadosPreAberturaPage
+    DadosPreAberturaPage,
+    ShellPage
   ],
   imports: [
     BrowserModule,
@@ -164,7 +166,8 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     ConfirmaDesejaNovoDocPage,
     ContratoEletronicoPage,
     AdditionalCreditCardPage,
-    DadosPreAberturaPage
+    DadosPreAberturaPage,
+    ShellPage
   ],
   providers: [
     AuthService,

@@ -11,9 +11,7 @@ import { NavController } from 'ionic-angular';
 })
 export class MyApp {
   ngAfterViewInit(): void {
-    console.log('Nav: ', this.nav);
     let curr = this.nav.getActive();
-    console.log('Current: ', curr);
   }
   rootPage: any = HomePage;
 
@@ -26,17 +24,5 @@ export class MyApp {
       splashScreen.hide();
     });
   }
-
-
-  presentDialogMenuModal(ev) {
-
-    let popover = this.popoverCtrl.create(DialogMenuPage, {}, {cssClass: "popover-menu"});
-
-    popover.present({
-      ev: ev
-    });
-
-  }
-
 
 }
