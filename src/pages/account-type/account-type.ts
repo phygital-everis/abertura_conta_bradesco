@@ -25,6 +25,8 @@ export class AccountTypePage {
   }
 
   goToNextPage() {
+    console.log('tipo de conta: '+this.cliente.cliente.tipoDeConta);
+
     console.log(this.accType);
     console.log(this.moveType);
     this.localStorage.addItem('accountType', this.accType);

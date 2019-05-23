@@ -3,6 +3,9 @@ import { NavController, NavParams } from 'ionic-angular';
 import { ClienteProvider } from "../../providers/cliente/cliente";
 import { LocalStorageProvider } from "../../providers/local-storage/local-storage";
 import { CaptureAdditionallyDocPage } from '../capture-additionally-doc/capture-additionally-doc';
+import { CadastraSenhaPage } from "../cadastra-senha/cadastra-senha";
+
+
 @Component({
   selector: 'page-formulario2',
   templateUrl: 'formulario2.html',
@@ -11,7 +14,6 @@ export class Formulario2Page {
 
   button1: boolean = false;
   button2: boolean = false;
-
   button3: boolean = false;
   button4: boolean = false;
   
@@ -24,6 +26,8 @@ export class Formulario2Page {
   }
 
   ionViewDidLoad() {
+    
+    
     let data = (this.navParams.get('data'));
     let fields = [];
    
@@ -53,9 +57,24 @@ export class Formulario2Page {
   }
 
   goNext() {
+    console.log('tipo de conta: ' + this.cliente.cliente.tipoDeConta);
+    let tipoConta = this.cliente.cliente.tipoDeConta
     let accType;
     accType = this.localstorage.getItems('accountType')
+
+    if (tipoConta == 1) {
+      this.goCadastraSenhaPage()
+    }else{
+      this.goCaptureAdditionallDocPage()
+    }
+  }
+
+  goCaptureAdditionallDocPage(){
     this.navCtrl.push(CaptureAdditionallyDocPage)
+  }
+
+  goCadastraSenhaPage(){
+    this.navCtrl.push(CadastraSenhaPage)
   }
 
 }

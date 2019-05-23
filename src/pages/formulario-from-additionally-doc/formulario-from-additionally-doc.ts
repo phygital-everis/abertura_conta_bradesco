@@ -2,13 +2,8 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { ClienteProvider } from '../../providers/cliente/cliente';
 import { CaputreProcuradorDocPage } from '../caputre-procurador-doc/caputre-procurador-doc';
+import { CadastraSenhaPage } from "../cadastra-senha/cadastra-senha";
 
-/**
- * Generated class for the FormularioFromAdditionallyDocPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @Component({
   selector: 'page-formulario-from-additionally-doc',
@@ -164,6 +159,20 @@ export class FormularioFromAdditionallyDocPage {
     }
   }
   goNext() {
+    console.log('tipo de conta: ' + this.cliente.cliente.tipoDeConta);
+    let tipoConta = this.cliente.cliente.tipoDeConta
+    if (tipoConta == 2) {
+      this.goCadastraSenhaPage()
+    } else {
+      this.goCaptureProcuradorPage()
+    }
+  }
+
+  goCaptureProcuradorPage() {
     this.navCtrl.push(CaputreProcuradorDocPage);
+  }
+
+  goCadastraSenhaPage() {
+    this.navCtrl.push(CadastraSenhaPage)
   }
 }

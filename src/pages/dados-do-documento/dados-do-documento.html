@@ -19,8 +19,8 @@
       </ion-col>
       <ion-col>
         <ion-item>
-          <button class="rounded-button">Sim</button>
-          <button class="rounded-button">Não</button>
+          <button [ngClass]="{'button-active': button1}" (click)="button2 ? button1 = true && button2 = false : button1 = true" class="rounded-button">Sim</button>
+          <button [ngClass]="{'button-active': button2}" (click)="button1 ? button2 = true && button1 = false : button2 = true" class="rounded-button">Não</button>
         </ion-item>
       </ion-col>
     </ion-row>

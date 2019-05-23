@@ -13,9 +13,13 @@
         <img class="menu-img" src="assets/imgs/menu.png" width="80" height="80" alt="menu">
       </button>
     </ion-buttons>
+    <button *ngIf="false"
+      (click)="goToPic('Foto Titular','','ComprovanteDeRenda',{ tipoFoto: 'Comprovante de Renda', anterior: '', proxima: '' ,canSkip:true},false)">
+      GetFotoTitular
+    </button>
   </ion-navbar>
 </ion-header>
 <ion-content>
-    <ion-nav #appNav [root]="rootPage">
-    </ion-nav>
+  <ion-nav #appNav [root]="rootPage">
+  </ion-nav>
 </ion-content>

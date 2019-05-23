@@ -1,3 +1,4 @@
+import { CapturePicPage } from './../pages/capture-pic/capture-pic';
 //modules
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
@@ -70,7 +71,9 @@ import { ClienteProvider } from '../providers/cliente/cliente';
 import { PrinterProvider } from '../providers/printer/printer';
 import { ValidaCpfProvider } from '../providers/valida-cpf/valida-cpf';
 import { SessionHelper } from '../providers/session-helper/session-helper';
-import {DadosPreAberturaPage} from "../pages/dados-pre-abertura/dados-pre-abertura";
+import { CameraMock } from '../providers/camera-mock/camera-mock';
+import { DadosPreAberturaPage } from "../pages/dados-pre-abertura/dados-pre-abertura";
+import { DadosComplementaresPage } from '../pages/dados-complementares/dados-complementares';
 
 const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
 
@@ -116,7 +119,10 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     FormularioFromProcuradorPage,
     CaptureProcuradorCompPage,
     FormularioProcuradorCompPage,
-    DadosDoDocumentoPage
+    DadosDoDocumentoPage,
+    CapturePicPage,
+    DadosPreAberturaPage,
+    DadosComplementaresPage
   ],
   imports: [
     BrowserModule,
@@ -180,7 +186,10 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     FormularioFromProcuradorPage,
     CaptureProcuradorCompPage,
     FormularioProcuradorCompPage,
-    DadosDoDocumentoPage
+    DadosDoDocumentoPage,
+    CapturePicPage,
+    DadosPreAberturaPage,
+    DadosComplementaresPage
   ],
   providers: [
     AuthService,
@@ -200,7 +209,8 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     PrinterProvider,
     BluetoothSerial,
     ValidaCpfProvider,
-    SessionHelper
+    SessionHelper,
+    { provide: Camera, useClass: CameraMock }
 
   ]
 })
