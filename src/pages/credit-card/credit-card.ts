@@ -10,12 +10,13 @@ import { ModalConfirmPage } from "../modal-confirm/modal-confirm";
   templateUrl: 'credit-card.html',
 })
 export class CreditCardPage {
-  vencimentoFatura: string[] = ['01','05','08','10','12','13','15','17','20','25']
+  vencimentoFatura: string[] = ['01', '05', '08', '10', '12', '13', '15', '17', '20', '25']
   public cards: any[];
-
+  limiteCartao: number;
+  
   constructor(public navCtrl: NavController,
-              public navParams: NavParams,
-              public modalCtrl: ModalController) {
+    public navParams: NavParams,
+    public modalCtrl: ModalController) {
   }
 
   ionViewDidLoad() {
@@ -33,16 +34,16 @@ export class CreditCardPage {
     ccModal.present();
   }
 
-  goBack():void {
+  goBack(): void {
     this.navCtrl.pop();
   }
 
-  removeCard(index):void {
-    this.cards.splice(index,1)
+  removeCard(index): void {
+    this.cards.splice(index, 1)
   }
 
-  goNext(){
-    this.navCtrl.push(AdditionalCreditCardPage, {cards:this.cards,index:0})
+  goNext() {
+    this.navCtrl.push(AdditionalCreditCardPage, { cards: this.cards, index: 0 })
   }
 
 }

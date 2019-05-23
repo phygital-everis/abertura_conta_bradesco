@@ -1,11 +1,8 @@
-import { CapturePicPage } from './../pages/capture-pic/capture-pic';
-import { DialogMenuPage } from './../pages/dialog-menu/dialog-menu';
 import { Component, ViewChild } from '@angular/core';
 import { Platform, PopoverController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
-import { ReciboPage } from '../pages/recibo/recibo';
 import { NavController } from 'ionic-angular';
 
 @Component({
@@ -13,9 +10,9 @@ import { NavController } from 'ionic-angular';
 })
 export class MyApp {
   ngAfterViewInit(): void {
-    let curr = this.nav.getActive();
   }
   rootPage: any = HomePage;
+  
 
   @ViewChild('appNav') nav: NavController
 
