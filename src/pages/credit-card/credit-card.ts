@@ -12,7 +12,6 @@ import { ModalConfirmPage } from "../modal-confirm/modal-confirm";
 export class CreditCardPage {
   vencimentoFatura: string[] = ['01', '05', '08', '10', '12', '13', '15', '17', '20', '25']
   public cards: any[];
-  limiteCartao: number;
   
   constructor(public navCtrl: NavController,
     public navParams: NavParams,

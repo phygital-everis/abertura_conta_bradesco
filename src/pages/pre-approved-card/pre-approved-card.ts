@@ -11,19 +11,23 @@ export class PreApprovedCardPage {
   public cards: any[] = [
     {
       nome: 'Função Crédito Elo',
-      bandeira: 'assets/imgs/elo-logo.png'
+      bandeira: 'assets/imgs/elo-logo.png',
+      limite: 0
     },
     {
       nome: 'Elo Plus',
-      bandeira: 'assets/imgs/elo-logo.png'
+      bandeira: 'assets/imgs/elo-logo.png',
+      limite: 0
     },
     {
       nome: 'Internacional Elo',
-      bandeira: 'assets/imgs/elo-logo.png'
+      bandeira: 'assets/imgs/elo-logo.png',
+      limite: 0
     },
     {
       nome: 'Internacional Visa',
-      bandeira: 'assets/imgs/visa-logo.png'
+      bandeira: 'assets/imgs/visa-logo.png',
+      limite: 0
     }
   ]
   public cartao = [false,false,false,false]
