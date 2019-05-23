@@ -13,7 +13,6 @@ page-contrato-eletronico {
   }
 
   .card {
-    border: #e2193d solid 1px;
     border-radius: 8px;
     background-color: #e2193d;
     margin-bottom: 3px;
@@ -30,6 +29,11 @@ page-contrato-eletronico {
     }
 
     .content {
+
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+
+      border: #e2193d solid 1px;
       color: #e2193d;
       background-color: #fff;
       font-family: Roboto;
