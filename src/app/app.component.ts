@@ -17,7 +17,7 @@ export class MyApp {
     let curr = this.nav.getActive();
     console.log('Current: ', curr);
   }
-  rootPage: any = DadosComplementaresPage;
+  rootPage: any = HomePage;
 
   @ViewChild('appNav') nav: NavController
 
