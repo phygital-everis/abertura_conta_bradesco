@@ -117,7 +117,6 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     ConfirmaDesejaNovoDocPage,
     ContratoEletronicoPage,
     AdditionalCreditCardPage,
-<<<<<<< HEAD
     CaptureAdditionallyDocPage,
     FormularioFromAdditionallyDocPage,
     CaputreProcuradorDocPage,
@@ -127,12 +126,9 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     DadosDoDocumentoPage,
     CapturePicPage,
     DadosPreAberturaPage,
-    DadosComplementaresPage
-=======
-    DadosPreAberturaPage,
+    DadosComplementaresPage,
     RepetirSenhaPage,
     SucessoCadastroSenhaPage
->>>>>>> 8521f0bc40f31e75c3625c6936a56cf29950affe
   ],
   imports: [
     BrowserModule,
