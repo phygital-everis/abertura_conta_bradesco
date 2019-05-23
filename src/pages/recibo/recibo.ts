@@ -245,33 +245,34 @@ export class ReciboPage {
 
   mountAlertBt(data) {
     this.receipt = data;
-    let mockImpressao = '-- TESTE ---- TREINAMENTO ---- TESTE \n\n \
-    Via do Cliente \n \n \
-    &nbsp&nbsp Correspondente do Banco Bradesco S.A. \n \
+    let mockImpressao = '\
+    -- TESTE ---- TREINAMENTO ---- TESTE \n\n \
+                 Via do Cliente \n \n \
+       Correspondente do Banco Bradesco S.A. \n \
     TDS Informatica - POS Teste OM-2 \n \
     R. Jose Horacio Meireles Teixeira 975 \n \
-    Term.Net-Iso 00001711 &nbsp&nbsp Data 01/04/2019 \n \n \
-    TESTE CABECALHO PARAMEtrIZADO \n \
-    &nbsp&nbsp&nbsp BRADESCO EXPRESSO \n \n \
-    Correspondente do Banco Bradesco \n \n \
+    Term.Net-Iso 00001711    Data 01/04/2019 \n \n \
+        TESTE CABECALHO PARAMEtrIZADO \n \
+              BRADESCO EXPRESSO \n \n \
+       Correspondente do Banco Bradesco \n \n \
     xxProposta de Pre-abertura de Contaxx \n \n \
-    Ag. Relac. :03982 - AGENCIA TESTE 3982 \n \
-    PACB &nbsp&nbsp&nbsp :300 - LJA 30008/2 \n \
-    Agencia &nbsp&nbsp: 03982-AGENCIA TESTE 3982 \n \
-    Conta &nbsp&nbsp&nbsp 0000000590110-3 \n \
-    Nome &nbsp&nbsp&nbsp&nbsp : MARCOS DE OLIVEIRA \n \
-    Data: &nbsp&nbsp&nbsp&nbsp : 01/04/2019 \n \
+    Ag. Relac.:03982 - AGENCIA TESTE 3982 \n \
+    PACB      :300 - LJA 30008/2 \n \n \
+    Agencia   : 03982-AGENCIA TESTE 3982 \n \
+    Conta     :0000000590110-3 \n \
+    Nome      : MARCOS DE OLIVEIRA \n \
+    Data:     : 01/04/2019 \n \
     Modalidade:00 \n \n \
     Tipo Pessoa: Fisica \n \
-    Tipo Conta &nbsp :Conta Corrente \n \
+    Tipo Conta :Conta Corrente \n \
     Cesta de Servicos: CESTA BRADESCO EXPRESSO 3 \n \n \
     Adesao ao Programa de Beneficios: N \n \n \
-    MSU BANCO: 040001643788 \n \
-    HORA &nbsp&nbsp&nbsp&nbsp&nbsp: 09:56:57 \n \n \
-    &nbsp&nbsp Sujeito a Confirmacao do Banco \n \n \
-    &nbsp&nbsp&nbsp&nbsp OUVIDORIA BRADESCO \n \
-    &nbsp&nbsp&nbsp&nbsp&nbsp 0800 727 9933 \n \n \
-    MSU Rede: 292936 &nbsp&nbsp Hora Rede: 09:56:50 \n \n \
+    NSU BANCO: 040001643788 \n \
+    HORA     : 09:56:57 \n \n \
+       Sujeito a Confirmacao do Banco \n \n \
+              OUVIDORIA BRADESCO \n \
+                0800 727 9933 \n \n \
+    MSU Rede: 292936    Hora Rede: 09:56:50 \n \n \
     -------------------------------------------- \
     TESTE ---- TREINAMENTO ---- TESTE --';
 
