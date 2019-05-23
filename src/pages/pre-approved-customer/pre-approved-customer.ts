@@ -45,4 +45,8 @@ export class PreApprovedCustomerPage {
     this.cartaoCredito = 0
   }
 
+  goBack():void {
+    this.navCtrl.pop();
+  }
+
 }

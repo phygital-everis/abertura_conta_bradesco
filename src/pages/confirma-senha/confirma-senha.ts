@@ -1,38 +1,40 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { SmsConfirmPage } from "../sms-confirm/sms-confirm";
 import { ToastController } from 'ionic-angular';
 import { ClienteProvider } from "../../providers/cliente/cliente";
+import {DadosPreAberturaPage} from "../dados-pre-abertura/dados-pre-abertura";
 @Component({
   selector: 'page-confirma-senha',
   templateUrl: 'confirma-senha.html',
 })
 export class ConfirmaSenhaPage {
-  senha1
+  //••••••
+  senha: string = "";
 
   constructor(
-    public navCtrl: NavController, 
+    public navCtrl: NavController,
     public navParams: NavParams,
     public toastCtrl: ToastController,
-    private cliente: ClienteProvider
-    ) {
+
+  ) {
   }
 
-  ionViewDidLoad() {
+
+  escolherNumero(numero){
+
+    if(this.senha.length < 6)
+      this.senha += numero;
+
   }
 
-  confereSenha() {
-    if (this.senha1 == this.cliente.cliente.senha) {
-      this.goNext()
-      
-    } else {
-      this.senha1=''
-      this.presentToast('senha não confere')
-    }
+  limpar(){
+
+    this.senha = this.senha.slice(0, -1);
+
   }
 
   goNext(){
-    this.navCtrl.push(SmsConfirmPage)
+    this.navCtrl.push(DadosPreAberturaPage, {senha: this.senha})
   }
 
   presentToast(msg) {
@@ -42,6 +44,5 @@ export class ConfirmaSenhaPage {
     });
     toast.present();
   }
-
 
 }

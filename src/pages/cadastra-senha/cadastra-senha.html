@@ -1,43 +1,67 @@
 <ion-content padding>
-  <ion-row>
-    <ion-col>
-      <h3>Segurança da conta</h3>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col text-center>
-      <h2>Crie uma senha</h2>
-    </ion-col>
-  </ion-row>
-  <ion-list>
+  <ion-grid>
+    <ion-row class="sub-titulo">
+      <ion-col>
+        <h3>Segurança da conta - Senha</h3>
+      </ion-col>
+    </ion-row>
     <ion-row>
+      <ion-col class="crie-senha-texto">
+        <h2>Crie uma senha</h2>
+        <p>A senha necessita ter 06 (seis) caracteres</p>
+      </ion-col>
+    </ion-row>
+    <ion-row class="input-container">
       <ion-col col-3></ion-col>
       <ion-col col-6>
         <ion-item>
-          <ion-input [(ngModel)]="senha1" type="password" (change)="senhaOk = true" placeholder="Digite sua senha">
+          <ion-input [(ngModel)]="senha" type="password">
           </ion-input>
         </ion-item>
       </ion-col>
       <ion-col col-3></ion-col>
     </ion-row>
     <ion-row>
-      <ion-col col-3></ion-col>
-      <ion-col col-6>
-        <ion-item>
-          <ion-input [(ngModel)]="senha2" type="password" placeholder="Repita sua senha"></ion-input>
-        </ion-item>
-      </ion-col>
-      <ion-col col-3></ion-col>
+      <ion-grid class="texto-numerico">
+        <ion-row>
+          <ion-col>
+            <span (click)="escolherNumero(1)" class="left numeric-button">1</span>
+            <span (click)="escolherNumero(2)" class="numeric-button">2</span>
+            <span (click)="escolherNumero(3)" class="right numeric-button">3</span>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <span (click)="escolherNumero(4)" class="left numeric-button">4</span>
+            <span (click)="escolherNumero(5)" class="numeric-button">5</span>
+            <span (click)="escolherNumero(6)" class="right numeric-button">6</span>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <span (click)="escolherNumero(7)" class="left numeric-button">7</span>
+            <span (click)="escolherNumero(8)" class="numeric-button">8</span>
+            <span (click)="escolherNumero(9)" class="right numeric-button">9</span>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <span (click)="escolherNumero(0)" class="numeric-button">0</span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
     </ion-row>
-
-  </ion-list>
-  <ion-row>
-    <ion-col col-4></ion-col>
-    <ion-col col-4>
-      <button ion-button clear full color="danger" (click)="confereSenha()" [disabled]="!senhaOk">
-        próximo
-      </button>
-    </ion-col>
-    <ion-col col-4></ion-col>
-  </ion-row>
+    <ion-row class="sim-nao">
+      <ion-col>
+        <button ion-button (click)="limpar()" color="danger">
+          Limpar
+        </button>
+      </ion-col>
+      <ion-col >
+        <button ion-button [disabled]="senha.length < 6" (click)="goNext()" color="danger">
+          Enviar
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

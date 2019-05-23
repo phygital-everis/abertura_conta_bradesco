@@ -1,0 +1,17 @@
+page-credit-card-modal {
+  .content-md {
+    background-color: #ffffff;
+  }
+
+  ion-icon {
+    margin-right: 20px;
+  }
+
+  .card{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    background: #cc092f;
+  }
+}

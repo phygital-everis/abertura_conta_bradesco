@@ -1,6 +1,6 @@
 import { ValidaCpfProvider } from './../../providers/valida-cpf/valida-cpf';
 import { Component } from '@angular/core';
-import { ModalController, NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { ClientElegivelPage } from "../client-elegivel/client-elegivel";
 import { ClientNaoElegivelPage } from "../client-nao-elegivel/client-nao-elegivel"
 import { SessionHelper } from '../../providers/session-helper/session-helper';
