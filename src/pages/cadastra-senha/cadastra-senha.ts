@@ -3,6 +3,7 @@ import { NavController, NavParams } from 'ionic-angular';
 import { ReciboPage} from '../recibo/recibo';
 import { ToastController } from 'ionic-angular';
 import { ClienteProvider } from "../../providers/cliente/cliente";
+import {ContratoEletronicoPage} from "../contrato-eletronico/contrato-eletronico";
 
 @Component({
   selector: 'page-cadastra-senha',
@@ -38,7 +39,7 @@ export class CadastraSenhaPage {
   
 
   goNext(){
-    this.navCtrl.push(ReciboPage)
+    this.navCtrl.push(ContratoEletronicoPage)
   }
 
   presentToast(msg) {

@@ -13,7 +13,9 @@ page-formulario-from-additionally-doc {
     .footer {
         position: relative!important;
     }
-
+    .scroll-content {
+        max-height: 100%!important;
+    }
     p {
         color: #e2193d;
         margin-left: 20px;
