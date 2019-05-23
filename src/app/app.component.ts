@@ -1,12 +1,10 @@
 import { DialogMenuPage } from './../pages/dialog-menu/dialog-menu';
-import { Component, OnInit, ViewChild } from '@angular/core';
-import {Platform, NavParams, PopoverController} from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import {Platform, PopoverController} from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { NavController } from 'ionic-angular';
-import {DadosPreAberturaPage} from "../pages/dados-pre-abertura/dados-pre-abertura";
-import {ReciboPage} from "../pages/recibo/recibo";
 
 @Component({
   templateUrl: 'app.html'
@@ -17,7 +15,7 @@ export class MyApp {
     let curr = this.nav.getActive();
     console.log('Current: ', curr);
   }
-  rootPage: any = ReciboPage;
+  rootPage: any = HomePage;
 
   @ViewChild('appNav') nav: NavController
 
