@@ -1,7 +1,7 @@
 <ion-content padding>
   <ion-grid>
   <ion-row text-center class="logo">
-    <ion-col id="faixa-logo">
+    <ion-col class="faixa-logo">
         <img class="logo-img" src="assets/imgs/bradesco_logo.png"  alt="logo">
     </ion-col>
   </ion-row>
@@ -37,7 +37,9 @@
     <ion-col col-8 style="padding-top: 25px;">
       <ion-row>
         <ion-col col-2>
-          <ion-label><img src="assets/imgs/lock.svg" class="img" width="20px" alt="pass logo"></ion-label>
+          <ion-label>
+            <img src="assets/imgs/lock.svg" class="img" width="20px" alt="pass logo">
+          </ion-label>
         </ion-col>
         <ion-col col-8>
           <ion-input class="input" type="password" [(ngModel)]="userPass" placeholder="Senha"></ion-input>

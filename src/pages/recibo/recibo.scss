@@ -1,6 +1,4 @@
 page-recibo {
-
-
   .grid{
 
     padding-top: 200px;
@@ -49,6 +47,11 @@ page-recibo {
     }
 
   }
+}
 
-
+.alert-wrapper {
+  max-width: 100%!important;
+  .alert-message {
+    font-size: 18px!important;
+  }
 }

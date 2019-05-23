@@ -245,22 +245,54 @@ export class ReciboPage {
 
   mountAlertBt(data) {
     this.receipt = data;
+    let mockImpressao = commands.HARDWARE.HW_INIT +
+    'TESTE --- TREINAMENTO --- TESTE\n\n' + 
+    '         Via do Cliente\n\n' + 
+    'Correspondente do Banco Bradesco S.A.\n' + 
+    'TDS Informatica - POS Teste OM-2\n' + 
+    'R. Jose Horacio Meireles Teixeira 975\n' + 
+    'Term.Net-Iso 00001711    Data 01/04/2019\n\n' + 
+    ' TESTE CABECALHO PARAMETRIZADO\n' + 
+    '     BRADESCO EXPRESSO\n\n' + 
+    '  Correspondente do Banco Bradesco\n\n' + 
+    'Proposta de Pre-abertura de Conta\n\n' + 
+    'Ag. Relac.:03982 - AGENCIA TESTE 3982\n' + 
+    'PACB      :300 - LJA 30008/2\n\n' + 
+    'Agencia   :03982-AGENCIA TESTE 3982\n' + 
+    'Conta     :0000000590110-3\n' + 
+    'Nome      :MARCOS DE OLIVEIRA\n' + 
+    'Data:     :01/04/2019\n' + 
+    'Modalidade:00\n\n' + 
+    'Tipo Pessoa: Fisica\n' + 
+    'Tipo Conta :Conta Corrente\n' + 
+    'Cesta de Servicos: CESTA BRADESCO EXPRESSO 3\n\n' + 
+    'Adesao ao Programa de Beneficios: N\n\n' + 
+    'NSU BANCO: 040001643788\n' + 
+    'HORA     : 09:56:57\n\n' + 
+    ' Sujeito a Confirmacao do Banco\n\n' + 
+    '      OUVIDORIA BRADESCO\n' + 
+    '        0800 727 9933 \n\n' + 
+    'MSU Rede: 292936  \n' + 
+    'Hora Rede: 09:56:50\n\n' + 
+    '--------------------------------\n' + 
+    'TESTE --- TREINAMENTO --- TESTE';
+
     let alert = this.alertCtrl.create({
-      title: 'Select your printer',
+      title: 'Selecione a impressora',
       buttons: [
         {
-          text: 'Cancel',
-          role: 'cancel',
+          text: 'Cancelar',
+          role: 'cancelar',
         },
         {
-          text: 'Select printer',
+          text: 'Selecionar',
           handler: (device) => {
             if (!device) {
-              this.showToast('Select a printer!');
+              this.showToast('Selecione a impressora!');
               return false;
             }
             console.log(device);
-            this.print(device, this.receipt);
+            this.print(device, mockImpressao);
           },
         },
       ],
@@ -296,6 +328,5 @@ export class ReciboPage {
         this.mountAlertBt(this.receipt);
       });
   }
-
 
 }

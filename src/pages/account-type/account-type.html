@@ -15,7 +15,7 @@
 
     <ion-item>
       <ion-label>Forma de Movimentação</ion-label>
-      <ion-select id="ionSelectMovType" (ionChange)="goToNextPage()" interface="popover" placeholder="Selecionar">
+      <ion-select [(ngModel)]="moveType" id="ionSelectMovType" (ionChange)="goToNextPage()" interface="popover" placeholder="Selecionar">
         <ion-option value="Isolada">Isolada</ion-option>
         <ion-option value="conjunta">Conjunta</ion-option>
         <ion-option value="procuracao">Por procuração</ion-option>

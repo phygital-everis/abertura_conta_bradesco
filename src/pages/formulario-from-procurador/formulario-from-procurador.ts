@@ -1,20 +1,15 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { CaptureCompEndPage } from "../capture-comp-end/capture-comp-end";
-import { ClienteProvider } from "../../providers/cliente/cliente";
-import { DadosDoDocumentoPage } from '../dados-do-documento/dados-do-documento';
+import { ClienteProvider } from '../../providers/cliente/cliente';
+import { CaptureProcuradorCompPage } from '../capture-procurador-comp/capture-procurador-comp';
 
 @Component({
-  selector: 'page-formulario',
-  templateUrl: 'formulario.html',
+  selector: 'page-formulario-from-procurador',
+  templateUrl: 'formulario-from-procurador.html',
 })
-export class FormularioPage {
+export class FormularioFromProcuradorPage {
 
-  constructor(
-    public navCtrl: NavController, 
-    public navParams: NavParams, 
-    private cliente: ClienteProvider
-  ) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,  private cliente: ClienteProvider) {
   }
 
   ionViewDidLoad() {
@@ -162,8 +157,8 @@ export class FormularioPage {
     }
   }
 
-  goNext(){
-    this.navCtrl.push(DadosDoDocumentoPage)
+  goNext() {
+    this.navCtrl.push(CaptureProcuradorCompPage);
   }
 
 }

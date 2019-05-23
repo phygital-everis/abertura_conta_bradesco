@@ -2,17 +2,16 @@ import { Component } from '@angular/core';
 import { NavController, NavParams, LoadingController, AlertController } from 'ionic-angular';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import { VisionProvider } from "../../providers/vision/vision";
-import { FormularioPage } from "../../pages/formulario/formulario";
+import { Formulario2Page } from "../../pages/formulario2/formulario2";
+import { FormularioProcuradorCompPage } from '../formulario-procurador-comp/formulario-procurador-comp';
 import { HomePage } from '../home/home';
-import { BasketOfServicesPage } from '../basket-of-services/basket-of-services';
 import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
-  selector: 'page-capture-doc',
-  templateUrl: 'capture-doc.html',
-  providers: [VisionProvider]
+  selector: 'page-capture-procurador-comp',
+  templateUrl: 'capture-procurador-comp.html',
 })
-export class CaptureDocPage {
+export class CaptureProcuradorCompPage {
 
   photo: any = ''
   tipoDoc: string
@@ -28,7 +27,6 @@ export class CaptureDocPage {
     private alertController: AlertController) { }
 
   getPhoto() {
-    if (!this.tipoDoc) return
 
     const options: CameraOptions = {
       quality: 100,
@@ -38,19 +36,18 @@ export class CaptureDocPage {
       targetHeight: 600,
       targetWidth: 900
     }
+
     this.camera.getPicture(options).then((imageData) => {
+
       this.presentLoadingOptions();
+
       this.vision.sendVision(imageData).subscribe((data) => {
-        this.navCtrl.push(FormularioPage, { data: data, tipo: this.tipoDoc });
+        this.navCtrl.push(FormularioProcuradorCompPage, { data: data });
       });
     }, (err) => {
       console.log(err);
       this.presentAlertConfirm();
     });
-  }
-
-  public close() {
-    this.navCtrl.popTo(BasketOfServicesPage);
   }
 
   choseType(el) {

@@ -1,20 +1,22 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { CaptureCompEndPage } from "../capture-comp-end/capture-comp-end";
-import { ClienteProvider } from "../../providers/cliente/cliente";
-import { DadosDoDocumentoPage } from '../dados-do-documento/dados-do-documento';
+import { ClienteProvider } from '../../providers/cliente/cliente';
+import { CaputreProcuradorDocPage } from '../caputre-procurador-doc/caputre-procurador-doc';
+
+/**
+ * Generated class for the FormularioFromAdditionallyDocPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
 
 @Component({
-  selector: 'page-formulario',
-  templateUrl: 'formulario.html',
+  selector: 'page-formulario-from-additionally-doc',
+  templateUrl: 'formulario-from-additionally-doc.html',
 })
-export class FormularioPage {
+export class FormularioFromAdditionallyDocPage {
 
-  constructor(
-    public navCtrl: NavController, 
-    public navParams: NavParams, 
-    private cliente: ClienteProvider
-  ) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private cliente: ClienteProvider) {
   }
 
   ionViewDidLoad() {
@@ -161,9 +163,7 @@ export class FormularioPage {
       this.cliente.cliente.cpf = cpf.replace(/ /g, '');
     }
   }
-
-  goNext(){
-    this.navCtrl.push(DadosDoDocumentoPage)
+  goNext() {
+    this.navCtrl.push(CaputreProcuradorDocPage);
   }
-
 }
