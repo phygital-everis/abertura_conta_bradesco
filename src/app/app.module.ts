@@ -119,7 +119,7 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     ContratoEletronicoPage,
     AdditionalCreditCardPage,
     DadosPreAberturaPage,
-    ShellPage
+    ShellPage,
     CaptureAdditionallyDocPage,
     FormularioFromAdditionallyDocPage,
     CaputreProcuradorDocPage,
@@ -191,7 +191,7 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     ContratoEletronicoPage,
     AdditionalCreditCardPage,
     DadosPreAberturaPage,
-    ShellPage
+    ShellPage,
     CaptureAdditionallyDocPage,
     FormularioFromAdditionallyDocPage,
     CaputreProcuradorDocPage,

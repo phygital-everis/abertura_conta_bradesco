@@ -16,7 +16,7 @@ export class MyApp {
   ngAfterViewInit(): void {
     let curr = this.nav.getActive();
   }
-  rootPage: any = ReciboPage;
+  rootPage: any = HomePage;
 
   @ViewChild('appNav') nav: NavController
 
