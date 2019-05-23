@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
-import { HomePage } from "../home/home";
-import { MenuInicialPage } from "../menu-inicial/menu-inicial";
+import { NavController, NavParams, App, ViewController } from 'ionic-angular';
+import { ShellPage } from '../shell/shell';
+import { HomePage } from '../home/home';
 
 @Component({
   selector: 'page-dialog-menu',
@@ -9,23 +9,24 @@ import { MenuInicialPage } from "../menu-inicial/menu-inicial";
 })
 export class DialogMenuPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
-
-  ionViewDidLoad() {
+  constructor(public navCtrl: NavController, 
+              public navParams: NavParams,
+              public viewCtrl: ViewController,
+              public appCtrl: App) {
   }
 
   goToMenu() {
-    this.navCtrl.setRoot(MenuInicialPage)
-    this.navCtrl.popToRoot();
+    this.viewCtrl.dismiss();
+    this.appCtrl.getRootNav().push(ShellPage);
   }
 
   exit() {
-    this.navCtrl.popToRoot()
+    this.viewCtrl.dismiss();
+    this.appCtrl.getRootNav().push(HomePage);
   }
 
   goBack() {
-    this.navCtrl.pop();
+    this.viewCtrl.dismiss();
   }
 
 }

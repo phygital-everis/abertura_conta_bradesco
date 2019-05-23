@@ -12,7 +12,7 @@ import { DialogMenuPage } from '../dialog-menu/dialog-menu';
 export class ShellPage {
   shellPage: any = MenuInicialPage;
 
-  @ViewChild('appNav') nav: NavController
+  @ViewChild('shellNav') nav: NavController
 
   constructor(public platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public popoverCtrl: PopoverController
   ) {
