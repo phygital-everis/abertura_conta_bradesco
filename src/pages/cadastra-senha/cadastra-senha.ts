@@ -1,18 +1,17 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { ReciboPage} from '../recibo/recibo';
 import { ToastController } from 'ionic-angular';
 import { ClienteProvider } from "../../providers/cliente/cliente";
-import {ContratoEletronicoPage} from "../contrato-eletronico/contrato-eletronico";
+import {RepetirSenhaPage} from "../repetir-senha/repetir-senha";
 
 @Component({
   selector: 'page-cadastra-senha',
   templateUrl: 'cadastra-senha.html',
 })
 export class CadastraSenhaPage {
-  senha1
-  senha2
-  senhaOk = false
+
+  //••••••
+  senha: string = "";
 
   constructor(
     public navCtrl: NavController, 
@@ -23,23 +22,22 @@ export class CadastraSenhaPage {
     ) {
   }
 
-  ionViewDidLoad() {
+
+  escolherNumero(numero){
+
+    if(this.senha.length < 6)
+      this.senha += numero;
+
   }
 
-  confereSenha(){
-    if (this.senha1 == this.senha2) {
-      this.cliente.cliente.senha = this.senha1
-      this.goNext()
-    }else{
-      this.senha1=''
-      this.senha2=''
-      this.presentToast('senhas não conferem')
-    }
+  limpar(){
+
+    this.senha = this.senha.slice(0, -1);
+
   }
-  
 
   goNext(){
-    this.navCtrl.push(ContratoEletronicoPage)
+    this.navCtrl.push(RepetirSenhaPage, {senha: this.senha})
   }
 
   presentToast(msg) {

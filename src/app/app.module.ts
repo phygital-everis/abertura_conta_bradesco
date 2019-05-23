@@ -50,6 +50,7 @@ import { BasketOfServicesPage } from '../pages/basket-of-services/basket-of-serv
 import { ChooseServicesPage } from '../pages/choose-services/choose-services';
 import { ConfirmaDesejaNovoDocPage } from '../pages/confirma-deseja-novo-doc/confirma-deseja-novo-doc';
 import { CreditCardPage } from '../pages/credit-card/credit-card';
+import { CreditCardModalPage } from '../pages/credit-card-modal/credit-card-modal';
 import { ContratoEletronicoPage } from '../pages/contrato-eletronico/contrato-eletronico';
 import { AdditionalCreditCardPage } from '../pages/additional-credit-card/additional-credit-card';
 import { CaptureAdditionallyDocPage } from '../pages/capture-additionally-doc/capture-additionally-doc';
@@ -72,8 +73,10 @@ import { PrinterProvider } from '../providers/printer/printer';
 import { ValidaCpfProvider } from '../providers/valida-cpf/valida-cpf';
 import { SessionHelper } from '../providers/session-helper/session-helper';
 import { CameraMock } from '../providers/camera-mock/camera-mock';
-import { DadosPreAberturaPage } from "../pages/dados-pre-abertura/dados-pre-abertura";
 import { DadosComplementaresPage } from '../pages/dados-complementares/dados-complementares';
+import { DadosPreAberturaPage } from "../pages/dados-pre-abertura/dados-pre-abertura";
+import { RepetirSenhaPage } from "../pages/repetir-senha/repetir-senha";
+import { SucessoCadastroSenhaPage } from "../pages/sucesso-cadastro-senha/sucesso-cadastro-senha";
 
 const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
 
@@ -109,10 +112,12 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     BasketOfServicesPage,
     ConfirmaDesejaNovoDocPage,
     CreditCardPage,
+    CreditCardModalPage,
     ChooseServicesPage,
     ConfirmaDesejaNovoDocPage,
     ContratoEletronicoPage,
     AdditionalCreditCardPage,
+<<<<<<< HEAD
     CaptureAdditionallyDocPage,
     FormularioFromAdditionallyDocPage,
     CaputreProcuradorDocPage,
@@ -123,6 +128,11 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     CapturePicPage,
     DadosPreAberturaPage,
     DadosComplementaresPage
+=======
+    DadosPreAberturaPage,
+    RepetirSenhaPage,
+    SucessoCadastroSenhaPage
+>>>>>>> 8521f0bc40f31e75c3625c6936a56cf29950affe
   ],
   imports: [
     BrowserModule,
@@ -176,6 +186,7 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     BasketOfServicesPage,
     ConfirmaDesejaNovoDocPage,
     CreditCardPage,
+    CreditCardModalPage,
     ChooseServicesPage,
     ConfirmaDesejaNovoDocPage,
     ContratoEletronicoPage,
@@ -189,7 +200,9 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     DadosDoDocumentoPage,
     CapturePicPage,
     DadosPreAberturaPage,
-    DadosComplementaresPage
+    DadosComplementaresPage,
+    RepetirSenhaPage,
+    SucessoCadastroSenhaPage
   ],
   providers: [
     AuthService,
@@ -209,9 +222,7 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     PrinterProvider,
     BluetoothSerial,
     ValidaCpfProvider,
-    SessionHelper,
-    { provide: Camera, useClass: CameraMock }
-
+    SessionHelper
   ]
 })
 export class AppModule { }

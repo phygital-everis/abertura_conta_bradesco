@@ -34,4 +34,8 @@ export class AccountTypePage {
     this.navCtrl.push(CpfPage);
   }
 
+  goBack():void {
+    this.navCtrl.pop();
+  }
+
 }
