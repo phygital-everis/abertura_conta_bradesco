@@ -276,17 +276,17 @@ export class ReciboPage {
     TESTE ---- TREINAMENTO ---- TESTE --';
 
     let alert = this.alertCtrl.create({
-      title: 'Select your printer',
+      title: 'Selecione a impressora',
       buttons: [
         {
-          text: 'Cancel',
-          role: 'cancel',
+          text: 'Cancelar',
+          role: 'cancelar',
         },
         {
-          text: 'Select printer',
+          text: 'Selecionar',
           handler: (device) => {
             if (!device) {
-              this.showToast('Select a printer!');
+              this.showToast('Selecione a impressora!');
               return false;
             }
             console.log(device);
@@ -326,6 +326,5 @@ export class ReciboPage {
         this.mountAlertBt(this.receipt);
       });
   }
-
 
 }
