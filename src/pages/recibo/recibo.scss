@@ -1,5 +1,54 @@
 page-recibo {
-.button-inner {
-    font-size: 20px; 
-}
+
+
+  .grid{
+
+    padding-top: 200px;
+    padding-left: 10%;
+    padding-right: 10%;
+
+    .comprovante, .deseja{
+
+      font-size: 41px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: -1.1px;
+      text-align: center;
+      color: #58595b;
+
+
+    }
+
+    .comprovante{
+
+      margin-bottom: 150px;
+
+    }
+
+    .sim-nao{
+
+      margin-top: 100px;
+
+      ion-col{
+
+        text-align: center;
+
+      }
+
+      button{
+
+        font-size: 41px;
+        text-transform: none;
+        width: 250px;
+        letter-spacing: -1.1px;
+
+      }
+
+    }
+
+  }
+
+
 }
