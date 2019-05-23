@@ -379,18 +379,21 @@ Não é necessario
 }
 
 .footer {
-  padding-top: 3%;
+
   width: 100%;
-  height: 18%;
-  bottom: 0px;
-  left: 0;
+  height: 10%;
+  bottom: 0;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
   position: absolute !important;
   background: #fff;
+
   .next-button {
+
+    text-align: center;
     transform: translate(0%, 30%);
-    left: 33%;
-    height: 61px !important;
-    width: 283px;
+
   }
 }
 
@@ -447,8 +450,10 @@ Não é necessario
   }
 }
 
-.scroll-content{
-  max-height: 85%;
+.fixed-content, .scroll-content{
+
+  margin-bottom: 0;
+
 }
 
 ion-title{

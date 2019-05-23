@@ -1,4 +1,3 @@
-import { DadosComplementaresPage } from './../pages/dados-complementares/dados-complementares';
 import { CapturePicPage } from './../pages/capture-pic/capture-pic';
 import { DialogMenuPage } from './../pages/dialog-menu/dialog-menu';
 import { Component, ViewChild } from '@angular/core';
@@ -17,7 +16,7 @@ export class MyApp {
     let curr = this.nav.getActive();
     console.log('Current: ', curr);
   }
-  rootPage: any = DadosComplementaresPage;
+  rootPage: any = HomePage;
 
   @ViewChild('appNav') nav: NavController
 
