@@ -53,6 +53,7 @@ import { CreditCardPage } from '../pages/credit-card/credit-card';
 import { CreditCardModalPage } from '../pages/credit-card-modal/credit-card-modal';
 import { ContratoEletronicoPage } from '../pages/contrato-eletronico/contrato-eletronico';
 import { AdditionalCreditCardPage } from '../pages/additional-credit-card/additional-credit-card';
+import { ShellPage } from '../pages/shell/shell';
 import { CaptureAdditionallyDocPage } from '../pages/capture-additionally-doc/capture-additionally-doc';
 import { FormularioFromAdditionallyDocPage } from '../pages/formulario-from-additionally-doc/formulario-from-additionally-doc';
 import { CaputreProcuradorDocPage } from '../pages/caputre-procurador-doc/caputre-procurador-doc';
@@ -117,6 +118,8 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     ConfirmaDesejaNovoDocPage,
     ContratoEletronicoPage,
     AdditionalCreditCardPage,
+    DadosPreAberturaPage,
+    ShellPage,
     CaptureAdditionallyDocPage,
     FormularioFromAdditionallyDocPage,
     CaputreProcuradorDocPage,
@@ -187,6 +190,8 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     ConfirmaDesejaNovoDocPage,
     ContratoEletronicoPage,
     AdditionalCreditCardPage,
+    DadosPreAberturaPage,
+    ShellPage,
     CaptureAdditionallyDocPage,
     FormularioFromAdditionallyDocPage,
     CaputreProcuradorDocPage,

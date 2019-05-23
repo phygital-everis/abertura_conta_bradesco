@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { LocalStorageProvider } from "../../providers/local-storage/local-storage";
 import { AuthService } from '../../providers/firebase/auth';
-import { MenuInicialPage } from "../../pages/menu-inicial/menu-inicial";
+import { ShellPage } from "../../pages/shell/shell";
 
 
 @Component({
@@ -27,7 +27,7 @@ export class HomePage {
       //this.navCtrl.push(ChooseServicesPage);
       //this.navCtrl.push(AccountTypePage);
       // this.navCtrl.push(ChooseServicesPage);
-      this.navCtrl.push(MenuInicialPage);
+      this.navCtrl.push(ShellPage);
       if(1 == 1)
         return;
       if(!this.userCode) return this.loginError = 'Usuário não pode ser vazio';
@@ -35,7 +35,7 @@ export class HomePage {
   
       this.auth.signInWithEmail(this.userCode, this.userPass)
       .then(
-        () => this.navCtrl.push(MenuInicialPage),
+        () => this.navCtrl.push(ShellPage),
         error => {
           this.loginError = 'Usuário ou senha inválidos';
           console.log(error);
@@ -48,7 +48,7 @@ export class HomePage {
     }
 
     joinChat() {
-      this.navCtrl.push(MenuInicialPage);
+      this.navCtrl.push(ShellPage);
     }
 
 }

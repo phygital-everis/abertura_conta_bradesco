@@ -76,7 +76,7 @@ ion-select {
 ion-popover {
   .popover-wrapper {
     .popover-content {
-      min-width: 45% !important;
+      min-width: 45%;
       .popover-viewport {
         ng-component {
           ion-list {
@@ -343,6 +343,7 @@ Não é necessario
 .input {
   border: 1px solid #4a4a4a;
   border-radius: 25px;
+  box-shadow: none!important;
 }
 
 .footer {
@@ -426,7 +427,9 @@ Não é necessario
 .item-input-has-focus {
   border: none !important;
   text-decoration: none !important;
+  box-shadow: none!important;
 }
+
 
 .no-padding {
   padding: 0px !important;

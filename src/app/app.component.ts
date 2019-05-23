@@ -5,6 +5,7 @@ import { Platform, PopoverController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
+import { ReciboPage } from '../pages/recibo/recibo';
 import { NavController } from 'ionic-angular';
 
 @Component({
@@ -12,9 +13,7 @@ import { NavController } from 'ionic-angular';
 })
 export class MyApp {
   ngAfterViewInit(): void {
-    console.log('Nav: ', this.nav);
     let curr = this.nav.getActive();
-    console.log('Current: ', curr);
   }
   rootPage: any = HomePage;
 
@@ -27,21 +26,4 @@ export class MyApp {
       splashScreen.hide();
     });
   }
-
-
-  presentDialogMenuModal(ev) {
-
-    let popover = this.popoverCtrl.create(DialogMenuPage, {}, { cssClass: "popover-menu" });
-
-    popover.present({
-      ev: ev
-    });
-
-  }
-  //TODO
-  //remover ao integrar
-  goToPic(picType: string, previous: string, next: string, nextData: any, canSkip = true) {
-    this.nav.push(CapturePicPage, { tipoFoto: picType, anterior: previous, proxima: next, nextData: nextData, canSkip: canSkip });
-  }
-
 }
