@@ -1,40 +1,24 @@
 <ion-content padding>
-  <ion-row>
-    <ion-col text-center>
-      <h2>Parabéns!</h2>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col text-center>
-      <h3>A sua conta foi criada com sucesso</h3>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col text-center>
-      <h4>Em instantes você receberá um SMS no telefone cadastrado com a confirmação</h4>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col text-center>
-      <h3>Seja bem vindo ao Banco Bradesco</h3>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col col-4></ion-col>
-    <ion-col col-4>
-      <button ion-button clear full color="danger" (click)="prepareToPrint()">
-        imprimir comprovante
-      </button>
-    </ion-col>
-    <ion-col col-4></ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col col-4></ion-col>
-    <ion-col col-4>
-      <button ion-button clear full color="danger" (click)="goNext()">
-        finalizar
-      </button>
-    </ion-col>
-    <ion-col col-4></ion-col>
-  </ion-row>
+  <ion-grid>
+    <ion-row class="comprovante">
+      O Comprovante será enviado
+      por e-mail e SMS
+    </ion-row>
+    <ion-row class="deseja">
+      Deseja imprimir o Comprovante
+      de abertura da conta do Cliente?
+    </ion-row>
+    <ion-row class="sim-nao">
+      <ion-col>
+        <button ion-button (click)="prepareToPrint()" color="danger">
+          Sim
+        </button>
+      </ion-col>
+      <ion-col >
+        <button ion-button (click)="goNext()" color="danger">
+          Não
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

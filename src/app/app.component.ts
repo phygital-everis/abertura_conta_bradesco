@@ -1,11 +1,11 @@
+import { DadosComplementaresPage } from './../pages/dados-complementares/dados-complementares';
 import { CapturePicPage } from './../pages/capture-pic/capture-pic';
 import { DialogMenuPage } from './../pages/dialog-menu/dialog-menu';
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { Platform, NavParams, PopoverController } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { Platform, PopoverController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { HomePage } from '../pages/home/home';
-import { NavController } from 'ionic-angular';
+  import { NavController } from 'ionic-angular';
 
 @Component({
   templateUrl: 'app.html'
@@ -16,7 +16,7 @@ export class MyApp {
     let curr = this.nav.getActive();
     console.log('Current: ', curr);
   }
-  rootPage: any = HomePage;
+  rootPage: any = DadosComplementaresPage;
 
   @ViewChild('appNav') nav: NavController
 

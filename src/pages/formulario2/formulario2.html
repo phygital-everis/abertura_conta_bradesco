@@ -1,17 +1,8 @@
 <ion-content padding>
   <ion-row>
-<<<<<<< Updated upstream
-    <ion-col>
-      <h3>Dados do Endereço</h3>
-    </ion-col>
-    <ion-col>
-      <h3>Titular</h3>
-    </ion-col>
-=======
     <ion-col text-center>
       <h3>Dados do Endereço</h3>
     </ion-col>
->>>>>>> Stashed changes
   </ion-row>
 
   <ion-list>
@@ -56,13 +47,8 @@
       </ion-col>
       <ion-col>
         <ion-item>
-<<<<<<< Updated upstream
-          
-          <ion-select [ngClass]="{'error-validation-input': !cliente.cliente.ufNascimento}"  interface="popover" placeholder="Estado" [(ngModel)]="cliente.cliente.ufNascimento">
-=======
           <ion-label>Estado</ion-label>
           <ion-select [(ngModel)]="cliente.cliente.ufNascimento">
->>>>>>> Stashed changes
             <ion-option value="sp">São Paulo</ion-option>
             <ion-option value="rj">Rio de Janeiro</ion-option>
             <ion-option value="es">Espirito Santo</ion-option>
@@ -101,12 +87,8 @@
       </ion-col>
       <ion-col>
         <ion-item>
-<<<<<<< Updated upstream
-          <ion-select [ngClass]="{'error-validation-input': !cliente.cliente.tipoResidencia}" interface="popover" placeholder="Tipo de Residência" [(ngModel)]="cliente.cliente.tipoResidencia">
-=======
           <ion-label floating>Tipo de Residência</ion-label>
           <ion-select [(ngModel)]="cliente.cliente.tipoResidencia">
->>>>>>> Stashed changes
             <ion-option value="casa">Casa</ion-option>
             <ion-option value="apartamento">Apartamento</ion-option>
             <ion-option value="sobrado">Sobrado</ion-option>
@@ -134,12 +116,6 @@
       </ion-col>
     </ion-row>
   </ion-list>
-<<<<<<< Updated upstream
-  <p *ngIf="!cliente.cliente.ocupacao">*Os campos em destaque não foram gravados e são obrigatórios</p>
-  <div class="footer">
-    <button class="next-button" ion-button color="danger" (click)="goNext()">Avançar</button>
-  </div>
-=======
 
   <ion-row>
     <ion-col col-4></ion-col>
@@ -150,5 +126,4 @@
     </ion-col>
     <ion-col col-4></ion-col>
   </ion-row>
->>>>>>> Stashed changes
 </ion-content>

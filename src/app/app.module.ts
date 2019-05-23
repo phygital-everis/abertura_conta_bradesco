@@ -72,6 +72,8 @@ import { PrinterProvider } from '../providers/printer/printer';
 import { ValidaCpfProvider } from '../providers/valida-cpf/valida-cpf';
 import { SessionHelper } from '../providers/session-helper/session-helper';
 import { CameraMock } from '../providers/camera-mock/camera-mock';
+import { DadosPreAberturaPage } from "../pages/dados-pre-abertura/dados-pre-abertura";
+import { DadosComplementaresPage } from '../pages/dados-complementares/dados-complementares';
 
 const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
 
@@ -117,11 +119,10 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     FormularioFromProcuradorPage,
     CaptureProcuradorCompPage,
     FormularioProcuradorCompPage,
-<<<<<<< Updated upstream
-    DadosDoDocumentoPage
-=======
-    CapturePicPage
->>>>>>> Stashed changes
+    DadosDoDocumentoPage,
+    CapturePicPage,
+    DadosPreAberturaPage,
+    DadosComplementaresPage
   ],
   imports: [
     BrowserModule,
@@ -185,11 +186,10 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     FormularioFromProcuradorPage,
     CaptureProcuradorCompPage,
     FormularioProcuradorCompPage,
-<<<<<<< Updated upstream
-    DadosDoDocumentoPage
-=======
-    CapturePicPage
->>>>>>> Stashed changes
+    DadosDoDocumentoPage,
+    CapturePicPage,
+    DadosPreAberturaPage,
+    DadosComplementaresPage
   ],
   providers: [
     AuthService,
