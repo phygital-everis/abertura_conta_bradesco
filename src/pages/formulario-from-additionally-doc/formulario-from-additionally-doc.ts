@@ -2,6 +2,10 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { ClienteProvider } from '../../providers/cliente/cliente';
 import { CaputreProcuradorDocPage } from '../caputre-procurador-doc/caputre-procurador-doc';
+import {CadastraSenhaPage} from "../cadastra-senha/cadastra-senha";
+import {CaptureProcuradorCompPage} from "../capture-procurador-comp/capture-procurador-comp";
+import {CaptureAdditionallyDocPage} from "../capture-additionally-doc/capture-additionally-doc";
+import {LocalStorageProvider} from "../../providers/local-storage/local-storage";
 
 /**
  * Generated class for the FormularioFromAdditionallyDocPage page.
@@ -16,7 +20,10 @@ import { CaputreProcuradorDocPage } from '../caputre-procurador-doc/caputre-proc
 })
 export class FormularioFromAdditionallyDocPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private cliente: ClienteProvider) {
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              private cliente: ClienteProvider,
+              private localstorage: LocalStorageProvider) {
   }
 
   ionViewDidLoad() {
@@ -164,6 +171,17 @@ export class FormularioFromAdditionallyDocPage {
     }
   }
   goNext() {
-    this.navCtrl.push(CaputreProcuradorDocPage);
+
+    this.localstorage.getItems('moveType').then(moveType => {
+
+      if(moveType == "Isolada" || moveType == "conjunta")
+        this.navCtrl.push(CadastraSenhaPage);
+
+      else
+        this.navCtrl.push(CaputreProcuradorDocPage)
+
+    });
+
   }
+
 }

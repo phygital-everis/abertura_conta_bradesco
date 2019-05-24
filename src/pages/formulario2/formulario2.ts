@@ -3,6 +3,9 @@ import { NavController, NavParams } from 'ionic-angular';
 import { ClienteProvider } from "../../providers/cliente/cliente";
 import { LocalStorageProvider } from "../../providers/local-storage/local-storage";
 import { CaptureAdditionallyDocPage } from '../capture-additionally-doc/capture-additionally-doc';
+import {CaptureProcuradorCompPage} from "../capture-procurador-comp/capture-procurador-comp";
+import {CadastraSenhaPage} from "../cadastra-senha/cadastra-senha";
+import {CaputreProcuradorDocPage} from "../caputre-procurador-doc/caputre-procurador-doc";
 @Component({
   selector: 'page-formulario2',
   templateUrl: 'formulario2.html',
@@ -52,9 +55,28 @@ export class Formulario2Page {
   }
 
   goNext() {
-    let accType;
-    accType = this.localstorage.getItems('accountType')
-    this.navCtrl.push(CaptureAdditionallyDocPage)
+
+    this.localstorage.getItems('accountType').then(accountType => {
+
+      this.localstorage.getItems('moveType').then(moveType => {
+
+        if(accountType == 1){
+
+          if(moveType == "Isolada" || moveType == "conjunta")
+            this.navCtrl.push(CadastraSenhaPage);
+
+          else
+            this.navCtrl.push(CaputreProcuradorDocPage);
+
+        }
+
+        else
+          this.navCtrl.push(CaptureAdditionallyDocPage)
+
+      });
+
+    });
+
   }
 
 }

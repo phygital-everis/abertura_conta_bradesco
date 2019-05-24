@@ -6,13 +6,12 @@
   <div class="select-options-account-type">
     <ion-item>
       <ion-label>Tipo da Conta</ion-label>
-      <ion-select id="ionSelectAccTp" interface="popover" placeholder="Selecionar" class="myCustomSelect">
+      <ion-select id="ionSelectAccTp" [(ngModel)]="accType" interface="popover" placeholder="Selecionar" class="myCustomSelect">
         <ion-option value="1">00 - Individual</ion-option>
         <ion-option value="2">11 a 19 Conjunta E/OU</ion-option>
         <ion-option value="3">21 a 29 Conjunta E</ion-option>
       </ion-select>
     </ion-item>
-
     <ion-item>
       <ion-label>Forma de Movimentação</ion-label>
       <ion-select [(ngModel)]="moveType" id="ionSelectMovType" (ionChange)="goToNextPage()" interface="popover" placeholder="Selecionar">
