@@ -35,12 +35,13 @@ export class CaptureDocPage {
       destinationType: this.camera.DestinationType.DATA_URL,
       encodingType: this.camera.EncodingType.JPEG,
       mediaType: this.camera.MediaType.PICTURE,
-      targetHeight: 600,
+      targetHeight: 900,
       targetWidth: 900
     }
     this.camera.getPicture(options).then((imageData) => {
       this.presentLoadingOptions();
       this.vision.sendVision(imageData).subscribe((data) => {
+        console.log('Result Vision', data);
         this.navCtrl.push(FormularioPage, { data: data, tipo: this.tipoDoc });
       });
     }, (err) => {
@@ -54,7 +55,8 @@ export class CaptureDocPage {
   }
 
   choseType(el) {
-    this.tipoDoc = el._elementRef.nativeElement.value
+    this.tipoDoc = el;
+    console.log(this.tipoDoc);
   }
 
   async presentLoadingOptions() {

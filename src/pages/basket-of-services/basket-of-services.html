@@ -25,14 +25,40 @@
 
     <div class="services-lst">
         <ion-list radio-group [(ngModel)]="plan">
-
             <ion-item>
-                <ion-radio value="Bradesco Expresso 6"></ion-radio>
-                <ion-label>Bradesco Expresso 6</ion-label>
-                <ion-label class="align-price">R$ 32,50</ion-label>
-                <ion-label>
-                    <a (click)="details()">Ver detalhes</a>
-                </ion-label>
+                <ion-row>
+                    <ion-col col-3>
+                        <button>Cesta/Pacote de Serviços</button>
+                    </ion-col>
+                    <ion-col>
+
+                        <button>Mensalidade</button>
+                    </ion-col>
+                    <ion-col col-3></ion-col>
+                    <ion-col>
+                        <button [disabled]="!plan" [ngClass]="{'disabled': !plan}" (click)="compare()">
+                            Comparar
+                        </button>
+                    </ion-col>
+                </ion-row>
+            </ion-item>
+            <ion-item>
+                <ion-row>
+                    <ion-col col-3>
+                        <ion-radio value="Bradesco Expresso 6"></ion-radio>
+                    </ion-col>
+                    <ion-col col-3>
+                        <ion-label>Bradesco Expresso 6</ion-label>
+                    </ion-col>
+                    <ion-col col-3>
+                        <ion-label class="align-price">R$ 32,50</ion-label>
+                    </ion-col>
+                    <ion-col col-3>
+                        <ion-label>
+                            <a (click)="details()">Ver detalhes</a>
+                        </ion-label>
+                    </ion-col>
+                </ion-row>
             </ion-item>
 
             <ion-item>
@@ -109,6 +135,16 @@
         </ion-list>
     </div>
     <div *ngIf="plan" class="footer">
-        <button class="next-button" ion-button color="danger" (click)="goNext()">Avançar</button>
+        <ion-item>
+            <ion-list>
+                <ion-row>
+                    <ion-col col-4></ion-col>
+                    <ion-col col-4>
+                        <button class="next-button" ion-button color="danger" (click)="goNext()">Avançar</button>
+                    </ion-col>
+                    <ion-col col-4></ion-col>
+                </ion-row>
+            </ion-list>
+        </ion-item>
     </div>
 </ion-content>
