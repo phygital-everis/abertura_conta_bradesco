@@ -15,23 +15,23 @@
         <ion-row>
           <ion-col text-center>
             <button ion-button #rg value="RG" [ngClass]="{'choosen': tipoDoc == 'RG'}"
-              (click)="choseType(rg)">RG</button>
+              (click)="choseType('RG')">RG</button>
           </ion-col>
           <ion-col text-center>
             <button ion-button #cnh value="CNH" [ngClass]="{'choosen': tipoDoc == 'CNH'}"
-              (click)="choseType(cnh)">CNH</button>
+              (click)="choseType('CNH')">CNH</button>
           </ion-col>
           <ion-col text-center>
             <button [disabled]="1 == 1" ion-button #RNE value="RNE" [ngClass]="{'choosen': tipoDoc == 'RNE'}"
-              (click)="choseType(RNE)">RNE</button>
+              (click)="choseType('RNE')">RNE</button>
           </ion-col>
           <ion-col text-center>
             <button [disabled]="1 == 1" ion-button #pass value="PASS" [ngClass]="{'choosen': tipoDoc == 'PASS'}"
-              (click)="choseType(PASS)">Passaporte</button>
+              (click)="choseType('PASS')">Passaporte</button>
           </ion-col>
           <ion-col text-center>
-            <button [disabled]="1 == 1" ion-button #cnh value="CDT" [ngClass]="{'choosen': tipoDoc == 'CDT'}"
-              (click)="choseType(CDT)">Carteira de trabalho</button>
+            <button [disabled]="1 == 1" ion-button #cdt value="CDT" [ngClass]="{'choosen': tipoDoc == 'CDT'}"
+              (click)="choseType('CDT')">Carteira de trabalho</button>
           </ion-col>
         </ion-row>
       </div>

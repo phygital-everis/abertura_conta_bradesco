@@ -56,7 +56,7 @@ export class CaputreProcuradorDocPage {
   }
 
   choseType(el) {
-    this.tipoDoc = el._elementRef.nativeElement.value
+    this.tipoDoc = el;
   }
 
   async presentLoadingOptions() {

@@ -45,11 +45,11 @@ export class CaptureAdditionallyDocPage {
 
       this.presentLoadingOptions();
 
-      this.vision.sendVision(imageData).subscribe((data) => {        
+      this.vision.sendVision(imageData).subscribe((data) => {
         this.navCtrl.push(FormularioFromAdditionallyDocPage, { data: data, tipo: this.tipoDoc });
       });
 
-      
+
     }, (err) => {
       console.log(err);
       this.presentAlertConfirm();
@@ -57,7 +57,7 @@ export class CaptureAdditionallyDocPage {
   }
 
   choseType(el) {
-    this.tipoDoc = el._elementRef.nativeElement.value
+    this.tipoDoc = el;
   }
 
   async presentLoadingOptions() {
