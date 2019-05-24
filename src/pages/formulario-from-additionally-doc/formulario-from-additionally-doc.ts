@@ -1,11 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { ClienteProvider } from '../../providers/cliente/cliente';
 import { CaputreProcuradorDocPage } from '../caputre-procurador-doc/caputre-procurador-doc';
 import {CadastraSenhaPage} from "../cadastra-senha/cadastra-senha";
-import {CaptureProcuradorCompPage} from "../capture-procurador-comp/capture-procurador-comp";
-import {CaptureAdditionallyDocPage} from "../capture-additionally-doc/capture-additionally-doc";
 import {LocalStorageProvider} from "../../providers/local-storage/local-storage";
+import {AdicionalProvider} from "../../providers/adicional/adicional";
 
 /**
  * Generated class for the FormularioFromAdditionallyDocPage page.
@@ -22,7 +20,7 @@ export class FormularioFromAdditionallyDocPage {
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
-              private cliente: ClienteProvider,
+              private adicional: AdicionalProvider,
               private localstorage: LocalStorageProvider) {
   }
 
@@ -110,10 +108,11 @@ export class FormularioFromAdditionallyDocPage {
         }
       }
 
-      this.cliente.cliente.nomeCompleto = nomeCompleto;
-      this.cliente.cliente.numeroDocumento = rg.replace(/[|(– -]/g, '').substring(0, 9);
-      this.cliente.cliente.cpf = cpf.replace(/ /g, '').substring(0, 14);
-      this.cliente.cliente.dataNascimento = dtNasc.replace(/[ -]/g, '').substring(0, 10);
+      this.adicional.adicional.nomeCompleto = nomeCompleto;
+      this.adicional.adicional.numeroDocumento = rg.replace(/[|(– -]/g, '').substring(0, 9);
+      this.adicional.adicional.cpf = cpf.replace(/ /g, '').substring(0, 14);
+      this.adicional.adicional.dataNascimento = dtNasc.replace(/[ -]/g, '').substring(0, 10);
+
     } else if(tipoDoc === "RG") {
       //RG
       let RGBegin = fields.indexOf("GERAL");
@@ -164,12 +163,14 @@ export class FormularioFromAdditionallyDocPage {
         }
       }
 
-      this.cliente.cliente.nomeCompleto = nomeCompleto;
-      this.cliente.cliente.numeroDocumento = rg.replace(/ /g, '');
-      this.cliente.cliente.dataNascimento = dtNasc.replace(/ /g, '');
-      this.cliente.cliente.cpf = cpf.replace(/ /g, '');
+      this.adicional.adicional.nomeCompleto = nomeCompleto;
+      this.adicional.adicional.numeroDocumento = rg.replace(/ /g, '');
+      this.adicional.adicional.dataNascimento = dtNasc.replace(/ /g, '');
+      this.adicional.adicional.cpf = cpf.replace(/ /g, '');
     }
+
   }
+
   goNext() {
 
     this.localstorage.getItems('moveType').then(moveType => {

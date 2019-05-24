@@ -78,6 +78,8 @@ import { DadosComplementaresPage } from '../pages/dados-complementares/dados-com
 import { DadosPreAberturaPage } from "../pages/dados-pre-abertura/dados-pre-abertura";
 import { RepetirSenhaPage } from "../pages/repetir-senha/repetir-senha";
 import { SucessoCadastroSenhaPage } from "../pages/sucesso-cadastro-senha/sucesso-cadastro-senha";
+import {AdicionalProvider} from "../providers/adicional/adicional";
+import {ProcuradorProvider} from "../providers/procurador/procurador";
 
 const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
 
@@ -223,6 +225,8 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     PrinterProvider,
     BluetoothSerial,
     ValidaCpfProvider,
+    AdicionalProvider,
+    ProcuradorProvider,
     SessionHelper
   ]
 })

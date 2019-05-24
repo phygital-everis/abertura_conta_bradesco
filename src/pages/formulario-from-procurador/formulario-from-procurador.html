@@ -11,19 +11,19 @@
         <ion-row>
         <ion-col>
             <ion-item>
-            <ion-input [ngClass]="{'error-validation-input': !cliente.cliente.nomeCompleto}" [(ngModel)]="cliente.cliente.nomeCompleto" type="text" placeholder="Nome"></ion-input>
+            <ion-input [ngClass]="{'error-validation-input': !procurador.procurador.nomeCompleto}" [(ngModel)]="procurador.procurador.nomeCompleto" type="text" placeholder="Nome"></ion-input>
             </ion-item>
         </ion-col>
         </ion-row>
         <ion-row>
         <ion-col>
             <ion-item>
-            <ion-input [ngClass]="{'error-validation-input': cliente.cliente.cpf.length < 11}" [(ngModel)]="cliente.cliente.cpf" type="text" placeholder="CPF"></ion-input>
+            <ion-input [ngClass]="{'error-validation-input': procurador.procurador.cpf.length < 11}" [(ngModel)]="procurador.procurador.cpf" type="text" placeholder="CPF"></ion-input>
             </ion-item>
         </ion-col>
             <ion-col>
             <ion-item>
-                <ion-select [ngClass]="{'error-validation-input': !cliente.cliente.sexo}"  placeholder="Sexo" interface="popover" [(ngModel)]="cliente.cliente.sexo">
+                <ion-select [ngClass]="{'error-validation-input': !procurador.procurador.sexo}"  placeholder="Sexo" interface="popover" [(ngModel)]="procurador.procurador.sexo">
                 <ion-option value="masculino">Masculino</ion-option>
                 <ion-option value="feminino">Feminino</ion-option>
                 </ion-select>
@@ -33,26 +33,26 @@
         <ion-row>
         <ion-col>
             <ion-item>
-            <ion-input  [(ngModel)]="cliente.cliente.nomeMae" type="text" placeholder="Filiação 1"></ion-input>
+            <ion-input  [(ngModel)]="procurador.procurador.nomeMae" type="text" placeholder="Filiação 1"></ion-input>
             </ion-item>
         </ion-col>
         </ion-row>
         <ion-row>
         <ion-col>
             <ion-item>
-            <ion-input [(ngModel)]="cliente.cliente.nomePai" type="text" placeholder="Filiação 2"></ion-input>
+            <ion-input [(ngModel)]="procurador.procurador.nomePai" type="text" placeholder="Filiação 2"></ion-input>
             </ion-item>
         </ion-col>
         </ion-row>
         <ion-row col-14>
         <ion-col>
             <ion-item>
-            <ion-input [ngClass]="{'error-validation-input': !cliente.cliente.nacionalidade}" [(ngModel)]="cliente.cliente.nacionalidade" type="text" placeholder="Nacionalidade"></ion-input>
+            <ion-input [ngClass]="{'error-validation-input': !procurador.procurador.nacionalidade}" [(ngModel)]="procurador.procurador.nacionalidade" type="text" placeholder="Nacionalidade"></ion-input>
             </ion-item>
         </ion-col>
         <ion-col>
             <ion-item>
-            <ion-select [ngClass]="{'error-validation-input': !cliente.cliente.ufNascimento}" placeholder="Estado de nascimento" interface="popover" [(ngModel)]="cliente.cliente.ufNascimento">
+            <ion-select [ngClass]="{'error-validation-input': !procurador.procurador.ufNascimento}" placeholder="Estado de nascimento" interface="popover" [(ngModel)]="procurador.procurador.ufNascimento">
                 <ion-option value="sp">São Paulo</ion-option>
                 <ion-option value="rj">Rio de Janeiro</ion-option>
                 <ion-option value="es">Espirito Santo</ion-option>
@@ -86,12 +86,12 @@
         <ion-row>
         <ion-col>
             <ion-item>
-                <ion-input [ngClass]="{'error-validation-input': !cliente.cliente.municipioNascimento}"  [(ngModel)]="cliente.cliente.municipioNascimento" type="text" placeholder="Municipio"></ion-input>
+                <ion-input [ngClass]="{'error-validation-input': !procurador.procurador.municipioNascimento}"  [(ngModel)]="procurador.procurador.municipioNascimento" type="text" placeholder="Municipio"></ion-input>
             </ion-item>
         </ion-col>
         <ion-col>
             <ion-item>
-                <ion-select [ngClass]="{'error-validation-input': !cliente.cliente.tpDoc}" placeholder="Tipo de documento" interface="popover" [(ngModel)]="cliente.cliente.tpDoc">
+                <ion-select [ngClass]="{'error-validation-input': !procurador.procurador.tpDoc}" placeholder="Tipo de documento" interface="popover" [(ngModel)]="procurador.procurador.tpDoc">
                 <ion-option value="RG">RG</ion-option>
                 <ion-option value="CNH">CNH</ion-option>
                 <ion-option value="RNE">RNE</ion-option>
@@ -104,20 +104,20 @@
         <ion-row>
         <ion-col>
             <ion-item>
-            <ion-input [ngClass]="{'error-validation-input': !cliente.cliente.numeroDocumento}" [(ngModel)]="cliente.cliente.numeroDocumento" type="text" placeholder="Número Documento">
+            <ion-input [ngClass]="{'error-validation-input': !procurador.procurador.numeroDocumento}" [(ngModel)]="procurador.procurador.numeroDocumento" type="text" placeholder="Número Documento">
             </ion-input>
             </ion-item>
         </ion-col>
         <ion-col>
             <ion-item>
-            <ion-input [ngClass]="{'error-validation-input': !cliente.cliente.orgaoEmissor}" [(ngModel)]="cliente.cliente.orgaoEmissor" type="text" placeholder="Órgão Emissor"></ion-input>
+            <ion-input [ngClass]="{'error-validation-input': !procurador.procurador.orgaoEmissor}" [(ngModel)]="procurador.procurador.orgaoEmissor" type="text" placeholder="Órgão Emissor"></ion-input>
             </ion-item>
         </ion-col>
         </ion-row>
         <ion-row>
         <ion-col>
             <ion-item>
-            <ion-select [ngClass]="{'error-validation-input': !cliente.cliente.ufOrgaoEmissor}" placeholder="Estado de emissão" interface="popover" [(ngModel)]="cliente.cliente.ufOrgaoEmissor">
+            <ion-select [ngClass]="{'error-validation-input': !procurador.procurador.ufOrgaoEmissor}" placeholder="Estado de emissão" interface="popover" [(ngModel)]="procurador.procurador.ufOrgaoEmissor">
                 <ion-option value="sp">São Paulo</ion-option>
                 <ion-option value="rj">Rio de Janeiro</ion-option>
                 <ion-option value="es">Espirito Santo</ion-option>
@@ -149,19 +149,19 @@
         </ion-col>
         <ion-col>
             <ion-item>
-                    <ion-input [ngClass]="{'error-validation-input': !cliente.cliente.paisEmissor}" [(ngModel)]="cliente.cliente.paisEmissor" type="text" placeholder="País de emissão"></ion-input>
+                    <ion-input [ngClass]="{'error-validation-input': !procurador.procurador.paisEmissor}" [(ngModel)]="procurador.procurador.paisEmissor" type="text" placeholder="País de emissão"></ion-input>
             </ion-item>
         </ion-col>
         </ion-row>
         <ion-row>
         <ion-col>
             <ion-item>
-                <ion-input [ngClass]="{'error-validation-input': !cliente.cliente.dataEmissao}" [(ngModel)]="cliente.cliente.dataEmissao" type="text" placeholder="Data de emissão"></ion-input>
+                <ion-input [ngClass]="{'error-validation-input': !procurador.procurador.dataEmissao}" [(ngModel)]="procurador.procurador.dataEmissao" type="text" placeholder="Data de emissão"></ion-input>
             </ion-item>
         </ion-col>
         <ion-col>
             <ion-item>
-            <ion-input [ngClass]="{'error-validation-input': !cliente.cliente.vencimentoDocumento}" [(ngModel)]="cliente.cliente.vencimentoDocumento" type="text"
+            <ion-input [ngClass]="{'error-validation-input': !procurador.procurador.vencimentoDocumento}" [(ngModel)]="procurador.procurador.vencimentoDocumento" type="text"
                 placeholder="Vencimento do documento"></ion-input>
             </ion-item>
         </ion-col>
@@ -169,7 +169,7 @@
         <ion-row>
         <ion-col>
             <ion-item>
-                <ion-input [ngClass]="{'error-validation-input': !cliente.cliente.email}" [(ngModel)]="cliente.cliente.email" type="email" placeholder="E-mail"></ion-input>
+                <ion-input [ngClass]="{'error-validation-input': !procurador.procurador.email}" [(ngModel)]="procurador.procurador.email" type="email" placeholder="E-mail"></ion-input>
             </ion-item>
         </ion-col>
         </ion-row>
@@ -184,7 +184,7 @@
         </ion-col>
         <ion-col>
             <ion-item>
-            <ion-select [ngClass]="{'error-validation-input': !cliente.cliente.capCivil}" placeholder="Selecionar" interface="popover" [(ngModel)]="cliente.cliente.capCivil">
+            <ion-select [ngClass]="{'error-validation-input': !procurador.procurador.capCivil}" placeholder="Selecionar" interface="popover" [(ngModel)]="procurador.procurador.capCivil">
                 <ion-option value="CPP">Capacidade Civil Plena</ion-option>
                 <ion-option value="CPR">Capacidade Civil Relativa</ion-option>
                 <ion-option value="CPA">Capacidade Civil Absoluta</ion-option>
@@ -202,7 +202,7 @@
         </ion-col>
         <ion-col>
             <ion-item>
-                <ion-select placeholder="Selecionar" [ngClass]="{'error-validation-input': !cliente.cliente.estCivil}" interface="popover" [(ngModel)]="cliente.cliente.estCivil">
+                <ion-select placeholder="Selecionar" [ngClass]="{'error-validation-input': !procurador.procurador.estCivil}" interface="popover" [(ngModel)]="procurador.procurador.estCivil">
                     <ion-option value="SLT">Solteiro</ion-option>
                     <ion-option value=CCCB>Casado com comunhão bens</ion-option>
                     <ion-option value="CCCPB">Casado com comunhão parcial de bens</ion-option>
@@ -225,7 +225,7 @@
         </ion-col>
         <ion-col>
             <ion-item>
-            <ion-select [ngClass]="{'error-validation-input': !cliente.cliente.profOc}" placeholder="Selecionar" interface="popover" [(ngModel)]="cliente.cliente.profOc">
+            <ion-select [ngClass]="{'error-validation-input': !procurador.procurador.profOc}" placeholder="Selecionar" interface="popover" [(ngModel)]="procurador.procurador.profOc">
                 <ion-option value="autômo">Autônomo</ion-option>
                 <ion-option value="Servidor público">Servidor público</ion-option>
                 <ion-option value="Terceirizado">Terceirizado</ion-option>
@@ -243,7 +243,7 @@
         </ion-col>
         <ion-col>
             <ion-item>
-            <ion-select [ngClass]="{'error-validation-input': !cliente.cliente.escolaridade}" placeholder="Selecionar" interface="popover" [(ngModel)]="cliente.cliente.escolaridade">
+            <ion-select [ngClass]="{'error-validation-input': !procurador.procurador.escolaridade}" placeholder="Selecionar" interface="popover" [(ngModel)]="procurador.procurador.escolaridade">
                 <ion-option value="analfabeto">Analfabeto</ion-option>
                 <ion-option value="EFI">Ensino fundamental incompleto</ion-option>
                 <ion-option value="EFC">Ensino fundamental completo</ion-option>
@@ -259,8 +259,8 @@
         </ion-col>
         </ion-row>
     </ion-list>
-    <p *ngIf="!cliente.cliente.escolaridade">*Os campos em destaque não foram gravados e são obrigatórios</p>
+    <p *ngIf="!procurador.procurador.escolaridade">*Os campos em destaque não foram gravados e são obrigatórios</p>
     <div class="footer">
-        <button [ngClass]="{'disabled': !cliente.cliente.escolaridade}" [disabled]="!cliente.cliente.escolaridade" class="next-button" ion-button color="danger" (click)="goNext()">Avançar</button>
+        <button [ngClass]="{'disabled': !procurador.procurador.escolaridade}" [disabled]="!procurador.procurador.escolaridade" class="next-button" ion-button color="danger" (click)="goNext()">Avançar</button>
     </div>
 </ion-content>

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { ClienteProvider } from '../../providers/cliente/cliente';
 import { CaptureProcuradorCompPage } from '../capture-procurador-comp/capture-procurador-comp';
+import {ProcuradorProvider} from "../../providers/procurador/procurador";
 
 @Component({
   selector: 'page-formulario-from-procurador',
@@ -9,7 +9,7 @@ import { CaptureProcuradorCompPage } from '../capture-procurador-comp/capture-pr
 })
 export class FormularioFromProcuradorPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,  private cliente: ClienteProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,  private procurador: ProcuradorProvider) {
   }
 
   ionViewDidLoad() {
@@ -96,10 +96,10 @@ export class FormularioFromProcuradorPage {
         }
       }
 
-      this.cliente.cliente.nomeCompleto = nomeCompleto;
-      this.cliente.cliente.numeroDocumento = rg.replace(/[|(– -]/g, '').substring(0, 9);
-      this.cliente.cliente.cpf = cpf.replace(/ /g, '').substring(0, 14);
-      this.cliente.cliente.dataNascimento = dtNasc.replace(/[ -]/g, '').substring(0, 10);
+      this.procurador.procurador.nomeCompleto = nomeCompleto;
+      this.procurador.procurador.numeroDocumento = rg.replace(/[|(– -]/g, '').substring(0, 9);
+      this.procurador.procurador.cpf = cpf.replace(/ /g, '').substring(0, 14);
+      this.procurador.procurador.dataNascimento = dtNasc.replace(/[ -]/g, '').substring(0, 10);
     } else if(tipoDoc === "RG") {
       //RG
       let RGBegin = fields.indexOf("GERAL");
@@ -150,11 +150,13 @@ export class FormularioFromProcuradorPage {
         }
       }
 
-      this.cliente.cliente.nomeCompleto = nomeCompleto;
-      this.cliente.cliente.numeroDocumento = rg.replace(/ /g, '');
-      this.cliente.cliente.dataNascimento = dtNasc.replace(/ /g, '');
-      this.cliente.cliente.cpf = cpf.replace(/ /g, '');
+      this.procurador.procurador.nomeCompleto = nomeCompleto;
+      this.procurador.procurador.numeroDocumento = rg.replace(/ /g, '');
+      this.procurador.procurador.dataNascimento = dtNasc.replace(/ /g, '');
+      this.procurador.procurador.cpf = cpf.replace(/ /g, '');
+
     }
+
   }
 
   goNext() {

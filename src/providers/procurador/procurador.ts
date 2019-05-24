@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Cliente } from "../../models/cliente.model";
+import {Procurador} from "../../models/procurador.model";
 /*
   Generated class for the ClienteProvider provider.
 
@@ -8,9 +8,9 @@ import { Cliente } from "../../models/cliente.model";
   and Angular DI.
 */
 @Injectable()
-export class ClienteProvider {
+export class ProcuradorProvider {
 
-  public cliente = new Cliente();
+  public procurador = new Procurador();
 
   constructor(public http: HttpClient) {
     
