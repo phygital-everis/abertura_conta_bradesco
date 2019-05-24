@@ -43,6 +43,11 @@ export class CpfPage {
 
   }
 
+  minusCondition() {
+    if (this.cpf) return this.cpf.length < 14
+    else return true
+  }
+
 
   getRandomInt() {
 

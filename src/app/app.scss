@@ -406,6 +406,10 @@ Não é necessario
   padding: 0px 10px 0px 10px;
 }
 
+.button[disabled]{
+  opacity: .4;
+}
+
 .list-md,
 .list-md .item-input:last-child,
 .item-md,

@@ -45,4 +45,8 @@ export class CreditCardPage {
     this.navCtrl.push(AdditionalCreditCardPage, { cards: this.cards, index: 0 })
   }
 
+  noneSelected() {
+    return !this.cards.every(card => card.vencimento && card.limite > 0)
+  }
+
 }
