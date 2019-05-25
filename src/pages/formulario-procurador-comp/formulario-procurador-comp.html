@@ -11,46 +11,46 @@
       <ion-row>
         <ion-col>
           <ion-item>
-            <ion-input [ngClass]="{'error-validation-input': !cliente.cliente.logradouro}" [(ngModel)]="cliente.cliente.logradouro" type="text" placeholder="Endereço"></ion-input>
+            <ion-input [ngClass]="{'error-validation-input': !procurador.procurador.logradouro}" [(ngModel)]="procurador.procurador.logradouro" type="text" placeholder="Endereço"></ion-input>
           </ion-item>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
           <ion-item>
-            <ion-input [ngClass]="{'error-validation-input': !cliente.cliente.numero}" [(ngModel)]="cliente.cliente.numero" type="text" placeholder="Número"></ion-input>
+            <ion-input [ngClass]="{'error-validation-input': !procurador.procurador.numero}" [(ngModel)]="procurador.procurador.numero" type="text" placeholder="Número"></ion-input>
           </ion-item>
         </ion-col>
         <ion-col>
           <ion-item>
-            <ion-input [ngClass]="{'error-validation-input': !cliente.cliente.complemento}" [(ngModel)]="cliente.cliente.complemento" type="text" placeholder="Complemento"></ion-input>
-          </ion-item>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          <ion-item>
-            <ion-input [ngClass]="{'error-validation-input': !cliente.cliente.bairro}" [(ngModel)]="cliente.cliente.bairro" type="text" placeholder="Bairro"></ion-input>
+            <ion-input [ngClass]="{'error-validation-input': !procurador.procurador.complemento}" [(ngModel)]="procurador.procurador.complemento" type="text" placeholder="Complemento"></ion-input>
           </ion-item>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
           <ion-item>
-            <ion-input [ngClass]="{'error-validation-input': !cliente.cliente.municipio}" [(ngModel)]="cliente.cliente.municipio" type="text" placeholder="Municipio"></ion-input>
+            <ion-input [ngClass]="{'error-validation-input': !procurador.procurador.bairro}" [(ngModel)]="procurador.procurador.bairro" type="text" placeholder="Bairro"></ion-input>
           </ion-item>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
           <ion-item>
-            <ion-input [ngClass]="{'error-validation-input': cliente.cliente.cep.length < 8}" [(ngModel)]="cliente.cliente.cep" type="text" placeholder="CEP"></ion-input>
+            <ion-input [ngClass]="{'error-validation-input': !procurador.procurador.municipio}" [(ngModel)]="procurador.procurador.municipio" type="text" placeholder="Municipio"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-input [ngClass]="{'error-validation-input': procurador.procurador.cep.length < 8}" [(ngModel)]="procurador.procurador.cep" type="text" placeholder="CEP"></ion-input>
           </ion-item>
         </ion-col>
         <ion-col>
           <ion-item>
             
-            <ion-select [ngClass]="{'error-validation-input': !cliente.cliente.ufNascimento}"  interface="popover" placeholder="Estado" [(ngModel)]="cliente.cliente.ufNascimento">
+            <ion-select [ngClass]="{'error-validation-input': !procurador.procurador.ufNascimento}"  interface="popover" placeholder="Estado" [(ngModel)]="procurador.procurador.ufNascimento">
               <ion-option value="sp">São Paulo</ion-option>
               <ion-option value="rj">Rio de Janeiro</ion-option>
               <ion-option value="es">Espirito Santo</ion-option>
@@ -84,12 +84,12 @@
       <ion-row>
         <ion-col>
           <ion-item>
-            <ion-input [ngClass]="{'error-validation-input': !cliente.cliente.telefone}" [(ngModel)]="cliente.cliente.telefone" type="text" placeholder="Telefone"></ion-input>
+            <ion-input [ngClass]="{'error-validation-input': !procurador.procurador.telefone}" [(ngModel)]="procurador.procurador.telefone" type="text" placeholder="Telefone"></ion-input>
           </ion-item>
         </ion-col>
         <ion-col>
           <ion-item>
-            <ion-select [ngClass]="{'error-validation-input': !cliente.cliente.tipoResidencia}" interface="popover" placeholder="Tipo de Residência" [(ngModel)]="cliente.cliente.tipoResidencia">
+            <ion-select [ngClass]="{'error-validation-input': !procurador.procurador.tipoResidencia}" interface="popover" placeholder="Tipo de Residência" [(ngModel)]="procurador.procurador.tipoResidencia">
               <ion-option value="casa">Casa</ion-option>
               <ion-option value="apartamento">Apartamento</ion-option>
               <ion-option value="sobrado">Sobrado</ion-option>
@@ -100,19 +100,19 @@
       <ion-row>
         <ion-col>
           <ion-item>
-            <ion-input [(ngModel)]="cliente.cliente.celular" type="text" placeholder="Celular"></ion-input>
+            <ion-input [(ngModel)]="procurador.procurador.celular" type="text" placeholder="Celular"></ion-input>
           </ion-item>
         </ion-col>
         <ion-col>
           <ion-item>
-            <ion-input [(ngModel)]="cliente.cliente.email" type="email" placeholder="E-mail"></ion-input>
+            <ion-input [(ngModel)]="procurador.procurador.email" type="email" placeholder="E-mail"></ion-input>
           </ion-item>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
           <ion-item>
-            <ion-input [ngClass]="{'error-validation-input': !cliente.cliente.ocupacao}" [(ngModel)]="cliente.cliente.ocupacao" type="text" placeholder="Ocupação"></ion-input>
+            <ion-input [ngClass]="{'error-validation-input': !procurador.procurador.ocupacao}" [(ngModel)]="procurador.procurador.ocupacao" type="text" placeholder="Ocupação"></ion-input>
           </ion-item>
         </ion-col>
       </ion-row>
@@ -143,8 +143,8 @@
         </ion-col>
       </ion-row>
     </ion-list>
-    <p *ngIf="!cliente.cliente.ocupacao">*Os campos em destaque não foram gravados e são obrigatórios</p>
+    <p *ngIf="!procurador.procurador.ocupacao">*Os campos em destaque não foram gravados e são obrigatórios</p>
     <div class="footer">
-      <button [ngClass]="{'disabled': !cliente.cliente.ocupacao}" [disabled]="!cliente.cliente.ocupacao" class="next-button" ion-button color="danger" (click)="goNext()">Avançar</button>
+      <button [ngClass]="{'disabled': !procurador.procurador.ocupacao}" [disabled]="!procurador.procurador.ocupacao" class="next-button" ion-button color="danger" (click)="goNext()">Avançar</button>
     </div>
 </ion-content>

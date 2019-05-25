@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { ClienteProvider } from "../../providers/cliente/cliente";
 import { CadastraSenhaPage } from '../cadastra-senha/cadastra-senha';
+import {ProcuradorProvider} from "../../providers/procurador/procurador";
 
 @Component({
   selector: 'page-formulario-procurador-comp',
@@ -17,7 +18,7 @@ export class FormularioProcuradorCompPage {
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
-    private cliente: ClienteProvider
+    private procurador: ProcuradorProvider
     ) {
   }
 
@@ -45,8 +46,8 @@ export class FormularioProcuradorCompPage {
     numeroCasa = addressSplit[1].split(' ')[1];
     enderecoCompleto = addressSplit[0];
 
-    this.cliente.cliente.logradouro = enderecoCompleto;
-    this.cliente.cliente.numero = numeroCasa;
+    this.procurador.procurador.logradouro = enderecoCompleto;
+    this.procurador.procurador.numero = numeroCasa;
     
   }
 
