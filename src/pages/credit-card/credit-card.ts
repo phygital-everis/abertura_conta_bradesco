@@ -69,4 +69,26 @@ export class CreditCardPage {
     this.navCtrl.push(AdditionalCreditCardPage, {cards:this.cards, index:0})
   }
 
+  validar() {
+
+    if(this.cards) {
+
+      let valido = true;
+
+      this.cards.forEach((card) => {
+
+        if (card.diaFatura == -1)
+          valido = false;
+
+      });
+
+      return valido;
+
+    }
+
+    else
+      return false;
+
+  }
+
 }

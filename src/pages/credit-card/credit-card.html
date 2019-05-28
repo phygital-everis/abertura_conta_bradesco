@@ -26,7 +26,7 @@
       <ion-col col-6 col-md-3 class="select-options-account-type">
         <ion-item>
           <ion-label stacked>Vencimento da Fatura</ion-label>
-          <ion-select interface="popover" placeholder="Selecionar">
+          <ion-select interface="popover" [(ngModel)]="card.diaFatura" placeholder="Selecionar">
             <ion-option *ngFor="let value of vencimentoFatura" [value]="value">{{value}}</ion-option>
           </ion-select>
         </ion-item>
@@ -58,6 +58,6 @@
     </ion-row>
   </ion-grid>
 </ion-content>
-<div class="footer">
+<div class="footer" *ngIf="validar()">
   <button class="next-button" ion-button color="danger" (click)="goNext()">Avançar</button>
 </div>

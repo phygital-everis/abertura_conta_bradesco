@@ -15,24 +15,28 @@ export class PreApprovedCardPage {
       bandeira: 'assets/imgs/elo-logo.png',
       valor: 0,
       selecionado: false,
+      diaFatura: -1,
     },
     {
       nome: 'Elo Plus',
       bandeira: 'assets/imgs/elo-logo.png',
       valor: 0,
       selecionado: false,
+      diaFatura: -1,
     },
     {
       nome: 'Internacional Elo',
       bandeira: 'assets/imgs/elo-logo.png',
       valor: 0,
       selecionado: false,
+      diaFatura: -1,
     },
     {
       nome: 'Internacional Visa',
       bandeira: 'assets/imgs/visa-logo.png',
       valor: 0,
       selecionado: false,
+      diaFatura: -1,
     }
   ];
 
