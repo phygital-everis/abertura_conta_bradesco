@@ -3,6 +3,7 @@ import { NavController, AlertController, LoadingController, ToastController } fr
 import { HomePage } from "../home/home";
 import { PrinterProvider } from './../../providers/printer/printer';
 import { commands } from './../../providers/printer/printer-commands';
+import {FinalizarProcessoPage} from "../finalizar-processo/finalizar-processo";
 
 
 @Component({
@@ -126,7 +127,7 @@ export class ReciboPage {
  
 
   goNext() {
-    this.navCtrl.push(HomePage)
+    this.navCtrl.push(FinalizarProcessoPage);
   }
 
   showToast(data) {
@@ -161,6 +162,7 @@ export class ReciboPage {
                   handler: () => {
                     load.dismiss();
                     this.printer.disconnectBluetooth();
+                    this.navCtrl.push(FinalizarProcessoPage);
                   },
                 },
               ],
