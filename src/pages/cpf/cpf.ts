@@ -11,8 +11,8 @@ import { SessionHelper } from '../../providers/session-helper/session-helper';
 })
 export class CpfPage {
 
-  cpf
-  cpfOk = false
+  cpf: string = "";
+
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
@@ -25,6 +25,7 @@ export class CpfPage {
   }
 
   validaCpf() {
+
     if (this.cpfSvc.validaCPF(this.cpf)) {
       this.sessionSvc.createSession(this.cpf);
       this.goToElegivelPage()
