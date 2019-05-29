@@ -2,176 +2,191 @@ page-dados-do-documento {
 
   ion-col {
     ion-item {
-       .rounded-button {
-            width: 113px;
-            background-color: #ffffff;
-            height: 61px;
-            border-radius: 30.5px;
-            border: solid 1px #4a4a4a;
-            margin-left: 15px;
-       }
-       .rounded-button:active {
-            width: 113px;
-            background-color: #9e1321;
-            color: #ffffff;
-        }
+      .rounded-button {
+        width: 113px;
+        background-color: #ffffff;
+        height: 61px;
+        border-radius: 30.5px;
+        border: solid 1px #4a4a4a;
+        margin-left: 15px;
+      }
+
+      .rounded-button:active {
+        width: 113px;
+        background-color: #9e1321;
+        color: #ffffff;
+      }
     }
   }
-    h2 {
-        font-size: 30px;
-        font-weight: 500;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: normal;
-        letter-spacing: -0.8px;
-        text-align: center;
-        color: #58595b;
+
+  h2 {
+    font-size: 30px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: -0.8px;
+    text-align: center;
+    color: #58595b;
+  }
+
+  .scroll-content {
+    max-height: 100% !important;
+  }
+
+  .Possui-residncia-fi {
+    width: 375px;
+    height: 54px;
+    font-size: 23px;
+    font-weight: normal;
+    font-style: italic;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: -0.6px;
+    color: #4a4a4a;
+  }
+
+  .Rectangle {
+    width: 113px;
+    height: 61px;
+    border-radius: 30.5px;
+    border: solid 1px #4a4a4a;
+    background-color: #e7e7e7;
+    font-size: 23px;
+    font-weight: normal;
+    font-style: italic;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: -0.6px;
+    text-align: center;
+    color: #4a4a4a;
+  }
+
+  .Rectangle-div {
+    width: 750px;
+    border-radius: 32px;
+    border: solid 1px #4a4a4a;
+    padding-left: 20px;
+    padding-top: 12px;
+    margin-bottom: 21px;
+  }
+
+  .Legenda {
+    font-size: 23px;
+    font-weight: normal;
+    font-style: italic;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: -0.6px;
+    color: #4a4a4a;
+    white-space: initial;
+  }
+
+  .combo {
+    height: 61px;
+    border-radius: 30.5px;
+    border: solid 1px #4a4a4a;
+    background-color: #e7e7e7;
+    font-size: 23px;
+    font-weight: normal;
+    font-style: italic;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: -0.6px;
+    text-align: center;
+    color: #4a4a4a;
+    margin-right: 15px;
+  }
+
+  .input-text {
+    width: 301px;
+    height: 61px;
+    border-radius: 30.5px;
+    border: solid 1px #4a4a4a;
+    font-size: 20px;
+    font-weight: normal;
+    font-style: italic;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: -0.5px;
+    text-align: center;
+    color: #9b9b9b;
+  }
+
+  .centralizado {
+    width: 750px;
+    margin: 0 auto;
+  }
+
+  button.item-cover {
+    left: initial;
+    top: initial;
+    position: fixed;
+    width: 0px;
+    height: 0px;
+  }
+
+  .input-radio {
+    width: 22px;
+    height: 20px;
+    border-radius: 10px;
+    border: solid 1px #4a4a4a;
+  }
+
+  .item-radio-checked .input-radio {
+    background-color: #4a4a4a;
+  }
+
+  div.item-inner {
+    border-bottom: none !important;
+  }
+
+  div.footer {
+    text-align: center;
+  }
+
+  button.next-button {
+    width: 283px;
+    height: 61px;
+    border-radius: 30.5px;
+    box-shadow: 2px 3px 4px 0 rgba(0, 0, 0, 0.5);
+    background-color: #e2193d;
+  }
+
+  .item-radio-checked.item-ios ion-label {
+    color: #4a4a4a;
+  }
+
+  div.radio-inner {
+    border: none !important;
+  }
+
+  ion-select{
+
+    padding-right: 0 !important;
+    max-width: 100%;
+
+  }
+
+  .backAnchor {
+    left: 700px;
+    position: relative;
+  }
+
+  .footer-class {
+    padding-top: 3%;
+    width: 100%;
+    height: 18%;
+    left: 0;
+    position: absolute !important;
+    background: #fff;
+
+    .next-button {
+      transform: translate(0%, 30%);
+      left: 33%;
+      height: 61px !important;
+      width: 283px;
     }
+  }
 
-    .scroll-content {
-      max-height: 100%!important;
-    }
-
-    .Possui-residncia-fi {
-        width: 375px;
-        height: 54px;
-        font-size: 23px;
-        font-weight: normal;
-        font-style: italic;
-        font-stretch: normal;
-        line-height: normal;
-        letter-spacing: -0.6px;
-        color: #4a4a4a;
-      }
-
-      .Rectangle {
-        width: 113px;
-        height: 61px;
-        border-radius: 30.5px;
-        border: solid 1px #4a4a4a;
-        background-color: #e7e7e7;
-        font-size: 23px;
-        font-weight: normal;
-        font-style: italic;
-        font-stretch: normal;
-        line-height: normal;
-        letter-spacing: -0.6px;
-        text-align: center;
-        color: #4a4a4a;
-      }
-
-      .Rectangle-div {
-        width: 750px;
-        border-radius: 32px;
-        border: solid 1px #4a4a4a;
-        padding-left: 20px;
-        padding-top: 12px;
-        margin-bottom: 21px;
-      }
-
-      .Legenda {
-        font-size: 23px;
-        font-weight: normal;
-        font-style: italic;
-        font-stretch: normal;
-        line-height: normal;
-        letter-spacing: -0.6px;
-        color: #4a4a4a;
-        white-space: initial;
-      }
-
-      .combo {
-        height: 61px;
-        border-radius: 30.5px;
-        border: solid 1px #4a4a4a;
-        background-color: #e7e7e7;
-        font-size: 23px;
-        font-weight: normal;
-        font-style: italic;
-        font-stretch: normal;
-        line-height: normal;
-        letter-spacing: -0.6px;
-        text-align: center;
-        color: #4a4a4a;
-        margin-right: 15px;
-      }
-
-      .input-text {
-        width: 301px;
-        height: 61px;
-        border-radius: 30.5px;
-        border: solid 1px #4a4a4a;
-        font-size: 20px;
-        font-weight: normal;
-        font-style: italic;
-        font-stretch: normal;
-        line-height: normal;
-        letter-spacing: -0.5px;
-        text-align: center;
-        color: #9b9b9b;
-      }
-
-      .centralizado{
-          width: 750px;
-          margin: 0 auto;
-      }
-
-      button.item-cover{
-        left: initial;
-        top: initial;
-        position: fixed;
-        width: 0px;
-        height: 0px;
-      }
-
-      .input-radio{
-        width: 22px;
-        height: 20px;
-        border-radius: 10px;
-        border: solid 1px #4a4a4a;
-      }
-      .item-radio-checked .input-radio{
-        background-color: #4a4a4a;
-      }
-      div.item-inner{
-        border-bottom: none!important;
-      }
-      div.footer{
-        text-align: center;
-      }
-
-      button.next-button{
-        width: 283px;
-        height: 61px;
-        border-radius: 30.5px;
-        box-shadow: 2px 3px 4px 0 rgba(0, 0, 0, 0.5);
-        background-color: #e2193d;
-      }
-
-      .item-radio-checked.item-ios ion-label {
-        color: #4a4a4a;
-    }
-    div.radio-inner{
-        border: none !important;
-    }
-    .backAnchor{
-        left: 700px;
-        position: relative;
-    }
-
-    .footer-class {
-      padding-top: 3%;
-      width: 100%;
-      height: 18%;
-      left: 0;
-      position: absolute !important;
-      background: #fff;
-      .next-button {
-        transform: translate(0%, 30%);
-        left: 33%;
-        height: 61px !important;
-        width: 283px;
-      }
-    }
-   
 }

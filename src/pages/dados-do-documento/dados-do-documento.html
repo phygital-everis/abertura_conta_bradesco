@@ -35,10 +35,10 @@
       </div>
     </ion-row>
 
-    <ion-row col-12>
-      <ion-col>
+    <ion-row>
+      <ion-col col-6>
         <ion-item>
-          <ion-select interface="popover" placeholder="Ref">
+          <ion-select class="" interface="popover" placeholder="Ref">
             <ion-option value="1">1</ion-option>
             <ion-option value="2">2</ion-option>
             <ion-option value="3">3</ion-option>
@@ -46,7 +46,9 @@
           </ion-select>
         </ion-item>
       </ion-col>
-      <ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6>
         <ion-item>
           <ion-select interface="popover" placeholder="País">
             <ion-option value="BR">Brasil</ion-option>
@@ -55,7 +57,17 @@
           </ion-select>
         </ion-item>
       </ion-col>
-      <ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6>
+        <ion-item>
+          <ion-select interface="popover" placeholder="Possui residência fiscal em outro país">
+            <ion-option value="sim">Sim</ion-option>
+            <ion-option value="nao">Não</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+      <ion-col offset-1 col-5>
         <ion-item>
           <ion-input type="number" placeholder="Número de Identificação Fiscal"></ion-input>
         </ion-item>
