@@ -80,6 +80,7 @@ import { RepetirSenhaPage } from "../pages/repetir-senha/repetir-senha";
 import { SucessoCadastroSenhaPage } from "../pages/sucesso-cadastro-senha/sucesso-cadastro-senha";
 import {AdicionalProvider} from "../providers/adicional/adicional";
 import {ProcuradorProvider} from "../providers/procurador/procurador";
+import {FinalizarProcessoPage} from "../pages/finalizar-processo/finalizar-processo";
 
 const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
 
@@ -133,7 +134,8 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     DadosPreAberturaPage,
     DadosComplementaresPage,
     RepetirSenhaPage,
-    SucessoCadastroSenhaPage
+    SucessoCadastroSenhaPage,
+    FinalizarProcessoPage
   ],
   imports: [
     BrowserModule,
@@ -205,7 +207,8 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     DadosPreAberturaPage,
     DadosComplementaresPage,
     RepetirSenhaPage,
-    SucessoCadastroSenhaPage
+    SucessoCadastroSenhaPage,
+    FinalizarProcessoPage
   ],
   providers: [
     AuthService,
